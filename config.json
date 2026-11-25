@@ -237,7 +237,7 @@
   "horizonYear": 2026,
   "trafficYear": 2030,
   "territoryBoundary": {
-    "label": "Limites de Paris Ouest La Défense",
+    "label": "Limites de Paris Ouest La Défense et des communes",
     "defaultVisible": false
   }
 }
