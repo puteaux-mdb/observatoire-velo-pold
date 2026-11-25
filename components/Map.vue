@@ -44,6 +44,7 @@
 
 <script setup lang="ts">
 import { plotTerritoryBoundary } from '~/helpers/territory';
+import LimitsControl from '~/maplibre/LimitsControl';
 import type { Collections } from '@nuxt/content';
 import { useMediaQuery } from '@vueuse/core';
 import {
@@ -77,7 +78,16 @@ import '~/assets/geocoder-style.css';
 setWorkerUrl(workerUrl);
 
 const assetUrl = useAssetUrl();
-const isTerritoryVisible = () => props.filters?.showTerritory.value ?? config.territoryBoundary.defaultVisible;
+// Limites du territoire : état partagé avec la case des filtres quand la carte en a, sinon état local
+const localTerritoryVisible = ref(config.territoryBoundary.defaultVisible);
+const isTerritoryVisible = () => props.filters?.showTerritory.value ?? localTerritoryVisible.value;
+function toggleTerritory() {
+  if (props.actions && props.filters) {
+    props.actions.toggleShowTerritory();
+  } else {
+    localTerritoryVisible.value = !localTerritoryVisible.value;
+  }
+}
 const { displayDistanceInKm, displayPercent } = useStats();
 
 const MAP_BOUNDS = config.bounds as [[number, number], [number, number]];
@@ -95,6 +105,7 @@ const defaultOptions = {
   showLineFilters: false,
   showDateFilter: false,
   showCounters: false,
+  limits: true,
   canUseSidePanel: false,
   onShrinkControlClick: () => {},
   filterStyle: 'height: calc(100vh - 100px)',
@@ -345,6 +356,13 @@ onMounted(() => {
     map.addControl(filterControl.value, 'top-right');
   }
 
+  let limitsControl: LimitsControl | null = null;
+  if (options.limits) {
+    limitsControl = new LimitsControl({ onClick: toggleTerritory, title: config.territoryBoundary.label });
+    map.addControl(limitsControl, 'top-right');
+    limitsControl.setActive(isTerritoryVisible());
+  }
+
   if (options.logo) {
     const logoControl = new LogoControl({
       src: assetUrl(config.mapLogoUrl),
@@ -489,14 +507,15 @@ onMounted(() => {
     { deep: true },
   );
 
-  watch(
-    () => props.filters?.showTerritory.value,
-    () => {
-      if (map.isStyleLoaded()) {
-        plotTerritoryBoundary(map, isTerritoryVisible());
-      }
-    },
-  );
+  watch(isTerritoryVisible, (visible) => {
+    limitsControl?.setActive(visible);
+    if (!mapReady.value) return;
+    try {
+      plotTerritoryBoundary(map, visible);
+    } catch (e) {
+      console.warn('not able to plot territory boundary', e);
+    }
+  });
 
   watch(mapStyle, (newStyleKey) => {
     map.setStyle(getMapStyle(newStyleKey), { diff: false });
@@ -668,6 +687,18 @@ defineExpose({ fitToFeatures });
   background-position: center;
   pointer-events: auto;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3h1zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16h1zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5H13zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1V7.5z'/%3E%3C/svg%3E");
+}
+
+.maplibregl-limits {
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: auto;
+  background-image: url('~/maplibre/limits.svg');
+  background-size: 75%;
+}
+
+.maplibregl-limits--active {
+  background-color: #fbe9ef;
 }
 
 .maplibregl-filter {
