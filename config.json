@@ -235,5 +235,9 @@
   "countersDisplay": false,
   "counterSources": [],
   "horizonYear": 2026,
-  "trafficYear": 2030
+  "trafficYear": 2030,
+  "territoryBoundary": {
+    "label": "Afficher les limites de Paris Ouest La Défense",
+    "defaultVisible": true
+  }
 }

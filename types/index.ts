@@ -185,6 +185,7 @@ export interface FiltersState {
   maxDate: Ref<number>;
   dateSteps: Ref<number[]>;
   showCounters: Ref<boolean>;
+  showTerritory: Ref<boolean>;
 }
 
 export interface FilterActions {
@@ -194,6 +195,7 @@ export interface FilterActions {
   toggleLineFilter: (index: number) => void;
   setDateRange: (newDateRange: [number, number]) => void;
   toggleShowCounters: () => void;
+  toggleShowTerritory: () => void;
 }
 
 export interface UseBikeLaneFiltersOptions {

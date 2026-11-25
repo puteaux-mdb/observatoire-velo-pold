@@ -99,6 +99,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
   const lineFilters = ref<{ label: string; isEnabled: boolean; line: number }[]>([]);
 
   const showCounters = ref(false);
+  const showTerritory = ref(config.territoryBoundary.defaultVisible);
 
   const dateRange = ref<[number, number]>([0, 0]);
   const minDate = ref(0);
@@ -129,6 +130,10 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
 
     if (Object.hasOwn(query, 'counters') || query.modal === 'counter') {
       showCounters.value = query.counters === '1' || query.modal === 'counter';
+    }
+
+    if (Object.hasOwn(query, 'limites')) {
+      showTerritory.value = query.limites === '1';
     }
 
     if (lineFilters.value.length > 0 && Object.hasOwn(query, 'lines')) {
@@ -262,7 +267,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
   });
 
   watch(
-    [statusFilters, typeFilters, qualityFilters, lineFilters, dateRange, showCounters],
+    [statusFilters, typeFilters, qualityFilters, lineFilters, dateRange, showCounters, showTerritory],
     () => {
       if (!isReady.value) {
         return;
@@ -295,6 +300,12 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
         newQuery.counters = '1';
       } else {
         delete newQuery.counters;
+      }
+
+      if (showTerritory.value !== config.territoryBoundary.defaultVisible) {
+        newQuery.limites = showTerritory.value ? '1' : '0';
+      } else {
+        delete newQuery.limites;
       }
 
       if (lineFilters.value.length > 0) {
@@ -398,6 +409,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     maxDate,
     dateSteps,
     showCounters,
+    showTerritory,
   };
 
   const actions: FilterActions = {
@@ -418,6 +430,9 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     },
     toggleShowCounters() {
       showCounters.value = !showCounters.value;
+    },
+    toggleShowTerritory() {
+      showTerritory.value = !showTerritory.value;
     },
   };
 

@@ -39,6 +39,18 @@
       @deselect-all="filters.lineFilters.value.forEach((line: LineFilterItem) => (line.isEnabled = false))"
     />
 
+    <section>
+      <label class="mt-2 flex items-center gap-3 cursor-pointer">
+        <input
+          type="checkbox"
+          :checked="filters.showTerritory.value"
+          class="h-4 w-4 rounded border-gray-300 text-lvv-blue-600 focus:ring-lvv-blue-600"
+          @change="actions.toggleShowTerritory"
+        />
+        <span class="text-base font-medium">{{ config.territoryBoundary.label }}</span>
+      </label>
+    </section>
+
     <section v-if="options.showCounters">
       <label class="mt-2 flex items-center gap-3 cursor-pointer">
         <input

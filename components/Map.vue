@@ -43,6 +43,7 @@
 </template>
 
 <script setup lang="ts">
+import { plotTerritoryBoundary } from '~/helpers/territory';
 import type { Collections } from '@nuxt/content';
 import { useMediaQuery } from '@vueuse/core';
 import {
@@ -76,6 +77,7 @@ import '~/assets/geocoder-style.css';
 setWorkerUrl(workerUrl);
 
 const assetUrl = useAssetUrl();
+const isTerritoryVisible = () => props.filters?.showTerritory.value ?? config.territoryBoundary.defaultVisible;
 const { displayDistanceInKm, displayPercent } = useStats();
 
 const MAP_BOUNDS = config.bounds as [[number, number], [number, number]];
@@ -395,6 +397,7 @@ onMounted(() => {
   async function onStyleLoaded() {
     await loadImages({ map, features: props.features });
     plotFeatures({ map, features: props.features });
+    plotTerritoryBoundary(map, isTerritoryVisible());
     highlightLines({ map, selections: null });
 
     if (route.query.modal === 'counter' && route.query.counterLink) {
@@ -486,12 +489,22 @@ onMounted(() => {
     { deep: true },
   );
 
+  watch(
+    () => props.filters?.showTerritory.value,
+    () => {
+      if (map.isStyleLoaded()) {
+        plotTerritoryBoundary(map, isTerritoryVisible());
+      }
+    },
+  );
+
   watch(mapStyle, (newStyleKey) => {
     map.setStyle(getMapStyle(newStyleKey), { diff: false });
     map.once('styledata', async () => {
       try {
         await loadImages({ map, features: props.features, force: true });
         plotFeatures({ map, features: props.features });
+        plotTerritoryBoundary(map, isTerritoryVisible());
         highlightLines({ map, selections: props.highlightedSections ?? null });
         if (props.highlightedCounter) {
           highlightCounter({ map, counterName: props.highlightedCounter });
