@@ -1,9 +1,9 @@
 import config from './config.json';
 
-const TITLE = `Cyclopolis - Suivi des ${config.revName.plural} par ${config.assoName}`;
-const DESCRIPTION = `Plateforme citoyenne et associative, par ${config.assoName}. État d'avancement, cartes interactives des itinéraires, détails, travaux : suivez le développement du réseau cyclable sécurisé lyonnais`;
-const BASE_URL = 'https://cyclopolis.fr';
-const COVER_IMAGE_URL = 'https://cyclopolis.lavilleavelo.org/cyclopolis.png';
+const TITLE = `${config.siteName} - Suivi des ${config.revName.plural}`;
+const DESCRIPTION = `Plateforme citoyenne et associative${config.assoName ? `, par ${config.assoName}` : ''}. État d'avancement, cartes interactives des itinéraires, détails, travaux : suivez le développement du réseau cyclable ${config.territory.adjective}.`;
+const BASE_URL = config.baseUrl;
+const COVER_IMAGE_URL = config.coverImageUrl;
 
 export default defineNuxtConfig({
   srcDir: '.',
@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       maptilerKey: process.env.MAPTILER_KEY,
-      counterStatsApiUrl: 'https://carte.lavilleavelo.org',
+      counterStatsApiUrl: '',
     },
   },
 
@@ -93,13 +93,14 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-08-11',
 
+  // Statistiques de visite : renseigner l'id et l'hôte de votre instance Umami, puis passer enabled à true
   umami: {
-    id: 'b9a30c67-3c47-465f-9629-632badd7632a',
-    host: 'https://umami.nimbus.lavilleavelo.org',
+    id: process.env.UMAMI_ID ?? '',
+    host: process.env.UMAMI_HOST ?? '',
     autoTrack: true,
     ignoreLocalhost: true,
     excludeQueryParams: true,
-    enabled: true,
+    enabled: Boolean(process.env.UMAMI_ID),
     logErrors: true,
   },
 });

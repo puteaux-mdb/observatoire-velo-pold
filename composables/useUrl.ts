@@ -11,11 +11,11 @@ export const useUrl = () => {
   }
 
   function getVoieCyclableRegex() {
-    return new RegExp(`${config.slug}-(1[0-2]|[1-9])\\b`);
+    return new RegExp(`${config.slug}-([1-9]\\d?)\\b`);
   }
 
   function extractLineAndAnchorFromPath(path: string) {
-    // Example path: /voie-lyonnaise-11#section-2
+    // Example path: /ligne-velo-11#section-2
     const [pathNoAnchor, anchor] = path.split('#');
     const match = pathNoAnchor?.match(getVoieCyclableRegex());
     if (match) {

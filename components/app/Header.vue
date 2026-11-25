@@ -6,15 +6,12 @@
           <NuxtLink to="/" class="flex space-x-2">
             <span class="sr-only">Cyclopolis</span>
             <img
+              v-if="config.assoLogoUrl"
               class="h-7 w-auto sm:h-8"
-              src="https://cyclopolis.lavilleavelo.org/logo-la-ville-a-velo.png"
+              :src="config.assoLogoUrl"
               :alt="`logo ${getAssoName()}`"
             />
-            <img
-              class="h-8 w-auto sm:h-10"
-              src="https://cyclopolis.lavilleavelo.org/logo-cyclopolis-header.png"
-              alt="logo cyclopolis"
-            />
+            <img class="h-8 w-auto sm:h-10" :src="config.siteLogoUrl" :alt="`logo ${config.siteName}`" />
           </NuxtLink>
         </div>
         <div class="-mr-2 -my-2 md:hidden flex items-center gap-1">
@@ -77,6 +74,7 @@
                       Évolution du réseau
                     </NuxtLink>
                     <NuxtLink
+                      v-if="hasFeature('officialPlan')"
                       to="/plan-officiel"
                       class="text-base font-medium text-gray-500 hover:text-lvv-blue-600"
                       @click="close()"
@@ -89,7 +87,7 @@
                       class="flex align-center space-x-2 text-base font-medium text-gray-500 hover:text-lvv-blue-600"
                       @click="close()"
                     >
-                      <span>Baromètre FUB Lyon</span>
+                      <span>{{ config.barometre.label }}</span>
                       <div class="flex items-center">
                         <Icon name="mdi:launch" class="h-4 w-4" aria-hidden="true" />
                       </div>
@@ -156,7 +154,7 @@
           </Popover>
 
           <!-- Compteurs -->
-          <Popover v-slot="{ open }" class="relative">
+          <Popover v-if="displayCounters()" v-slot="{ open }" class="relative">
             <PopoverButton
               :class="[
                 open ? 'text-gray-900' : 'text-gray-500',
@@ -192,6 +190,7 @@
                       Compteurs vélo
                     </NuxtLink>
                     <NuxtLink
+                      v-if="hasFeature('carCounters')"
                       to="/compteurs/voiture"
                       class="text-base font-medium text-gray-500 hover:text-lvv-blue-600"
                       @click="close()"
@@ -199,6 +198,7 @@
                       Compteurs voiture
                     </NuxtLink>
                     <NuxtLink
+                      v-if="hasFeature('carCounters')"
                       to="/compteurs/comparaison"
                       class="text-base font-medium text-gray-500 hover:text-lvv-blue-600"
                       @click="close()"
@@ -236,6 +236,7 @@
             <SettingsPopover />
           </div>
           <NuxtLink
+            v-if="hasFeature('blog')"
             to="/blog"
             class="ml-1 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-lvv-blue-600 hover:shadow-lg transition duration-300 transform hover:scale-105"
           >
@@ -269,7 +270,7 @@
               <NuxtLink to="/" @click="close()">
                 <img
                   class="h-8 w-auto"
-                  src="https://cyclopolis.lavilleavelo.org/logo-la-ville-a-velo.png"
+                  :src="config.assoLogoUrl || config.siteLogoUrl"
                   :alt="`logo ${getAssoName()}`"
                 />
               </NuxtLink>
@@ -308,9 +309,10 @@
                 </NuxtLink>
 
                 <!-- Compteurs -->
-                <hr class="h-px bg-gray-200 border-0" />
+                <hr v-if="displayCounters()" class="h-px bg-gray-200 border-0" />
 
                 <NuxtLink
+                  v-if="displayCounters()"
                   to="/compteurs/velo"
                   class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   @click="close()"
@@ -318,6 +320,7 @@
                   <span class="ml-3 text-base font-medium text-gray-900"> Compteurs vélo </span>
                 </NuxtLink>
                 <NuxtLink
+                  v-if="displayCounters() && hasFeature('carCounters')"
                   to="/compteurs/voiture"
                   class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   @click="close()"
@@ -325,6 +328,7 @@
                   <span class="ml-3 text-base font-medium text-gray-900"> Compteurs voiture </span>
                 </NuxtLink>
                 <NuxtLink
+                  v-if="displayCounters() && hasFeature('carCounters')"
                   to="/compteurs/comparaison"
                   class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   @click="close()"
@@ -333,9 +337,14 @@
                 </NuxtLink>
 
                 <!-- Autres -->
-                <hr class="h-px bg-gray-200 border-0" />
+                <hr v-if="hasFeature('blog')" class="h-px bg-gray-200 border-0" />
 
-                <NuxtLink to="/blog" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50" @click="close()">
+                <NuxtLink
+                  v-if="hasFeature('blog')"
+                  to="/blog"
+                  class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                  @click="close()"
+                >
                   <span class="ml-3 text-base font-medium text-gray-900"> Blog </span>
                 </NuxtLink>
               </nav>
@@ -374,8 +383,8 @@ import SettingsPopover from './SettingsPopover.vue';
 import type GlobalSearch from '~/components/GlobalSearch.vue';
 const { getLineColor } = useColors();
 const { getVoieCyclablePath } = useUrl();
-const { getAssoName } = useConfig();
-const barometreVeloLink = 'https://www.barometre-velo.fr/2025/carte/#11.1/45.7505/4.8316';
+const { config, getAssoName, hasFeature, displayCounters } = useConfig();
+const barometreVeloLink = config.barometre.link;
 
 const isLargeScreen = useMediaQuery('(min-width: 1024px)');
 const isMac = computed(() => typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigator.userAgent));
@@ -385,9 +394,9 @@ const linkToMap = computed(() => {
 
 const navItems = computed(() => [
   { name: 'Carte interactive', path: linkToMap.value, target: '_self' },
-  { name: 'Plan officiel', path: '/plan-officiel', target: '_self' },
+  ...(hasFeature('officialPlan') ? [{ name: 'Plan officiel', path: '/plan-officiel', target: '_self' }] : []),
   { name: 'Évolution du réseau', path: '/evolution', target: '_self' },
-  { name: 'Baromètre FUB Lyon', path: barometreVeloLink, target: '_blank' },
+  { name: config.barometre.label, path: barometreVeloLink, target: '_blank' },
 ]);
 
 const { voies } = await useGetVoiesCyclablesNums();

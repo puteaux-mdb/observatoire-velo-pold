@@ -6,7 +6,8 @@
         <span class="font-bold" :style="`color: ${color}`">{{ displayDistanceInKm(distance, 1) }}</span>
       </div>
       <div v-if="voie.trafic" class="text-center text-sm text-gray-900">
-        Fréquentation max 2030: <span class="font-bold" :style="`color: ${color}`">{{ voie.trafic }}</span>
+        Fréquentation max {{ config.trafficYear }}:
+        <span class="font-bold" :style="`color: ${color}`">{{ voie.trafic }}</span>
       </div>
       <ProgressBar :voies="[geojson]" />
       <Stats :voies="[geojson]" :precision="1" />
@@ -76,6 +77,7 @@
 </template>
 
 <script setup lang="ts">
+import config from '~/config.json';
 import type { Collections } from '@nuxt/content';
 import GeoJsonToGpx from '@dwayneparton/geojson-to-gpx';
 import MapPlaceholder from '~/components/MapPlaceholder.vue';
@@ -149,7 +151,7 @@ watch(
 const color = getLineColor(Number(props.voie.line));
 const distance = geojson.value ? getTotalDistance([geojson.value]) : 0;
 
-const linkToGeoJSON = `https://github.com/lavilleavelo/cyclopolis/blob/main/content/voies-cyclables/ligne-${props.voie.line}.json`;
+const linkToGeoJSON = `${config.repoUrl}/blob/main/content/voies-cyclables/ligne-${props.voie.line}.json`;
 
 function downloadGpx() {
   if (!geojson.value) {
@@ -157,15 +159,15 @@ function downloadGpx() {
   }
 
   const gpx = GeoJsonToGpx(geojson.value, {
-    creator: 'Cyclopolis - La Ville à Vélo',
+    creator: `${config.siteName} - ${config.assoName}`,
     metadata: {
-      name: `Voie Lyonnaise ${props.voie.line}`,
-      desc: `Tracé de la voie lyonnaise ${props.voie.line} - Source: La Ville à Vélo`,
+      name: `${config.revName.singular} ${props.voie.line}`,
+      desc: `Tracé de la ${config.revName.singular} ${props.voie.line} - Source: ${config.assoName}`,
       author: {
-        name: 'Cyclopolis - La Ville à Vélo',
+        name: `${config.siteName} - ${config.assoName}`,
         link: {
-          href: `https://cyclopolis.fr/voie-lyonnaise-${props.voie.line}`,
-          text: 'Cyclopolis - La Ville à Vélo',
+          href: `${config.baseUrl}/${config.slug}-${props.voie.line}`,
+          text: `${config.siteName} - ${config.assoName}`,
         },
       },
     },

@@ -1,3 +1,4 @@
+import config from '~/config.json';
 import { removeDiacritics } from '~/helpers/helpers';
 import type { CompteurFeature } from '~/types';
 import type { ComparisonPeriod, DisplayMode, SortOption } from '~/components/counter/ListLayout.vue';
@@ -5,13 +6,15 @@ import { useVoiesCyclablesGeojson } from '~/composables/useVoiesCyclables';
 
 function parseLineSearch(text: string): number | 'any' | null {
   const normalized = removeDiacritics(text.trim().toLowerCase());
-  const withNumber = normalized.match(/^(?:vl|voie[- ]?lyonnaise?)\s*(\d+)$/);
+  const withNumber = normalized.match(
+    new RegExp(`^(?:${config.revName.abbreviated.toLowerCase()}|ligne|vl)\\s*(\\d+)$`),
+  );
 
   if (withNumber) {
     return Number(withNumber[1]);
   }
 
-  if (/^(?:vl|voie[- ]?lyonnaise?)$/.test(normalized)) {
+  if (new RegExp(`^(?:${config.revName.abbreviated.toLowerCase()}|ligne|vl)$`).test(normalized)) {
     return 'any';
   }
 

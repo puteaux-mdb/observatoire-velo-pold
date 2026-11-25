@@ -344,7 +344,8 @@ onMounted(() => {
 
   if (options.logo) {
     const logoControl = new LogoControl({
-      src: 'https://cyclopolis.lavilleavelo.org/logo-lvv-carte.png',
+      src: config.mapLogoUrl,
+      href: config.assoLink,
       alt: `logo ${config.assoName}`,
       width: 75,
       height: 75,

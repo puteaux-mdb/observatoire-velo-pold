@@ -234,7 +234,7 @@ const { getLineColor } = useColors();
 const { palette, customColors, reduceMotion, mapStyle } = useSettings();
 
 const PALETTE_OPTIONS: { id: 'default' | 'accessible'; label: string; description: string }[] = [
-  { id: 'default', label: 'Officielle', description: 'Couleurs des Voies Lyonnaises' },
+  { id: 'default', label: 'Officielle', description: `Couleurs des ${config.revName.plural}` },
   { id: 'accessible', label: 'Contraste élevé', description: 'Palette accessible' },
 ];
 

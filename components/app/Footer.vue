@@ -32,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-const { getAssoName, getAssoLink } = useConfig();
+const { config, getAssoName, getAssoLink } = useConfig();
 
 const links = [
   { name: 'Mentions légales', path: '/mentions-legales' },
@@ -42,45 +42,9 @@ const links = [
 ];
 
 const socials = [
-  {
-    name: 'Bluesky',
-    href: 'https://bsky.app/profile/lavilleavelo.bsky.social',
-    icon: 'fa6-brands:bluesky',
-  },
-  {
-    name: 'Mastodon',
-    href: 'https://masto.bike/@lavilleavelo',
-    icon: 'mdi:mastodon',
-  },
-  {
-    name: 'Facebook',
-    href: 'https://www.facebook.com/lavilleavelolyon/',
-    icon: 'mdi:facebook',
-  },
-  {
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/la-ville-%C3%A0-v%C3%A9lo',
-    icon: 'mdi:linkedin',
-  },
-  {
-    name: 'Instagram',
-    href: 'https://www.instagram.com/lavilleavelolyon',
-    icon: 'mdi:instagram',
-  },
-  {
-    name: 'Github',
-    href: 'https://github.com/lavilleavelo/cyclopolis',
-    icon: 'mdi:github',
-  },
-  {
-    name: 'Site web',
-    href: 'https://lavilleavelo.org/',
-    icon: 'mdi:link',
-  },
-  {
-    name: 'Email',
-    href: 'mailto:contact_at_lavilleavelo.org',
-    icon: 'mdi:email-outline',
-  },
-];
+  ...config.socials,
+  ...(config.repoUrl ? [{ name: 'Github', href: config.repoUrl, icon: 'mdi:github' }] : []),
+  ...(config.assoLink ? [{ name: 'Site web', href: config.assoLink, icon: 'mdi:link' }] : []),
+  ...(config.contactEmail ? [{ name: 'Email', href: `mailto:${config.contactEmail}`, icon: 'mdi:email-outline' }] : []),
+] as { name: string; href: string; icon: string }[];
 </script>

@@ -42,7 +42,7 @@
             @click="showVoiesLyonnaises = !showVoiesLyonnaises"
           >
             <Icon name="game-icons:dutch-bike" class="text-base" />
-            Voies Lyonnaises
+            {{ config.revName.plural }}
           </button>
           <button
             type="button"
@@ -245,6 +245,7 @@
 </template>
 
 <script setup lang="ts">
+import config from '~/config.json';
 import MapPlaceholder from '~/components/MapPlaceholder.vue';
 import type { CompteurFeature } from '~/types';
 

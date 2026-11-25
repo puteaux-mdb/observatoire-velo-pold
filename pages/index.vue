@@ -7,9 +7,7 @@
         <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl text-center">
           <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Où en est le projet ?</h2>
           <p class="text-xl text-gray-500">
-            Après une phase d'étude et de concertation en 2022 et 2023, le projet est maintenant en phase de
-            réalisation.<br />
-            Malgré de nombreux reports, les travaux se multiplient entre l'été 2024 et l'été 2026.
+            {{ config.home.progressText }}
           </p>
         </div>
       </div>
@@ -50,8 +48,8 @@
       <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl text-center">
         <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Compteurs de passages</h2>
         <p class="text-xl text-gray-500">
-          Suivez l'évolution de la fréquentation cycliste grâce aux {{ counterCount }} compteurs de l'agglomération
-          lyonnaise.
+          Suivez l'évolution de la fréquentation cycliste grâce aux {{ counterCount }} compteurs du territoire
+          {{ config.territory.name }}.
         </p>
       </div>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
@@ -68,6 +66,7 @@
           </div>
         </NuxtLink>
         <NuxtLink
+          v-if="hasFeature('carCounters')"
           to="/compteurs/comparaison"
           class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 hover:border-lvv-blue-600 hover:shadow-md transition-all group w-full sm:w-auto sm:min-w-[250px]"
         >
@@ -86,10 +85,13 @@
       <div class="relative flex flex-col sm:flex-row justify-between items-center gap-6">
         <div class="max-w-2xl">
           <p class="mt-2 text-lg text-gray-500">
-            Découvrez d'autres observatoires à travers le pays, dont certains sont basés sur
-            <NuxtLink class="text-lvv-blue-600 hover:text-lvv-blue-800 font-medium underline" to="/blog/open-source"
-              >notre travail en Open Source.</NuxtLink
-            >
+            Découvrez d'autres observatoires à travers le pays. Ce site est basé sur
+            <a
+              class="text-lvv-blue-600 hover:text-lvv-blue-800 font-medium underline"
+              href="https://github.com/lavilleavelo/cyclopolis"
+              target="_blank"
+              >Cyclopolis</a
+            >, le logiciel libre développé par l'association lyonnaise La Ville à Vélo.
           </p>
         </div>
         <NuxtLink
@@ -110,7 +112,7 @@
 <script setup lang="ts">
 import type { Collections } from '@nuxt/content';
 
-const { getRevName, displayQuality, displayQualityOnHomePage, displayCounters } = useConfig();
+const { config, getRevName, displayQuality, displayQualityOnHomePage, displayCounters, hasFeature } = useConfig();
 
 const { geojsons } = await useVoiesCyclablesGeojson();
 const voies: Ref<Collections['voiesCyclablesGeojson'][]> = computed(() => geojsons.value || []);

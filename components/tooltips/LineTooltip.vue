@@ -11,7 +11,7 @@
           class="h-8 w-8 rounded-full flex items-center justify-center text-white text-base font-bold"
           :style="`background-color: ${getLineColor(line)}`"
         >
-          <a :href="`/voie-lyonnaise-${line}`">
+          <a :href="`/${config.slug}-${line}`">
             {{ line }}
           </a>
         </div>
@@ -66,6 +66,7 @@
 </template>
 
 <script setup lang="ts">
+import config from '~/config.json';
 import type { LaneQuality, LineStringFeature } from '~/types';
 
 const { getLineColor } = useColors();
@@ -114,7 +115,7 @@ function getStatus(properties: LineStringFeature['properties']): { label: string
     },
     postponed: {
       label: 'reporté',
-      date: 'après 2026',
+      date: `après ${config.horizonYear}`,
       class: 'text-white bg-lvv-pink rounded-xl px-2',
     },
     variante: {
@@ -123,7 +124,7 @@ function getStatus(properties: LineStringFeature['properties']): { label: string
     },
     'variante-postponed': {
       label: 'variante reportée',
-      date: 'après 2026',
+      date: `après ${config.horizonYear}`,
       class: 'text-white bg-lvv-pink rounded-xl px-2',
     },
     unknown: {

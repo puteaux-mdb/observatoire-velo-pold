@@ -1,5 +1,7 @@
 import config from '~/config.json';
 
+export type SiteFeature = keyof typeof config.features;
+
 export const useConfig = () => {
   function getRevName(gram: 'plural' | 'singular' = 'plural'): string {
     return config.revName[gram];
@@ -29,7 +31,13 @@ export const useConfig = () => {
     return config.countersDisplay ?? false;
   }
 
+  /** Active/désactive une rubrique du site (plan officiel, blog, compteurs voiture, actualités) */
+  function hasFeature(feature: SiteFeature): boolean {
+    return Boolean(config.features?.[feature]);
+  }
+
   return {
+    config,
     getRevName,
     getAssoName,
     getAssoLink,
@@ -37,5 +45,6 @@ export const useConfig = () => {
     displayQuality,
     displayQualityOnHomePage,
     displayCounters,
+    hasFeature,
   };
 };

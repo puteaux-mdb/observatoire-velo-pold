@@ -77,13 +77,21 @@
         </h1>
       </div>
       <div class="mt-6 prose prose-lg text-gray-500 mx-auto">
-        <h2>Hébergement</h2>
+        <h2>Éditeur</h2>
         <p>
-          Ce site Web est hébergé par la société OVH (<a href="https://www.ovh.com/fr/">https://www.ovh.com/fr/</a>).
+          Ce site est édité par {{ getAssoName() }} (<a :href="getAssoLink()" target="_blank">{{ getAssoLink() }}</a
+          >).
+          <span v-if="config.contactEmail">
+            Contact : <a :href="`mailto:${config.contactEmail}`">{{ config.contactEmail }}</a></span
+          >
         </p>
+        <h2>Hébergement</h2>
+        <p>Hébergeur à compléter (nom, raison sociale, adresse).</p>
+        <h2>Logiciel</h2>
         <p>
-          OVH SAS<br />SAS au capital de 50 000 000 €<br />RCS Lille Métropole 424 761 419 00045<br />Code APE 2620Z<br />N°
-          TVA : FR 22 424 761&nbsp;419<br />Siège social : 2 rue Kellermann – 59100 Roubaix – France
+          Ce site est basé sur le logiciel libre
+          <a href="https://github.com/lavilleavelo/cyclopolis" target="_blank">Cyclopolis</a>, développé par
+          l'association lyonnaise La Ville à Vélo et publié sous licence MIT.
         </p>
         <h2>Protection des données à caractère personnel</h2>
         <p>Le présent site web respecte les règles suivantes :</p>
@@ -109,9 +117,9 @@
           site et toute information, textes, noms, images, photos, logos, liens, etc. sont fournis « en l’état » et sans
           garantie expresse ou implicite. En particulier, nous ne garantissons pas l'exactitude ou l'état complet des
           informations présentées sur ce site web ni ne garantissons que l'accès à ce site web sera ininterrompue et
-          sans erreur. En aucun cas CYCLOPOLIS ne pourra être tenu responsable pour tout dommage ou perte résultant de
-          l'utilisation de toute information contenue sur le site web, y compris, sans limitation, les dommages
-          indirects ou tout autre dommage suite ou en rapport avec l'utilisation du site web.
+          sans erreur. En aucun cas l'éditeur du site ne pourra être tenu responsable pour tout dommage ou perte
+          résultant de l'utilisation de toute information contenue sur le site web, y compris, sans limitation, les
+          dommages indirects ou tout autre dommage suite ou en rapport avec l'utilisation du site web.
         </p>
       </div>
     </div>
@@ -119,5 +127,5 @@
 </template>
 
 <script setup lang="ts">
-const { getAssoName, getAssoLink } = useConfig();
+const { config, getAssoName, getAssoLink } = useConfig();
 </script>

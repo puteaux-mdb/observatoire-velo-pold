@@ -42,7 +42,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
       },
     },
     {
-      label: 'Prévu pour 2026',
+      label: `Prévu pour ${config.horizonYear}`,
       isEnabled: true,
       statuses: ['planned'],
       customStyle: {
@@ -309,7 +309,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
       if (visibleDateRange.value && (dateRange.value[0] !== minDate.value || dateRange.value[1] !== maxDate.value)) {
         const formatMonthIndex = (monthIndex: number): string => {
           if (monthIndex >= 999999) {
-            return '2026+';
+            return `${config.horizonYear}+`;
           }
 
           const year = Math.floor(monthIndex / 12);

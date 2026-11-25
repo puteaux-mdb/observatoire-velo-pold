@@ -1,5 +1,7 @@
 # Cyclopolis
 
+> **Adaptation pour le territoire Paris Ouest La Défense (POLD).** Voir [DONNEES-POLD.md](DONNEES-POLD.md) pour la configuration et le format des données.
+
 ## Qu'est-ce que Cyclopolis ?
 
 Il s'agit d'une plateforme web permettant la visualisation d'un projet de réseau cyclable structurant.

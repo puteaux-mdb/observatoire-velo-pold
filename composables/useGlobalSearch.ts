@@ -36,7 +36,7 @@ export interface SearchResult {
   status?: string;
 }
 
-const staticPages: SearchResult[] = [
+const allStaticPages: SearchResult[] = [
   {
     type: 'page',
     label: 'Carte interactive',
@@ -45,7 +45,7 @@ const staticPages: SearchResult[] = [
   },
   { type: 'page', label: 'Évolution du réseau', sublabel: "Suivre l'avancement au fil du temps", href: '/evolution' },
   { type: 'page', label: 'Chronologie', sublabel: 'Les tronçons livrés mois par mois', href: '/chronologie' },
-  { type: 'page', label: 'Plan officiel', sublabel: 'Le plan publié par la Métropole', href: '/plan-officiel' },
+  { type: 'page', label: 'Plan officiel', sublabel: 'Le plan officiel du réseau', href: '/plan-officiel' },
   { type: 'page', label: 'Tableau de bord', sublabel: 'Indicateurs globaux du réseau', href: '/tableau-de-bord' },
   { type: 'page', label: 'Compteurs vélo', sublabel: 'Données de fréquentation vélo', href: '/compteurs/velo' },
   {
@@ -64,6 +64,15 @@ const staticPages: SearchResult[] = [
   { type: 'page', label: 'Historique des nouveautés', sublabel: 'Toutes les actualités du site', href: '/historique' },
   { type: 'page', label: 'Sites partenaires', sublabel: 'Les autres observatoires', href: '/sites-partenaires' },
 ];
+
+const staticPages = allStaticPages.filter((page) => {
+  if (page.href === '/plan-officiel') return config.features.officialPlan;
+  if (page.href === '/blog') return config.features.blog;
+  if (page.href === '/compteurs/velo') return config.countersDisplay;
+  if (page.href.startsWith('/compteurs/')) return config.countersDisplay && config.features.carCounters;
+  if (page.href === '/historique') return config.features.news;
+  return true;
+});
 
 export function useGlobalSearch() {
   const results = ref<SearchResult[]>([]);
@@ -123,7 +132,7 @@ export function useGlobalSearch() {
         type: 'voie',
         label: `${config.revName.singular} ${line}`,
         sublabel: voieEndpoints.has(line) ? `${voieEndpoints.get(line)!.from} → ${voieEndpoints.get(line)!.to}` : '',
-        href: `/voie-lyonnaise-${line}`,
+        href: `/${config.slug}-${line}`,
         line,
       });
     }
@@ -177,7 +186,9 @@ export function useGlobalSearch() {
 
   function parseVoieQuery(text: string): number | null {
     const normalized = removeDiacritics(text.trim().toLowerCase());
-    const match = normalized.match(/^(?:vl\s*|voie[- ]?lyonnaise?\s*)?(\d{1,2})$/);
+    const match = normalized.match(
+      new RegExp(`^(?:${config.revName.abbreviated.toLowerCase()}\\s*|ligne\\s*|vl\\s*)?(\\d{1,2})$`),
+    );
     if (match) {
       const num = Number(match[1]);
       if (num >= 1 && num <= 20) return num;

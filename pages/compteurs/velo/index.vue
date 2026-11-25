@@ -14,31 +14,23 @@
     :available-years="availableYears"
     :counters="counters"
     :filtered-features="filteredFeatures"
-    search-placeholder="Chercher un compteur, une ville, une VL..."
-    empty-search-hint="Essayez un nom de rue (ex: Lafayette), une ville (ex: Villeurbanne) ou une voie lyonnaise (ex: VL 3)"
+    search-placeholder="Chercher un compteur, une ville, une ligne..."
+    empty-search-hint="Essayez un nom de rue, une ville (ex: Puteaux) ou une ligne (ex: L 1)"
   >
     <template #header>
       <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-        Suivi des compteurs vélo de l'agglomération lyonnaise
+        Suivi des compteurs vélo {{ config.territory.adjective }}
       </h2>
       <p class="mt-4 text-xl text-gray-500 leading-8">
-        Chaque début de mois, nous remontons les données de {{ stableCounters.length }} compteurs à vélo de
-        l'agglomération lyonnaise.
+        Nous suivons les données de {{ stableCounters.length }} compteurs à vélo du territoire
+        {{ config.territory.name }}.
       </p>
-      <span class="text-sm text-gray-400"
-        >Données&nbsp;:&nbsp;<a
-          class="hover:underline"
-          href="https://data.eco-counter.com/ParcPublic/?id=3902#"
-          target="_blank"
-          >data.eco-counter.com</a
-        >
-        et
-        <a
-          class="hover:underline"
-          href="https://data.grandlyon.com/portail/fr/jeux-de-donnees/mesures-comptage-metropole-lyon/info"
-          target="_blank"
-          >data.grandlyon.com</a
-        ></span
+      <span v-if="config.counterSources?.length" class="text-sm text-gray-400"
+        >Données&nbsp;:
+        <template v-for="(source, i) in config.counterSources" :key="source.link">
+          <span v-if="i > 0">, </span>
+          <a class="hover:underline" :href="source.link" target="_blank">{{ source.label }}</a>
+        </template></span
       >
     </template>
     <template #overview>
@@ -139,9 +131,10 @@ const { searchText, showVoiesLyonnaises, highlightedCounter, filteredFeatures } 
   showMap,
 });
 
-const PAGE_TITLE = "Compteurs vélo de l'agglomération lyonnaise | Cyclopolis";
+const { config } = useConfig();
+const PAGE_TITLE = `Compteurs vélo ${config.territory.adjective} | ${config.siteName}`;
 const DESCRIPTION =
-  'Carte interactive et classement des compteurs vélo de la métropole de Lyon. ' +
+  `Carte interactive et classement des compteurs vélo ${config.territory.adjective}. ` +
   'Suivez la fréquentation cycliste mois par mois, comparez les années et explorez ' +
   "l'évolution du trafic.";
 

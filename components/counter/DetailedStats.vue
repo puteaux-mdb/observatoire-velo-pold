@@ -9,8 +9,8 @@
     <p>
       Fréquentation moyenne selon le type de jour, et répartition des {{ unit }} au fil de la journée, sur la période
       choisie ci-dessous (par défaut les douze derniers mois), hors jours de panne du compteur. Les jours ouvrés sont
-      séparés entre période scolaire et vacances scolaires (académie de Lyon). La moyenne par jour de la semaine exclut
-      les vacances scolaires et les jours fériés.
+      séparés entre période scolaire et vacances scolaires (zone de l'académie). La moyenne par jour de la semaine
+      exclut les vacances scolaires et les jours fériés.
     </p>
 
     <CounterPeriodSelect

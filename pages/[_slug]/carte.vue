@@ -18,6 +18,7 @@
 </template>
 
 <script setup lang="ts">
+import config from '~/config.json';
 import type { Collections } from '@nuxt/content';
 import { useBikeLaneFilters } from '~/composables/useBikeLaneFilters';
 import MapPlaceholder from '~/components/MapPlaceholder.vue';
@@ -61,7 +62,7 @@ const { filters, actions, filteredFeatures, totalDistance, filteredDistance } = 
   allFeatures: features,
 });
 
-const description = `Carte de la ${getRevName('singular')} ${line}. Découvrez les tronçons prévus, déjà réalisés, en travaux et ceux reportés après 2026.`;
+const description = `Carte de la ${getRevName('singular')} ${line}. Découvrez les tronçons prévus, déjà réalisés, en travaux et ceux reportés après ${config.horizonYear}.`;
 useHead({
   title: `Carte de la ${getRevName('singular')} ${line}`,
   meta: [

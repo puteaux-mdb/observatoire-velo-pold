@@ -24,7 +24,7 @@
               </span>
             </div>
             <div v-if="getTrafic(voie)" class="text-center text-sm text-gray-900">
-              Fréquentation max 2030:
+              Fréquentation max {{ config.trafficYear }}:
               <span class="font-bold" :style="`color: ${getLineColor(getLine(voie))}`">
                 {{ getTrafic(voie) }}
               </span>

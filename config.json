@@ -1,19 +1,73 @@
 {
   "revName": {
-    "plural": "Voies Lyonnaises",
-    "singular": "Voie Lyonnaise",
-    "abbreviated": "VL"
+    "plural": "Lignes vélo POLD",
+    "singular": "Ligne vélo POLD",
+    "abbreviated": "L"
   },
-  "assoName": "La Ville à Vélo",
-  "assoLink": "https://lavilleavelo.org",
-  "slug": "voie-lyonnaise",
-  "center": [4.878973368615107, 45.746703113094895],
+  "siteName": "Observatoire vélo POLD",
+  "territory": {
+    "name": "Paris Ouest La Défense",
+    "short": "POLD",
+    "adjective": "de Paris Ouest La Défense",
+    "communes": [
+      "Courbevoie",
+      "Garches",
+      "La Garenne-Colombes",
+      "Levallois-Perret",
+      "Nanterre",
+      "Neuilly-sur-Seine",
+      "Puteaux",
+      "Rueil-Malmaison",
+      "Saint-Cloud",
+      "Suresnes",
+      "Vaucresson"
+    ]
+  },
+  "assoName": "Association à compléter",
+  "assoLink": "https://example.org",
+  "assoLogoUrl": "",
+  "siteLogoUrl": "/logo-observatoire-pold.svg",
+  "mapLogoUrl": "/logo-observatoire-pold-carte.svg",
+  "membershipLink": "",
+  "donationLink": "",
+  "contactEmail": "",
+  "baseUrl": "https://example.org",
+  "coverImageUrl": "",
+  "repoUrl": "https://github.com/lavilleavelo/cyclopolis",
+  "socials": [],
+  "barometre": {
+    "label": "Baromètre FUB POLD",
+    "link": "https://www.barometre-velo.fr/2025/carte/#12.5/48.8835/2.2257"
+  },
+  "home": {
+    "heroImage": "",
+    "heroText": "pour suivre le développement du réseau cyclable du territoire Paris Ouest La Défense (11 communes des Hauts-de-Seine).",
+    "whatIsText": "C'est le nom donné ici au réseau cyclable structurant prévu sur les 11 communes du territoire Paris Ouest La Défense : Courbevoie, Garches, La Garenne-Colombes, Levallois-Perret, Nanterre, Neuilly-sur-Seine, Puteaux, Rueil-Malmaison, Saint-Cloud, Suresnes et Vaucresson. Il réunit les itinéraires portés par le Département des Hauts-de-Seine, les communes, la Métropole du Grand Paris et la Région (réseau VIF).",
+    "progressText": "Texte à compléter : état d'avancement global du réseau cyclable du territoire.",
+    "stats": [
+      {
+        "label": "Communes",
+        "value": "11"
+      },
+      {
+        "label": "Distance",
+        "value": "à compléter"
+      },
+      {
+        "label": "Budget",
+        "value": "à compléter"
+      }
+    ]
+  },
+  "ctaText": "Soutenez la promotion et l'usage du vélo sur le territoire Paris Ouest La Défense, ainsi que le développement d'infrastructures cyclables continues et sécurisées en adhérant à l'association.",
+  "slug": "ligne-velo",
+  "center": [2.2275, 48.8775],
   "bounds": [
-    [4.2, 45.4],
-    [5.5, 46.1]
+    [1.95, 48.75],
+    [2.5, 49.0]
   ],
-  "zoom": 10.331154971672706,
-  "nbVoiesCyclables": 12,
+  "zoom": 12.2,
+  "nbVoiesCyclables": 2,
   "colors": [
     {
       "line": 1,
@@ -65,100 +119,121 @@
     }
   ],
   "accessibleColors": [
-    { "line": 1, "color": "#000000" },
-    { "line": 2, "color": "#D32F2F" },
-    { "line": 3, "color": "#388E3C" },
-    { "line": 4, "color": "#F57C00" },
-    { "line": 5, "color": "#7B1FA2" },
-    { "line": 6, "color": "#1976D2" },
-    { "line": 7, "color": "#AAAAAA" },
-    { "line": 8, "color": "#8f9628" },
-    { "line": 9, "color": "#FBC02D" },
-    { "line": 10, "color": "#5D4037" },
-    { "line": 11, "color": "#00BCD4" },
-    { "line": 12, "color": "#E91E63" }
+    {
+      "line": 1,
+      "color": "#000000"
+    },
+    {
+      "line": 2,
+      "color": "#D32F2F"
+    },
+    {
+      "line": 3,
+      "color": "#388E3C"
+    },
+    {
+      "line": 4,
+      "color": "#F57C00"
+    },
+    {
+      "line": 5,
+      "color": "#7B1FA2"
+    },
+    {
+      "line": 6,
+      "color": "#1976D2"
+    },
+    {
+      "line": 7,
+      "color": "#AAAAAA"
+    },
+    {
+      "line": 8,
+      "color": "#8f9628"
+    },
+    {
+      "line": 9,
+      "color": "#FBC02D"
+    },
+    {
+      "line": 10,
+      "color": "#5D4037"
+    },
+    {
+      "line": 11,
+      "color": "#00BCD4"
+    },
+    {
+      "line": 12,
+      "color": "#E91E63"
+    }
   ],
   "transports": [
     {
-      "type": "métro",
+      "type": "rer",
       "line": "A",
-      "color": "#EF3899",
-      "link": "https://www.tcl.fr/lignes/metro-a"
+      "color": "#E3051C",
+      "link": "https://www.iledefrance-mobilites.fr/"
+    },
+    {
+      "type": "rer",
+      "line": "E",
+      "color": "#BD76A1",
+      "link": "https://www.iledefrance-mobilites.fr/"
     },
     {
       "type": "métro",
-      "line": "B",
-      "color": "#007CC5",
-      "link": "https://www.tcl.fr/lignes/metro-b"
+      "line": "1",
+      "color": "#FFCD00",
+      "link": "https://www.ratp.fr/plans-lignes/metro/1"
     },
     {
       "type": "métro",
-      "line": "C",
-      "color": "#F99D1C",
-      "link": "https://www.tcl.fr/lignes/metro-c"
+      "line": "3",
+      "color": "#9F9825",
+      "link": "https://www.ratp.fr/plans-lignes/metro/3"
     },
     {
       "type": "métro",
-      "line": "D",
-      "color": "#01AD4C",
-      "link": "https://www.tcl.fr/lignes/metro-d"
+      "line": "15",
+      "color": "#B90845",
+      "link": "https://www.societedugrandparis.fr/"
     },
     {
       "type": "tram",
       "line": "1",
-      "color": "#873E99",
-      "link": "https://www.tcl.fr/lignes/tramway-t1"
+      "color": "#003CA6",
+      "link": "https://www.ratp.fr/plans-lignes/tramway/t1"
     },
     {
       "type": "tram",
       "line": "2",
-      "color": "#873E99",
-      "link": "https://www.tcl.fr/lignes/tramway-t2"
+      "color": "#CF009E",
+      "link": "https://www.ratp.fr/plans-lignes/tramway/t2"
     },
     {
-      "type": "tram",
-      "line": "3",
-      "color": "#873E99",
-      "link": "https://www.tcl.fr/lignes/tramway-t3"
+      "type": "transilien",
+      "line": "L",
+      "color": "#C4A4CC",
+      "link": "https://www.transilien.com/"
     },
     {
-      "type": "tram",
-      "line": "4",
-      "color": "#873E99",
-      "link": "https://www.tcl.fr/lignes/tramway-t4"
-    },
-    {
-      "type": "tram",
-      "line": "5",
-      "color": "#873E99",
-      "link": "https://www.tcl.fr/lignes/tramway-t5"
-    },
-    {
-      "type": "tram",
-      "line": "6",
-      "color": "#873E99",
-      "link": "https://www.tcl.fr/lignes/tramway-t6"
-    },
-    {
-      "type": "tram",
-      "line": "7",
-      "color": "#873E99",
-      "link": "https://www.tcl.fr/lignes/tramway-t7"
-    },
-    {
-      "type": "tram",
-      "line": "9",
-      "color": "#873E99",
-      "link": "https://destinations2026-sytral.fr/processes/t9"
-    },
-    {
-      "type": "tram",
-      "line": "10",
-      "color": "#873E99",
-      "link": "https://destinations2026-sytral.fr/processes/t10"
+      "type": "transilien",
+      "line": "U",
+      "color": "#D60058",
+      "link": "https://www.transilien.com/"
     }
   ],
+  "features": {
+    "officialPlan": false,
+    "blog": false,
+    "carCounters": false,
+    "news": true
+  },
   "qualityDisplay": true,
   "qualityDisplayOnHomePage": false,
-  "countersDisplay": true
+  "countersDisplay": false,
+  "counterSources": [],
+  "horizonYear": 2026,
+  "trafficYear": 2030
 }

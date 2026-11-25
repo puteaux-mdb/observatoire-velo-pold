@@ -25,7 +25,7 @@ const features: Ref<Collections['voiesCyclablesGeojson']['features']> = computed
 });
 
 const description = `Découvrez la carte interactive des ${getRevName()}. Itinéraires rue par rue. Plan régulièrement mis à jour pour une information complète.`;
-const COVER_IMAGE_URL = 'https://cyclopolis.lavilleavelo.org/cyclopolis.png';
+const COVER_IMAGE_URL = useConfig().config.coverImageUrl;
 useHead({
   title: `Carte à jour des ${getRevName()}`,
   link: MAP_PRECONNECT_LINKS,

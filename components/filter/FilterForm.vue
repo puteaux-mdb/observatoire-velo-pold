@@ -31,7 +31,7 @@
 
     <FilterSection
       v-if="options.showLineFilters"
-      title="Filtrer par voie lyonnaise"
+      title="Filtrer par ligne"
       :filters="filters.lineFilters.value"
       :show-selection-buttons="true"
       @toggle-filter="actions.toggleLineFilter"
@@ -71,6 +71,7 @@
 </template>
 
 <script setup lang="ts">
+import config from '~/config.json';
 import FilterSection from '~/components/filter/FilterSection.vue';
 import DoubleRangeSlider from '~/components/DoubleRangeSlider.vue';
 import dayjs from 'dayjs';
@@ -90,12 +91,12 @@ const options = { ...defaultOptions, ...props };
 
 function formatMonthYear(stepIndex: number) {
   if (stepIndex >= props.filters.dateSteps.value.length || stepIndex < 0) {
-    return '2026+';
+    return `${config.horizonYear}+`;
   }
 
   const monthIndex = props.filters.dateSteps.value[stepIndex];
   if (monthIndex === undefined || monthIndex >= 999999) {
-    return '2026+';
+    return `${config.horizonYear}+`;
   }
 
   const year = Math.floor(monthIndex / 12);

@@ -1,3 +1,4 @@
+import config from '~/config.json';
 import type { Collections } from '@nuxt/content';
 import { isLineStringFeature } from '~/types';
 
@@ -46,7 +47,7 @@ export function useTimeline(geojsons: Ref<Collections['voiesCyclablesGeojson'][]
             existing.lines.sort((a, b) => a - b);
             existing.pageLinks.push({
               line,
-              href: feature.properties.link || `/voie-lyonnaise-${line}`,
+              href: feature.properties.link || `/${config.slug}-${line}`,
             });
             existing.pageLinks.sort((a, b) => a.line - b.line);
           }
@@ -62,7 +63,7 @@ export function useTimeline(geojsons: Ref<Collections['voiesCyclablesGeojson'][]
             quality: feature.properties.quality,
             distance: getLineStringDistance(feature),
             mapLink: `/carte-interactive?modal=details&line=${line}&sectionName=${encodeURIComponent(name)}&fromSearch=1`,
-            pageLinks: [{ line, href: feature.properties.link || `/voie-lyonnaise-${line}` }],
+            pageLinks: [{ line, href: feature.properties.link || `/${config.slug}-${line}` }],
             features: [feature],
           });
         }

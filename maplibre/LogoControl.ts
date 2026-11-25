@@ -5,8 +5,22 @@ export default class LogoControl {
   _alt: string;
   _width: number;
   _height: number;
+  _href?: string;
 
-  constructor({ src, alt, width, height }: { src: string; alt: string; width: number; height: number }) {
+  constructor({
+    src,
+    alt,
+    width,
+    height,
+    href,
+  }: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    href?: string;
+  }) {
+    this._href = href;
     this._src = src;
     this._alt = alt;
     this._width = width;
@@ -29,7 +43,7 @@ export default class LogoControl {
     // on click, go to the logo's website in a new tab
     this._image.style.cursor = 'pointer';
     this._image.onclick = () => {
-      window.open('https://lavilleavelo.org/', '_blank');
+      if (this._href) window.open(this._href, '_blank');
     };
 
     this._container.appendChild(this._image);

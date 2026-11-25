@@ -165,15 +165,12 @@
               <header class="print-title" :class="{ 'print-title--compact': !title && !subtitle }">
                 <div class="print-title__logos">
                   <img
-                    src="https://cyclopolis.lavilleavelo.org/logo-la-ville-a-velo.png"
+                    v-if="config.assoLogoUrl"
+                    :src="config.assoLogoUrl"
                     :alt="`logo ${getAssoName()}`"
                     style="height: 11mm"
                   />
-                  <img
-                    src="https://cyclopolis.lavilleavelo.org/logo-cyclopolis-header.png"
-                    alt="logo cyclopolis"
-                    style="height: 13mm"
-                  />
+                  <img :src="config.siteLogoUrl" :alt="`logo ${config.siteName}`" style="height: 13mm" />
                 </div>
                 <div v-if="title" class="print-title__main">{{ title }}</div>
                 <p v-if="subtitle" class="print-title__message">
@@ -271,15 +268,14 @@ const ORIENTATIONS: { id: PaperOrientation; label: string }[] = [
 const SCALE_BAR_MAX_WIDTH_MM = 60;
 const PREVIEW_PADDING_PX = 48;
 const MIN_DPI_RATIO = 0.95;
-const ATTRIBUTION =
-  '© DINUM (data.gouv.fr) © OpenMapTiles © Contributeurs OpenStreetMap · Métro : TCL (SYTRAL), data.grandlyon.com';
+const ATTRIBUTION = '© DINUM (data.gouv.fr) © OpenMapTiles © Contributeurs OpenStreetMap';
 
 definePageMeta({
   pageTransition: false,
   layout: false,
 });
 
-const { getRevName, getAssoName } = useConfig();
+const { config, getRevName, getAssoName } = useConfig();
 
 const isSmallScreen = useMediaQuery('(max-width: 767px)');
 

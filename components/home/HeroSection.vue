@@ -48,7 +48,7 @@
                 class="text-lvv-blue-600 font-medium hover:underline"
                 ><strong>{{ assoName }}</strong></a
               >
-              pour suivre le développement du nouveau réseau vélo sécurisé Lyonnais.
+              {{ config.home.heroText }}
             </p>
             <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
               <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
@@ -68,10 +68,10 @@
                   </NuxtLink>
                 </ClientOnly>
                 <NuxtLink
-                  to="/plan-officiel"
+                  :to="hasFeature('officialPlan') ? '/plan-officiel' : '/tableau-de-bord'"
                   class="flex items-center justify-center px-4 py-3 text-base font-medium rounded-md shadow-sm text-lvv-blue-600 border border-lvv-blue-600 hover:shadow-lg sm:px-8 transition duration-300 transform hover:scale-105"
                 >
-                  Plan officiel
+                  {{ hasFeature('officialPlan') ? 'Plan officiel' : 'Tableau de bord' }}
                 </NuxtLink>
               </div>
             </div>
@@ -81,7 +81,11 @@
           >
             <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
               <div class="relative block w-full bg-white rounded-lg overflow-hidden">
-                <img class="w-full" src="~/assets/hero.jpeg" :alt="`illustration des ${getRevName()}`" />
+                <img
+                  class="w-full"
+                  :src="config.home.heroImage || heroFallback"
+                  :alt="`illustration des ${getRevName()}`"
+                />
               </div>
             </div>
           </div>
@@ -93,8 +97,9 @@
 
 <script setup lang="ts">
 import { useMediaQuery } from '@vueuse/core';
+import heroFallback from '~/assets/hero-pold.svg';
 
-const { getRevName, getAssoName, getAssoLink } = useConfig();
+const { config, getRevName, getAssoName, getAssoLink, hasFeature } = useConfig();
 const assoName = getAssoName();
 
 const isLargeScreen = useMediaQuery('(min-width: 1024px)');
