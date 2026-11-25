@@ -75,6 +75,7 @@ import '~/assets/geocoder-style.css';
 
 setWorkerUrl(workerUrl);
 
+const assetUrl = useAssetUrl();
 const { displayDistanceInKm, displayPercent } = useStats();
 
 const MAP_BOUNDS = config.bounds as [[number, number], [number, number]];
@@ -344,7 +345,7 @@ onMounted(() => {
 
   if (options.logo) {
     const logoControl = new LogoControl({
-      src: config.mapLogoUrl,
+      src: assetUrl(config.mapLogoUrl),
       href: config.assoLink,
       alt: `logo ${config.assoName}`,
       width: 75,

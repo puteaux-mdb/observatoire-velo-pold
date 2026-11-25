@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'fr' },
       title: TITLE,
+      link: [{ rel: 'icon', href: `${process.env.NUXT_APP_BASE_URL ?? '/'}favicon.ico` }],
       meta: [
         { hid: 'description', name: 'description', content: DESCRIPTION },
         // facebook

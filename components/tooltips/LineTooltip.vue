@@ -11,7 +11,7 @@
           class="h-8 w-8 rounded-full flex items-center justify-center text-white text-base font-bold"
           :style="`background-color: ${getLineColor(line)}`"
         >
-          <a :href="`/${config.slug}-${line}`">
+          <a :href="assetUrl(`/${config.slug}-${line}`)">
             {{ line }}
           </a>
         </div>
@@ -70,6 +70,7 @@ import config from '~/config.json';
 import type { LaneQuality, LineStringFeature } from '~/types';
 
 const { getLineColor } = useColors();
+const assetUrl = useAssetUrl();
 const { getRevName, displayQuality } = useConfig();
 const { getDistance, typologyNames, qualityNames } = useStats();
 const { getSectionDetailsUrl } = useUrl();

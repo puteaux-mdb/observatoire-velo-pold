@@ -5,19 +5,19 @@ Les lignes 1 et 2 actuellement en ligne sont des **exemples fictifs** : elles se
 
 ## 1. Réglages généraux — `config.json`
 
-| Clé | Rôle | À compléter |
-| --- | --- | --- |
-| `revName` | Nom du réseau (pluriel, singulier, abréviation) | Nom définitif du réseau (ex. « Lignes vélo POLD ») |
-| `slug` | Préfixe des URL des lignes (`/ligne-velo-1`) | |
-| `assoName`, `assoLink`, `assoLogoUrl` | Association éditrice | ✅ |
-| `membershipLink`, `donationLink`, `contactEmail`, `socials` | Boutons « Adhérer / Donner », contact, réseaux sociaux | ✅ |
-| `baseUrl`, `coverImageUrl` | Adresse du site, image de partage | ✅ |
-| `home.*` | Textes et chiffres de la page d'accueil (distance, budget…) | ✅ |
-| `home.heroImage` | Image d'accueil (sinon illustration schématique) | facultatif |
-| `nbVoiesCyclables`, `colors` | Nombre de lignes et couleur de chacune | ✅ |
-| `horizonYear`, `trafficYear` | Échéance du plan (« prévu pour 2026 ») et année de fréquentation | ✅ |
-| `features` | Afficher ou masquer : plan officiel, blog, compteurs voiture, actualités | |
-| `countersDisplay`, `counterSources` | Rubrique compteurs vélo et sources affichées | |
+| Clé                                                         | Rôle                                                                     | À compléter                                        |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------- |
+| `revName`                                                   | Nom du réseau (pluriel, singulier, abréviation)                          | Nom définitif du réseau (ex. « Lignes vélo POLD ») |
+| `slug`                                                      | Préfixe des URL des lignes (`/ligne-velo-1`)                             |                                                    |
+| `assoName`, `assoLink`, `assoLogoUrl`                       | Association éditrice                                                     | ✅                                                 |
+| `membershipLink`, `donationLink`, `contactEmail`, `socials` | Boutons « Adhérer / Donner », contact, réseaux sociaux                   | ✅                                                 |
+| `baseUrl`, `coverImageUrl`                                  | Adresse du site, image de partage                                        | ✅                                                 |
+| `home.*`                                                    | Textes et chiffres de la page d'accueil (distance, budget…)              | ✅                                                 |
+| `home.heroImage`                                            | Image d'accueil (sinon illustration schématique)                         | facultatif                                         |
+| `nbVoiesCyclables`, `colors`                                | Nombre de lignes et couleur de chacune                                   | ✅                                                 |
+| `horizonYear`, `trafficYear`                                | Échéance du plan (« prévu pour 2026 ») et année de fréquentation         | ✅                                                 |
+| `features`                                                  | Afficher ou masquer : plan officiel, blog, compteurs voiture, actualités |                                                    |
+| `countersDisplay`, `counterSources`                         | Rubrique compteurs vélo et sources affichées                             |                                                    |
 
 ## 2. Une ligne = deux fichiers dans `content/voies-cyclables/`
 
@@ -38,7 +38,13 @@ Chaque tronçon est une `Feature` `LineString` :
     "link": "/ligne-velo-1#quai-de-dion-bouton",
     "id": "tronc-commun-quais"
   },
-  "geometry": { "type": "LineString", "coordinates": [[2.24, 48.88], [2.25, 48.89]] }
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [2.24, 48.88],
+      [2.25, 48.89]
+    ]
+  }
 }
 ```
 
@@ -49,6 +55,7 @@ Chaque tronçon est une `Feature` `LineString` :
 - `id` (facultatif) : même identifiant pour un tronçon partagé par plusieurs lignes
 
 Points facultatifs dans le même fichier :
+
 - `perspective` (photo / image de projet) : `{"type": "perspective", "line": 1, "name": "…", "imgUrl": "https://…"}`
 - `danger` (point noir) : `{"type": "danger", "name": "…", "description": "…", "danger": "…"}`
 

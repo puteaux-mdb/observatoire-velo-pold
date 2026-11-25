@@ -60,6 +60,7 @@ export const useMap = ({
   updateUrlOnFeatureClick,
   print = false,
 }: { updateUrlOnFeatureClick?: boolean; print?: boolean } = {}) => {
+  const assetUrl = useAssetUrl();
   const iconPixelRatio = print ? PRINT_ICON_PIXEL_RATIO : 1;
   const crossIconSize = print ? printConfig.crossIconSize : 1.2;
   const crossLineWidth = print ? printConfig.crossLineWidth : undefined;
@@ -123,9 +124,9 @@ export const useMap = ({
     force?: boolean;
   }) {
     const imagesToLoad = [
-      { id: 'camera-icon', url: '/icons/camera.png', sdf: true },
-      { id: 'pump-icon', url: '/icons/pump.png', sdf: true },
-      { id: 'danger-icon', url: '/icons/danger.png', sdf: false },
+      { id: 'camera-icon', url: assetUrl('/icons/camera.png'), sdf: true },
+      { id: 'pump-icon', url: assetUrl('/icons/pump.png'), sdf: true },
+      { id: 'danger-icon', url: assetUrl('/icons/danger.png'), sdf: false },
       { id: 'cross-icon', url: getCrossIconUrl(iconPixelRatio, crossLineWidth), sdf: true, pixelRatio: iconPixelRatio },
     ];
 

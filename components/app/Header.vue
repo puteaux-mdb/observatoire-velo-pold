@@ -8,10 +8,10 @@
             <img
               v-if="config.assoLogoUrl"
               class="h-7 w-auto sm:h-8"
-              :src="config.assoLogoUrl"
+              :src="assetUrl(config.assoLogoUrl)"
               :alt="`logo ${getAssoName()}`"
             />
-            <img class="h-8 w-auto sm:h-10" :src="config.siteLogoUrl" :alt="`logo ${config.siteName}`" />
+            <img class="h-8 w-auto sm:h-10" :src="assetUrl(config.siteLogoUrl)" :alt="`logo ${config.siteName}`" />
           </NuxtLink>
         </div>
         <div class="-mr-2 -my-2 md:hidden flex items-center gap-1">
@@ -270,7 +270,7 @@
               <NuxtLink to="/" @click="close()">
                 <img
                   class="h-8 w-auto"
-                  :src="config.assoLogoUrl || config.siteLogoUrl"
+                  :src="assetUrl(config.assoLogoUrl || config.siteLogoUrl)"
                   :alt="`logo ${getAssoName()}`"
                 />
               </NuxtLink>
@@ -384,6 +384,7 @@ import type GlobalSearch from '~/components/GlobalSearch.vue';
 const { getLineColor } = useColors();
 const { getVoieCyclablePath } = useUrl();
 const { config, getAssoName, hasFeature, displayCounters } = useConfig();
+const assetUrl = useAssetUrl();
 const barometreVeloLink = config.barometre.link;
 
 const isLargeScreen = useMediaQuery('(min-width: 1024px)');

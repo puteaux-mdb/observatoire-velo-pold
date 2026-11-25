@@ -166,11 +166,11 @@
                 <div class="print-title__logos">
                   <img
                     v-if="config.assoLogoUrl"
-                    :src="config.assoLogoUrl"
+                    :src="assetUrl(config.assoLogoUrl)"
                     :alt="`logo ${getAssoName()}`"
                     style="height: 11mm"
                   />
-                  <img :src="config.siteLogoUrl" :alt="`logo ${config.siteName}`" style="height: 13mm" />
+                  <img :src="assetUrl(config.siteLogoUrl)" :alt="`logo ${config.siteName}`" style="height: 13mm" />
                 </div>
                 <div v-if="title" class="print-title__main">{{ title }}</div>
                 <p v-if="subtitle" class="print-title__message">
@@ -276,6 +276,7 @@ definePageMeta({
 });
 
 const { config, getRevName, getAssoName } = useConfig();
+const assetUrl = useAssetUrl();
 
 const isSmallScreen = useMediaQuery('(max-width: 767px)');
 
