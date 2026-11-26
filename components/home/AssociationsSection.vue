@@ -22,9 +22,9 @@
               :src="assetUrl(asso.logo)"
               :alt="`logo ${asso.name}`"
               class="max-h-32 max-w-32 object-contain"
-              :class="{ 'opacity-50': 'enChantier' in asso && asso.enChantier }"
+              :class="{ 'opacity-50': 'enCreation' in asso && asso.enCreation }"
             />
-            <template v-if="'enChantier' in asso && asso.enChantier">
+            <template v-if="'enCreation' in asso && asso.enCreation">
               <img
                 :src="assetUrl('/associations/plots-chantier.png')"
                 alt=""
@@ -33,7 +33,7 @@
               <span
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-12 rounded bg-yellow-400 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-gray-900 shadow"
               >
-                En chantier
+                En création
               </span>
             </template>
           </component>

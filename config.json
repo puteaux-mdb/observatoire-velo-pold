@@ -57,10 +57,19 @@
   },
   "ctaText": "Soutenez la promotion et l'usage du vélo sur le territoire Paris Ouest La Défense, ainsi que le développement d'infrastructures cyclables continues et sécurisées, en rejoignant l'une des associations du collectif.",
   "slug": "ligne-velo",
-  "center": [2.2275, 48.8775],
+  "center": [
+    2.2275,
+    48.8775
+  ],
   "bounds": [
-    [1.95, 48.75],
-    [2.5, 49.0]
+    [
+      1.95,
+      48.75
+    ],
+    [
+      2.5,
+      49.0
+    ]
   ],
   "zoom": 12.2,
   "colors": [
@@ -320,70 +329,102 @@
   "associations": [
     {
       "name": "Collectif Vélo Nanterre",
-      "communes": ["Nanterre"],
+      "communes": [
+        "Nanterre"
+      ],
       "logo": "/associations/collectif-velo-nanterre.png",
       "link": ""
     },
     {
       "name": "La Rustine de Nanterre",
-      "communes": ["Nanterre"],
+      "communes": [
+        "Nanterre"
+      ],
       "logo": "/associations/la-rustine-de-nanterre.png",
       "link": ""
     },
     {
       "name": "Rueil à Vélo",
-      "communes": ["Rueil-Malmaison"],
+      "communes": [
+        "Rueil-Malmaison"
+      ],
       "logo": "/associations/rueil-a-velo.png",
       "link": ""
     },
     {
       "name": "MDB Saint-Cloud – Garches",
-      "communes": ["Saint-Cloud", "Garches"],
+      "communes": [
+        "Saint-Cloud",
+        "Garches"
+      ],
       "logo": "/associations/mdb-saint-cloud-garches.png",
       "link": ""
     },
     {
       "name": "Cyclonade – Suresnes à vélo",
-      "communes": ["Suresnes"],
+      "communes": [
+        "Suresnes"
+      ],
       "logo": "/associations/cyclonade-suresnes.png",
       "link": ""
     },
     {
       "name": "MDB Puteaux",
-      "communes": ["Puteaux"],
+      "communes": [
+        "Puteaux"
+      ],
       "logo": "/associations/mdb-puteaux.png",
       "link": ""
     },
     {
       "name": "MDB Courbevoie",
-      "communes": ["Courbevoie"],
+      "communes": [
+        "Courbevoie"
+      ],
       "logo": "/associations/mdb-courbevoie.png",
       "link": ""
     },
     {
       "name": "MDB La Garenne-Colombes",
-      "communes": ["La Garenne-Colombes"],
-      "logo": "/associations/mdb-la-garenne-colombes.png",
+      "communes": [
+        "La Garenne-Colombes"
+      ],
+      "logo": "/associations/mdb.png",
       "link": "",
-      "enChantier": true
+      "enCreation": true
     },
     {
       "name": "MDB Neuilly à Vélo",
-      "communes": ["Neuilly-sur-Seine"],
+      "communes": [
+        "Neuilly-sur-Seine"
+      ],
       "logo": "/associations/mdb-neuilly-a-velo.png",
       "link": ""
     },
     {
       "name": "MDB Vélo à Levallois",
-      "communes": ["Levallois-Perret"],
+      "communes": [
+        "Levallois-Perret"
+      ],
       "logo": "/associations/mdb-velo-a-levallois.png",
       "link": ""
     },
     {
       "name": "Paris en Selle Levallois",
-      "communes": ["Levallois-Perret"],
+      "communes": [
+        "Levallois-Perret"
+      ],
       "logo": "/associations/paris-en-selle-levallois.png",
       "link": ""
+    },
+    {
+      "name": "MDB Vaucresson",
+      "communes": [
+        "Vaucresson"
+      ],
+      "logo": "/associations/mdb.png",
+      "link": "",
+      "enCreation": true
     }
   ]
 }
