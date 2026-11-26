@@ -1,9 +1,9 @@
 ---
 name: Ligne V20
 line: 20
-from: Saint-Cloud
-to: Levallois-Perret
-description: "Partie de la ligne V20 du réseau Vélo Île-de-France (VIF) sur le territoire Paris Ouest La Défense, le long de la Seine, de Saint-Cloud à Levallois-Perret, via Suresnes, Puteaux, Courbevoie et Neuilly-sur-Seine. Environ 10.9 km sur le territoire."
+from: Grande ceinture
+to: ""
+description: "Ligne V20 du réseau Vélo Île-de-France (VIF), la Grande ceinture : une boucle autour de Paris qui passe, dans le sens des aiguilles d'une montre depuis le territoire, par Saint-Cloud, Suresnes, Puteaux, Courbevoie, Neuilly-sur-Seine, Levallois-Perret, Clichy, Saint-Ouen, Saint-Denis, Aubervilliers, La Courneuve, Drancy, Bobigny, Noisy-le-Sec, Rosny-sous-Bois, Fontenay-sous-Bois, Le Perreux-sur-Marne, Nogent-sur-Marne, Paris (bois de Vincennes), Joinville-le-Pont, Saint-Maur-des-Fossés, Créteil, Choisy-le-Roi, Thiais, Chevilly-Larue, L'Haÿ-les-Roses, Bourg-la-Reine, Bagneux, Sceaux, Fontenay-aux-Roses, Le Plessis-Robinson, Clamart, Issy-les-Moulineaux, Meudon et Sèvres. Sur le territoire Paris Ouest La Défense, le long de la Seine : de Saint-Cloud à Levallois-Perret, via Suresnes, Puteaux, Courbevoie et Neuilly-sur-Seine, environ 10.9 km."
 trafic: à compléter
 cover: ""
 ---

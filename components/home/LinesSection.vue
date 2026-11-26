@@ -12,7 +12,7 @@
         <NuxtLink :to="getVoieCyclablePath(voie.line)" class="focus:outline-none">
           <span class="absolute inset-0" aria-hidden="true" />
           <p class="text-sm font-medium text-gray-900">Ligne {{ getLineCode(voie.line) }}</p>
-          <p class="text-sm text-gray-500 truncate">{{ voie.from }} → {{ voie.to }}</p>
+          <p class="text-sm text-gray-500 truncate">{{ voie.to ? `${voie.from} → ${voie.to}` : voie.from }}</p>
         </NuxtLink>
       </div>
     </div>

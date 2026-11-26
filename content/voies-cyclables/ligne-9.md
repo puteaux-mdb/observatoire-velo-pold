@@ -1,9 +1,9 @@
 ---
 name: Ligne V9
 line: 9
-from: Vaucresson
-to: Saint-Cloud (pont de Saint-Cloud)
-description: "Partie de la ligne V9 du réseau Vélo Île-de-France (VIF) sur le territoire Paris Ouest La Défense : de Vaucresson au pont de Saint-Cloud, via Garches et Saint-Cloud. Environ 4.9 km sur le territoire."
+from: Saint-Nom-la-Bretèche
+to: Paris
+description: "Ligne V9 du réseau Vélo Île-de-France (VIF), de Saint-Nom-la-Bretèche à Paris, via Noisy-le-Roi, Bailly, La Celle-Saint-Cloud, Le Chesnay-Rocquencourt, Vaucresson, Marnes-la-Coquette, Garches, Saint-Cloud et Boulogne-Billancourt. Sur le territoire Paris Ouest La Défense : de Vaucresson au pont de Saint-Cloud, via Garches et Saint-Cloud, environ 4.9 km."
 trafic: à compléter
 cover: ""
 ---
