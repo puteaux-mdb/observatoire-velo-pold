@@ -1,3 +1,4 @@
+import { getLineCode } from '~/composables/useConfig';
 import type { Collections } from '@nuxt/content';
 import { getStatusDefinition } from '~/helpers/statuses';
 import type * as maplibregl from 'maplibre-gl';
@@ -163,7 +164,7 @@ export const useMap = ({
       }
 
       const color = getLineColor(line);
-      const canvas = createLineShieldIcon(line, color, iconPixelRatio);
+      const canvas = createLineShieldIcon(getLineCode(line), color, iconPixelRatio);
       const imageData = canvas.getContext('2d')?.getImageData(0, 0, canvas.width, canvas.height);
       if (imageData) {
         map.addImage(id, imageData, { pixelRatio: iconPixelRatio });

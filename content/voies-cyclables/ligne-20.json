@@ -9,7 +9,7 @@
         "status": "works-study",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#d7-saint-cloud-quai-du-président-carnot-partie-sud"
+        "link": "/v20#d7-saint-cloud-quai-du-président-carnot-partie-sud"
       },
       "geometry": {
         "type": "LineString",
@@ -41,7 +41,7 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#d7-saint-cloud-quai-du-président-carnot-jusqu-au-pont-de-saint-cloud"
+        "link": "/v20#d7-saint-cloud-quai-du-président-carnot-jusqu-au-pont-de-saint-cloud"
       },
       "geometry": {
         "type": "LineString",
@@ -73,7 +73,7 @@
         "status": "works-study",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#d7-saint-cloud-du-pont-de-saint-cloud-vers-suresnes"
+        "link": "/v20#d7-saint-cloud-du-pont-de-saint-cloud-vers-suresnes"
       },
       "geometry": {
         "type": "LineString",
@@ -145,7 +145,7 @@
         "status": "works-study",
         "type": "inconnu",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#d7-limite-saint-cloud-suresnes-quai-gallieni"
+        "link": "/v20#d7-limite-saint-cloud-suresnes-quai-gallieni"
       },
       "geometry": {
         "type": "LineString",
@@ -189,7 +189,7 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#d7-suresnes-puteaux-jusqu-au-pont-de-puteaux"
+        "link": "/v20#d7-suresnes-puteaux-jusqu-au-pont-de-puteaux"
       },
       "geometry": {
         "type": "LineString",
@@ -249,7 +249,7 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#d7-puteaux-quai-de-dion-bouton-depuis-le-pont-de-puteaux"
+        "link": "/v20#d7-puteaux-quai-de-dion-bouton-depuis-le-pont-de-puteaux"
       },
       "geometry": {
         "type": "LineString",
@@ -277,7 +277,7 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#d7-puteaux-quai-de-dion-bouton-depuis-le-pont-de-puteaux"
+        "link": "/v20#d7-puteaux-quai-de-dion-bouton-depuis-le-pont-de-puteaux"
       },
       "geometry": {
         "type": "LineString",
@@ -301,7 +301,7 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#d7-puteaux-quai-de-dion-bouton-partie-nord"
+        "link": "/v20#d7-puteaux-quai-de-dion-bouton-partie-nord"
       },
       "geometry": {
         "type": "LineString",
@@ -333,7 +333,7 @@
         "status": "done",
         "type": "inconnu",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#puteaux-sortie-du-quai-vers-le-pont-de-neuilly",
+        "link": "/v20#puteaux-sortie-du-quai-vers-le-pont-de-neuilly",
         "comment": "Type d'aménagement « Autre » dans les données de la Région (préexistant ?)"
       },
       "geometry": {
@@ -362,7 +362,7 @@
         "status": "works-study",
         "type": "inconnu",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#puteaux-abords-du-pont-de-neuilly"
+        "link": "/v20#puteaux-abords-du-pont-de-neuilly"
       },
       "geometry": {
         "type": "LineString",
@@ -418,7 +418,7 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#carrefour-du-pont-de-neuilly-côté-puteaux-tronc-commun-v5",
+        "link": "/v20#carrefour-du-pont-de-neuilly-côté-puteaux-tronc-commun-v5",
         "id": "vif-carrefour-du-pont-de-neuilly-côté-puteaux-tronc-commun-v5",
         "comment": "Tronc commun avec V5"
       },
@@ -476,7 +476,7 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#carrefour-du-pont-de-neuilly-côté-courbevoie-tronc-commun-v4",
+        "link": "/v20#carrefour-du-pont-de-neuilly-côté-courbevoie-tronc-commun-v4",
         "id": "vif-carrefour-du-pont-de-neuilly-côté-courbevoie-tronc-commun-v4",
         "comment": "Tronc commun avec V4"
       },
@@ -518,7 +518,7 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#courbevoie-du-pont-de-neuilly-vers-le-nord-est"
+        "link": "/v20#courbevoie-du-pont-de-neuilly-vers-le-nord-est"
       },
       "geometry": {
         "type": "LineString",
@@ -550,7 +550,7 @@
         "status": "done",
         "type": "inconnu",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#courbevoie-quai-paul-doumer",
+        "link": "/v20#courbevoie-quai-paul-doumer",
         "comment": "Type d'aménagement « Autre » dans les données de la Région (préexistant ?)"
       },
       "geometry": {
@@ -595,7 +595,7 @@
         "status": "validated",
         "type": "velorue",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#courbevoie-vélorue-jusqu-au-pont-de-courbevoie"
+        "link": "/v20#courbevoie-vélorue-jusqu-au-pont-de-courbevoie"
       },
       "geometry": {
         "type": "LineString",
@@ -643,7 +643,7 @@
         "status": "validated",
         "type": "velorue",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#courbevoie-vélorue-jusqu-au-pont-de-courbevoie"
+        "link": "/v20#courbevoie-vélorue-jusqu-au-pont-de-courbevoie"
       },
       "geometry": {
         "type": "LineString",
@@ -667,7 +667,7 @@
         "status": "done",
         "type": "bilaterale",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#pont-de-courbevoie-vers-l-île-de-la-jatte"
+        "link": "/v20#pont-de-courbevoie-vers-l-île-de-la-jatte"
       },
       "geometry": {
         "type": "LineString",
@@ -699,7 +699,7 @@
         "status": "works-study",
         "type": "inconnu",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#neuilly-île-de-la-jatte-jusqu-au-pont-de-levallois"
+        "link": "/v20#neuilly-île-de-la-jatte-jusqu-au-pont-de-levallois"
       },
       "geometry": {
         "type": "LineString",
@@ -731,7 +731,7 @@
         "status": "works-study",
         "type": "inconnu",
         "quality": "satisfactory",
-        "link": "/ligne-velo-20#levallois-du-pont-de-levallois-à-la-limite-de-clichy"
+        "link": "/v20#levallois-du-pont-de-levallois-à-la-limite-de-clichy"
       },
       "geometry": {
         "type": "LineString",

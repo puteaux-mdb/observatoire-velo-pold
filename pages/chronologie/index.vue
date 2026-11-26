@@ -29,7 +29,7 @@
           :style="{ backgroundColor: getLineColor(line), '--tw-ring-color': getLineColor(line) }"
           @click="toggleLine(line)"
         >
-          {{ line }}
+          {{ getLineCode(line) }}
         </button>
       </div>
 
@@ -122,7 +122,7 @@
                     class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white"
                     :style="{ backgroundColor: getLineColor(line) }"
                   >
-                    {{ line }}
+                    {{ getLineCode(line) }}
                   </div>
                 </div>
                 <div class="flex-1 min-w-0">
@@ -226,6 +226,7 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import { useVoiesCyclablesGeojson } from '~/composables/useVoiesCyclables';
 import type { TimelineSection } from '~/composables/useTimeline';
 import dayjs from 'dayjs';

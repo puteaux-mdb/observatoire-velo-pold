@@ -18,18 +18,16 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import config from '~/config.json';
 import type { Collections } from '@nuxt/content';
 import { useBikeLaneFilters } from '~/composables/useBikeLaneFilters';
 import MapPlaceholder from '~/components/MapPlaceholder.vue';
 
 const { path } = useRoute();
-const { getVoieCyclableRegex } = useUrl();
-const { getRevName } = useConfig();
+const { getLineFromPath } = useUrl();
 
-const regex = getVoieCyclableRegex();
-const match = path.match(regex);
-const line = match ? match[1] : '';
+const line = getLineFromPath(path);
 
 // https://github.com/nuxt/framework/issues/3587
 definePageMeta({
@@ -62,9 +60,9 @@ const { filters, actions, filteredFeatures, totalDistance, filteredDistance } = 
   allFeatures: features,
 });
 
-const description = `Carte de la ${getRevName('singular')} ${line}. Découvrez les tronçons prévus, déjà réalisés, en travaux et ceux reportés après ${config.horizonYear}.`;
+const description = `Carte de la ligne ${getLineCode(line)}. Découvrez les tronçons prévus, déjà réalisés, en travaux et ceux reportés après ${config.horizonYear}.`;
 useHead({
-  title: `Carte de la ${getRevName('singular')} ${line}`,
+  title: `Carte de la ligne ${getLineCode(line)}`,
   meta: [
     // description
     { key: 'description', name: 'description', content: description },

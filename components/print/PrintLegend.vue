@@ -44,7 +44,9 @@
       :style="{ gridTemplateRows: `repeat(${Math.ceil(voies.length / 2)}, auto)` }"
     >
       <li v-for="voie in voies" :key="voie.line">
-        <span class="print-legend__shield" :style="{ backgroundColor: getLineColor(voie.line) }">{{ voie.line }}</span>
+        <span class="print-legend__shield" :style="{ backgroundColor: getLineColor(voie.line) }">{{
+          getLineCode(voie.line)
+        }}</span>
         <span>{{ voie.from }} – {{ voie.to }}</span>
       </li>
     </ul>
@@ -54,6 +56,7 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import type { Collections } from '@nuxt/content';
 import { CROSS_ICON_SIZE, createConstructionIcon } from '~/helpers/map-utils';
 import { SECTION_STYLE } from '~/composables/useMap';

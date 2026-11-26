@@ -1,3 +1,4 @@
+import { getLineNumberFromCode } from '~/composables/useConfig';
 import config from '~/config.json';
 import { removeDiacritics } from '~/helpers/helpers';
 import type { CompteurFeature } from '~/types';
@@ -5,6 +6,8 @@ import type { ComparisonPeriod, DisplayMode, SortOption } from '~/components/cou
 import { useVoiesCyclablesGeojson } from '~/composables/useVoiesCyclables';
 
 function parseLineSearch(text: string): number | 'any' | null {
+  const byCode = getLineNumberFromCode(removeDiacritics(text.trim().toLowerCase()).replace(/\s+/g, ''));
+  if (byCode !== undefined) return byCode;
   const normalized = removeDiacritics(text.trim().toLowerCase());
   const withNumber = normalized.match(
     new RegExp(`^(?:${config.revName.abbreviated.toLowerCase()}|ligne|vl)\\s*(\\d+)$`),

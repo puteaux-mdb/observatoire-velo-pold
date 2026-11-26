@@ -1,8 +1,8 @@
 {
   "revName": {
-    "plural": "Lignes vélo POLD",
-    "singular": "Ligne vélo POLD",
-    "abbreviated": "V"
+    "plural": "lignes vélo",
+    "singular": "Ligne",
+    "abbreviated": ""
   },
   "siteName": "Observatoire vélo POLD",
   "territory": {
@@ -243,5 +243,58 @@
     "label": "Limites de Paris Ouest La Défense et des communes",
     "defaultVisible": false
   },
-  "lines": [20]
+  "lines": [
+    {
+      "number": 20,
+      "code": "V20",
+      "network": "vif"
+    }
+  ],
+  "networks": [
+    {
+      "id": "vif",
+      "label": "VIF – réseau Vélo Île-de-France",
+      "short": "VIF",
+      "enabled": true
+    },
+    {
+      "id": "departemental",
+      "label": "Voie départementale",
+      "short": "VD",
+      "enabled": true
+    },
+    {
+      "id": "metropolitain",
+      "label": "Plan vélo métropolitain",
+      "short": "MGP",
+      "enabled": false
+    },
+    {
+      "id": "pold",
+      "label": "Voie POLD (VéloPOLD)",
+      "short": "VP",
+      "enabled": true
+    },
+    {
+      "id": "communal",
+      "label": "Communal (desserte locale)",
+      "short": "Communal",
+      "enabled": true
+    }
+  ],
+  "owners": [
+    "Département des Hauts-de-Seine",
+    "Paris La Défense",
+    "Courbevoie",
+    "Garches",
+    "La Garenne-Colombes",
+    "Levallois-Perret",
+    "Nanterre",
+    "Neuilly-sur-Seine",
+    "Puteaux",
+    "Rueil-Malmaison",
+    "Saint-Cloud",
+    "Suresnes",
+    "Vaucresson"
+  ]
 }

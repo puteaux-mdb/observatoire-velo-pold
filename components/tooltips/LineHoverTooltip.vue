@@ -5,10 +5,10 @@
         <div
           v-for="line in lines"
           :key="line"
-          class="h-8 w-8 rounded-full flex items-center justify-center text-white text-base font-bold"
+          class="h-8 min-w-8 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white text-base font-bold"
           :style="`background-color: ${getLineColor(line)}`"
         >
-          {{ line }}
+          {{ getLineCode(line) }}
         </div>
       </div>
     </div>
@@ -55,6 +55,7 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import { getStatusDefinition } from '~/helpers/statuses';
 import type { LaneQuality, LineStringFeature } from '~/types';
 

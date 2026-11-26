@@ -1,3 +1,4 @@
+import { getLineCode, getLineNumberFromCode } from '~/composables/useConfig';
 import { removeDiacritics } from '~/helpers/helpers';
 import { isLineStringFeature } from '~/types';
 import config from '~/config.json';
@@ -117,7 +118,7 @@ export function useGlobalSearch() {
         sectionResults.push({
           type: 'section',
           label: feature.properties.name,
-          sublabel: `${config.revName.abbreviated} ${feature.properties.line}`,
+          sublabel: getLineCode(feature.properties.line),
           href,
           line: feature.properties.line,
           status: feature.properties.status,
@@ -130,9 +131,9 @@ export function useGlobalSearch() {
     for (const line of Array.from(lines).sort((a, b) => a - b)) {
       voieResults.push({
         type: 'voie',
-        label: `${config.revName.singular} ${line}`,
+        label: `${config.revName.singular} ${getLineCode(line)}`,
         sublabel: voieEndpoints.has(line) ? `${voieEndpoints.get(line)!.from} → ${voieEndpoints.get(line)!.to}` : '',
-        href: `/${config.slug}-${line}`,
+        href: `/${getLineCode(line).toLowerCase()}`,
         line,
       });
     }
@@ -185,6 +186,8 @@ export function useGlobalSearch() {
   }
 
   function parseVoieQuery(text: string): number | null {
+    const byCode = getLineNumberFromCode(removeDiacritics(text.trim().toLowerCase()).replace(/\s+/g, ''));
+    if (byCode !== undefined) return byCode;
     const normalized = removeDiacritics(text.trim().toLowerCase());
     const match = normalized.match(
       new RegExp(`^(?:${config.revName.abbreviated.toLowerCase()}\\s*|ligne\\s*|vl\\s*)?(\\d{1,2})$`),

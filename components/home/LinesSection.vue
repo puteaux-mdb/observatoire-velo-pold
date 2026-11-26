@@ -7,16 +7,16 @@
     >
       <div class="flex-shrink-0">
         <div
-          class="h-10 w-10 rounded-full flex items-center justify-center text-white font-bold"
+          class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white font-bold"
           :style="`background-color: ${getLineColor(voie.line)}`"
         >
-          {{ voie.line }}
+          {{ getLineCode(voie.line) }}
         </div>
       </div>
       <div class="flex-1 min-w-0">
         <NuxtLink :to="getVoieCyclablePath(voie.line)" class="focus:outline-none">
           <span class="absolute inset-0" aria-hidden="true" />
-          <p class="text-sm font-medium text-gray-900">Ligne {{ voie.line }}</p>
+          <p class="text-sm font-medium text-gray-900">Ligne {{ getLineCode(voie.line) }}</p>
           <p class="text-sm text-gray-500 truncate">{{ voie.from }} → {{ voie.to }}</p>
         </NuxtLink>
       </div>
@@ -25,6 +25,7 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 const { getLineColor } = useColors();
 const { getVoieCyclablePath } = useUrl();
 

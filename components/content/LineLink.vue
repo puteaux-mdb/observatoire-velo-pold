@@ -6,14 +6,15 @@
     <span
       class="not-prose inline-flex no-underline items-center justify-center rounded-full text-white leading-none"
       :style="`background-color: ${color};`"
-      :class="size === 'sm' ? 'text-lg h-6 w-6' : 'h-10 w-10'"
+      :class="size === 'sm' ? 'text-lg h-6 min-w-6 w-fit px-1.5 whitespace-nowrap' : 'h-10 w-10'"
     >
-      {{ line }}
+      {{ getLineCode(line) }}
     </span>
   </a>
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 const { getLineColor } = useColors();
 const { getRevName } = useConfig();
 const { getVoieCyclablePath } = useUrl();

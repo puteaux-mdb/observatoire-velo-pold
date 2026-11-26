@@ -30,6 +30,36 @@
     />
 
     <FilterSection
+      v-if="filters.networkFilters.value.length > 1"
+      title="Filtrer par réseau"
+      :filters="filters.networkFilters.value"
+      :show-selection-buttons="true"
+      @toggle-filter="(index: number) => actions.toggleAttributeFilter('networkFilters', index)"
+      @select-all="filters.networkFilters.value.forEach((item: AttributeFilterItem) => (item.isEnabled = true))"
+      @deselect-all="filters.networkFilters.value.forEach((item: AttributeFilterItem) => (item.isEnabled = false))"
+    />
+
+    <FilterSection
+      v-if="filters.ownerFilters.value.length > 1"
+      title="Filtrer par maître d’ouvrage"
+      :filters="filters.ownerFilters.value"
+      :show-selection-buttons="true"
+      @toggle-filter="(index: number) => actions.toggleAttributeFilter('ownerFilters', index)"
+      @select-all="filters.ownerFilters.value.forEach((item: AttributeFilterItem) => (item.isEnabled = true))"
+      @deselect-all="filters.ownerFilters.value.forEach((item: AttributeFilterItem) => (item.isEnabled = false))"
+    />
+
+    <FilterSection
+      v-if="filters.horizonFilters.value.length > 1"
+      title="Filtrer par horizon de réalisation"
+      :filters="filters.horizonFilters.value"
+      :show-selection-buttons="true"
+      @toggle-filter="(index: number) => actions.toggleAttributeFilter('horizonFilters', index)"
+      @select-all="filters.horizonFilters.value.forEach((item: AttributeFilterItem) => (item.isEnabled = true))"
+      @deselect-all="filters.horizonFilters.value.forEach((item: AttributeFilterItem) => (item.isEnabled = false))"
+    />
+
+    <FilterSection
       v-if="options.showLineFilters"
       title="Filtrer par ligne"
       :filters="filters.lineFilters.value"
@@ -88,7 +118,13 @@ import FilterSection from '~/components/filter/FilterSection.vue';
 import DoubleRangeSlider from '~/components/DoubleRangeSlider.vue';
 import dayjs from 'dayjs';
 import 'dayjs/locale/fr';
-import type { FiltersState, FilterActions, StatusTypeQualityFilterItem, LineFilterItem } from '~/types';
+import type {
+  FiltersState,
+  FilterActions,
+  StatusTypeQualityFilterItem,
+  LineFilterItem,
+  AttributeFilterItem,
+} from '~/types';
 dayjs.locale('fr');
 
 const props = defineProps<{

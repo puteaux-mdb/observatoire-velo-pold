@@ -43,6 +43,9 @@ export type LineStringFeature = {
     doneAt?: string; // si applicable, date de fin des travaux (utile pour suivre la progression)
     link?: string;
     quality?: LaneQuality; // tronçon de qualité ou non
+    networks?: string[]; // réseaux d'appartenance (vif, departemental, metropolitain, pold, communal) ; par défaut celui de la ligne
+    owners?: string[]; // maîtres d'ouvrage (commune(s), Département des Hauts-de-Seine, Paris La Défense)
+    horizon?: string; // horizon de réalisation (ex. « 2027 », « court terme »)
     blockedBy?: string; // si bloqué : par qui / pourquoi
     comment?: string; // commentaire libre (ex. « aménagement préexistant »)
     blogLink?: string; // lien vers un article qui détaille la situation
@@ -180,6 +183,10 @@ export interface StatusTypeQualityFilterItem extends BaseFilterItem {
   qualities?: string[];
 }
 
+export interface AttributeFilterItem extends BaseFilterItem {
+  value: string;
+}
+
 export interface LineFilterItem extends BaseFilterItem {
   line: number;
   color?: string;
@@ -196,6 +203,9 @@ export interface FiltersState {
   dateSteps: Ref<number[]>;
   showCounters: Ref<boolean>;
   showTerritory: Ref<boolean>;
+  networkFilters: Ref<Array<AttributeFilterItem>>;
+  ownerFilters: Ref<Array<AttributeFilterItem>>;
+  horizonFilters: Ref<Array<AttributeFilterItem>>;
 }
 
 export interface FilterActions {
@@ -206,6 +216,7 @@ export interface FilterActions {
   setDateRange: (newDateRange: [number, number]) => void;
   toggleShowCounters: () => void;
   toggleShowTerritory: () => void;
+  toggleAttributeFilter: (group: 'networkFilters' | 'ownerFilters' | 'horizonFilters', index: number) => void;
 }
 
 export interface UseBikeLaneFiltersOptions {

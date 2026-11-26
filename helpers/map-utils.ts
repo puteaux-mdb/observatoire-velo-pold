@@ -51,7 +51,7 @@ export function getCrossIconUrl(pixelRatio = 1, lineWidth = 3): string {
   return canvas.toDataURL();
 }
 
-export function createLineShieldIcon(lineNumber: number, color: string, pixelRatio = 1): HTMLCanvasElement {
+export function createLineShieldIcon(lineLabel: string | number, color: string, pixelRatio = 1): HTMLCanvasElement {
   const canvas = document.createElement('canvas');
   const size = 64;
 
@@ -81,10 +81,11 @@ export function createLineShieldIcon(lineNumber: number, color: string, pixelRat
 
   // line number
   ctx.fillStyle = '#ffffff';
-  ctx.font = 'bold 28px sans-serif';
+  const label = String(lineLabel);
+  ctx.font = `bold ${label.length <= 2 ? 28 : label.length === 3 ? 22 : 17}px sans-serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText(String(lineNumber), centerX, centerY + 3);
+  ctx.fillText(label, centerX, centerY + 3);
 
   return canvas;
 }
@@ -129,7 +130,8 @@ export function createCompositeLineShieldIcon(
 
     // line number
     ctx.fillStyle = '#ffffff';
-    ctx.font = 'bold 28px sans-serif';
+    const label = String(lineLabel);
+    ctx.font = `bold ${label.length <= 2 ? 28 : label.length === 3 ? 22 : 17}px sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(String(lineNumber), x, centerY + 3);

@@ -4,7 +4,7 @@
     v-if="isLargeScreen"
     :open="isPanelOpen"
     panel-id="voie-cyclable-details-sidebar"
-    :title="`${config.revName.singular} ${selectedLine}`"
+    :title="`${config.revName.singular} ${getLineCode(selectedLine)}`"
     width="w-[1015px]"
     min-width="min-w-[700px]"
     content-classes="p-0"
@@ -34,7 +34,7 @@
   >
     <template #title>
       <div class="flex gap-2 align-middle items-center">
-        <h2 class="text-lg font-medium leading-6">{{ config.revName.singular }} {{ selectedLine }}</h2>
+        <h2 class="text-lg font-medium leading-6">{{ config.revName.singular }} {{ getLineCode(selectedLine) }}</h2>
         <a
           v-if="pathToLine"
           :to="pathToLine"
@@ -56,6 +56,7 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import config from '~/config.json';
 import { useMediaQuery } from '@vueuse/core';
 import { computed } from 'vue';
@@ -96,7 +97,7 @@ const voieData = computed(() => {
 
 const isPanelOpen = computed(() => props.open && !!props.line);
 
-const pathToLine = computed(() => (selectedLine.value ? `/${config.slug}-${selectedLine.value}` : null));
+const pathToLine = computed(() => (selectedLine.value ? `/${getLineCode(selectedLine.value).toLowerCase()}` : null));
 
 function getFirstVisibleAnchor(): string | null {
   const container =

@@ -135,10 +135,10 @@
                     >
                       <div class="flex-shrink-0">
                         <div
-                          class="h-10 w-10 rounded-full flex items-center justify-center text-white font-bold"
+                          class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white font-bold"
                           :style="`background-color: ${getLineColor(voie.line)}`"
                         >
-                          {{ voie.line }}
+                          {{ getLineCode(voie.line) }}
                         </div>
                       </div>
                     </NuxtLink>
@@ -361,10 +361,10 @@
               >
                 <div class="flex-shrink-0">
                   <div
-                    class="h-10 w-10 rounded-full flex items-center justify-center text-white font-bold"
+                    class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white font-bold"
                     :style="`background-color: ${getLineColor(voie.line)}`"
                   >
-                    {{ voie.line }}
+                    {{ getLineCode(voie.line) }}
                   </div>
                 </div>
               </NuxtLink>
@@ -377,6 +377,7 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue';
 import { useMediaQuery } from '@vueuse/core';
 import SettingsPopover from './SettingsPopover.vue';

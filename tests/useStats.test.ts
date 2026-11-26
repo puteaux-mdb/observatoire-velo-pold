@@ -28,7 +28,7 @@ describe('useStats', () => {
       it('should return 100% for that type', () => {
         const voies = [{ type: 'FeatureCollection', features: [vl2StRambertCommun] }];
         const stats = getStatsByTypology(voies);
-        assert.deepEqual(stats, [{ name: 'Inconnu', percent: 100 }]);
+        assert.deepEqual(stats, [{ name: 'Pas d’information', percent: 100 }]);
       });
     });
     describe('When there are 2 types of cycle lane, both having same coordinates', () => {
@@ -36,7 +36,7 @@ describe('useStats', () => {
         const voies = [{ type: 'FeatureCollection', features: [vl2StRambertCommun, vl5PierreBeniteNordCommun] }];
         const stats = getStatsByTypology(voies);
         assert.deepEqual(stats, [
-          { name: 'Inconnu', percent: 50 },
+          { name: 'Pas d’information', percent: 50 },
           { name: 'Piste bilatérale', percent: 50 },
         ]);
       });
@@ -49,7 +49,7 @@ describe('useStats', () => {
         const stats = getStatsByTypology(voies);
         assert.deepEqual(stats, [
           { name: 'Piste bilatérale', percent: 67 },
-          { name: 'Inconnu', percent: 33 },
+          { name: 'Pas d’information', percent: 33 },
         ]);
       });
     });

@@ -3,14 +3,14 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import VoieCyclableDetails from '~/components/VoieCyclableDetails.vue';
 
 const { path } = useRoute();
 const { getRevName } = useConfig();
-const { getVoieCyclableRegex } = useUrl();
+const { getLineFromPath } = useUrl();
 
-const regex = getVoieCyclableRegex();
-const line = path.match(regex)?.[1] ?? '';
+const line = getLineFromPath(path);
 
 // https://github.com/nuxt/framework/issues/3587
 definePageMeta({
@@ -22,10 +22,10 @@ const { data: voie } = await useAsyncData(path, () => {
   return queryCollection('voiesCyclablesPage').where('line', '=', Number(line)).first();
 });
 
-const description = `Tout savoir sur la ${getRevName('singular')} ${line}. Avancement, carte interactive, détail rue par rue, calendrier des travaux et photos du projet.`;
+const description = `Tout savoir sur la ligne ${getLineCode(line)}. Avancement, carte interactive, détail rue par rue, calendrier des travaux et photos du projet.`;
 
 useHead({
-  title: `${getRevName('singular')} ${line}`,
+  title: `${getRevName('singular')} ${getLineCode(line)}`,
   meta: [
     // description
     { key: 'description', name: 'description', content: description },

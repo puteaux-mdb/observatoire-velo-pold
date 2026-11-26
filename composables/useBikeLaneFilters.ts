@@ -1,3 +1,4 @@
+import { getLineCode, getLineNetwork } from '~/composables/useConfig';
 import {
   type FiltersState,
   type FilterActions,
@@ -8,6 +9,7 @@ import {
   type LaneStatus,
   type LaneType,
   type UseBikeLaneFiltersOptions,
+  type AttributeFilterItem,
 } from '~/types';
 import type { Collections } from '@nuxt/content';
 import { useRoute, useRouter } from 'vue-router';
@@ -108,6 +110,56 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
   const lineFilters = ref<{ label: string; isEnabled: boolean; line: number }[]>([]);
 
   const showCounters = ref(false);
+
+  // Réseau d'appartenance, maître d'ouvrage, horizon : valeur absente = « Non renseigné »
+  const NONE = '__none__';
+  const networkFilters = ref<AttributeFilterItem[]>(
+    config.networks.filter((n) => n.enabled).map((n) => ({ label: n.label, isEnabled: true, value: n.id })),
+  );
+  const ownerFilters = ref<AttributeFilterItem[]>([
+    ...config.owners.map((owner) => ({ label: owner, isEnabled: true, value: owner })),
+    { label: 'Non renseigné', isEnabled: true, value: NONE },
+  ]);
+  const horizonFilters = ref<AttributeFilterItem[]>([]);
+  watch(
+    allFeatures,
+    (features) => {
+      const horizons = new Set<string>();
+      (features ?? []).forEach((feature) => {
+        if (isLineStringFeature(feature) && feature.properties.horizon) horizons.add(feature.properties.horizon);
+      });
+      horizonFilters.value = [
+        ...Array.from(horizons)
+          .sort()
+          .map((h) => ({ label: h, isEnabled: true, value: h })),
+        { label: 'Non renseigné', isEnabled: true, value: NONE },
+      ];
+    },
+    { immediate: true },
+  );
+
+  function featureNetworks(feature: { properties: { networks?: string[]; line: number } }): string[] {
+    if (feature.properties.networks?.length) return feature.properties.networks;
+    const network = getLineNetwork(feature.properties.line);
+    return network ? [network] : [];
+  }
+  function matchesAttributes(feature: Parameters<typeof isLineStringFeature>[0]): boolean {
+    if (!isLineStringFeature(feature)) return true;
+    const enabled = (items: AttributeFilterItem[]) => new Set(items.filter((i) => i.isEnabled).map((i) => i.value));
+    const networks = enabled(networkFilters.value);
+    const featureNets = featureNetworks(feature);
+    if (
+      featureNets.length &&
+      !featureNets.some((n) => networks.has(n) || !config.networks.find((c) => c.id === n)?.enabled)
+    )
+      return false;
+    const owners = enabled(ownerFilters.value);
+    const featureOwners = feature.properties.owners?.length ? feature.properties.owners : [NONE];
+    if (!featureOwners.some((o) => owners.has(o) || (o !== NONE && !config.owners.includes(o)))) return false;
+    const horizons = enabled(horizonFilters.value);
+    if (!horizons.has(feature.properties.horizon || NONE)) return false;
+    return true;
+  }
   const showTerritory = ref(config.territoryBoundary.defaultVisible);
 
   const dateRange = ref<[number, number]>([0, 0]);
@@ -237,7 +289,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
             .map((line) => {
               const color = getLineColor(line);
               return {
-                label: `${config.revName.abbreviated} ${line}`,
+                label: getLineCode(line),
                 isEnabled: true,
                 line,
                 color,
@@ -386,6 +438,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
         }
 
         return (
+          matchesAttributes(feature) &&
           visibleStatuses.value.includes(feature.properties.status) &&
           visibleTypes.value.includes(feature.properties.type) &&
           visibleQualities.value.includes(feature.properties.quality)
@@ -419,6 +472,9 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     dateSteps,
     showCounters,
     showTerritory,
+    networkFilters,
+    ownerFilters,
+    horizonFilters,
   };
 
   const actions: FilterActions = {
@@ -442,6 +498,11 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     },
     toggleShowTerritory() {
       showTerritory.value = !showTerritory.value;
+    },
+    toggleAttributeFilter(group, index) {
+      const list = { networkFilters, ownerFilters, horizonFilters }[group].value;
+      const item = list[index];
+      if (item) item.isEnabled = !item.isEnabled;
     },
   };
 

@@ -77,6 +77,7 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import config from '~/config.json';
 import type { Collections } from '@nuxt/content';
 import GeoJsonToGpx from '@dwayneparton/geojson-to-gpx';
@@ -161,12 +162,12 @@ function downloadGpx() {
   const gpx = GeoJsonToGpx(geojson.value, {
     creator: `${config.siteName} - ${config.assoName}`,
     metadata: {
-      name: `${config.revName.singular} ${props.voie.line}`,
-      desc: `Tracé de la ${config.revName.singular} ${props.voie.line} - Source: ${config.assoName}`,
+      name: `${config.revName.singular} ${getLineCode(props.voie.line)}`,
+      desc: `Tracé de la ligne ${getLineCode(props.voie.line)} - Source: ${config.assoName}`,
       author: {
         name: `${config.siteName} - ${config.assoName}`,
         link: {
-          href: `${config.baseUrl}/${config.slug}-${props.voie.line}`,
+          href: `${config.baseUrl}/${getLineCode(props.voie.line).toLowerCase()}`,
           text: `${config.siteName} - ${config.assoName}`,
         },
       },

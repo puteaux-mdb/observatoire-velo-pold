@@ -17,7 +17,7 @@
             class="inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-bold text-white border border-white/50"
             :style="{ backgroundColor: getLineColor(line) }"
           >
-            {{ line }}
+            {{ getLineCode(line) }}
           </span>
         </div>
       </div>
@@ -108,6 +108,7 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import type { Collections } from '@nuxt/content';
 import type { ComparisonPeriod, DisplayMode } from '~/components/counter/ListLayout.vue';
 

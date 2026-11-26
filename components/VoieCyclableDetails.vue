@@ -12,10 +12,10 @@
         <h1 class="text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
           {{ getRevName('singular') }}
           <div
-            class="mt-2 h-12 w-12 rounded-full flex items-center justify-center text-white font-bold mx-auto transition-colors"
+            class="mt-2 h-12 min-w-12 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white font-bold mx-auto transition-colors"
             :style="`background-color: ${color}`"
           >
-            {{ voie.line }}
+            {{ getLineCode(voie.line) }}
           </div>
         </h1>
       </template>
@@ -27,7 +27,7 @@
       >
         <img
           :src="voie.cover"
-          :alt="`${config.revName.singular} ${voie.line}`"
+          :alt="`${config.revName.singular} ${getLineCode(voie.line)}`"
           class="w-full rounded-lg"
           loading="lazy"
         />
@@ -81,6 +81,7 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import config from '~/config.json';
 import type { Collections } from '@nuxt/content';
 import { waitForElement } from '~/helpers/helpers';
@@ -103,17 +104,16 @@ const props = withDefaults(
 
 const { getLineColor } = useColors();
 const { getRevName } = useConfig();
-const { getVoieCyclableRegex } = useUrl();
+const { getLineFromPath } = useUrl();
 
-const color = computed(() => getLineColor(Number(props.line)));
-
-const regex = getVoieCyclableRegex();
 const line = computed(() => {
-  if (typeof props.line === 'string') {
-    return props.line.match(regex)?.[1] ?? props.line;
+  if (typeof props.line === 'string' && props.line.startsWith('/')) {
+    return getLineFromPath(props.line) || props.line;
   }
   return props.line;
 });
+
+const color = computed(() => getLineColor(Number(line.value)));
 
 const { data: asyncVoie } = useAsyncData(
   () => `voie-${line.value}`,

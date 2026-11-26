@@ -178,10 +178,8 @@
                 </button>
               </div>
               <div class="grid grid-cols-4 gap-2">
-                <div v-for="id in config.lines" :key="id" class="flex flex-col items-center">
-                  <label :for="`color-line-${id}`" class="text-xs text-gray-500 mb-1"
-                    >{{ config.revName.abbreviated }}{{ id }}</label
-                  >
+                <div v-for="id in config.lines.map((l) => l.number)" :key="id" class="flex flex-col items-center">
+                  <label :for="`color-line-${id}`" class="text-xs text-gray-500 mb-1">{{ getLineCode(id) }}</label>
                   <input
                     :id="`color-line-${id}`"
                     type="color"
@@ -215,6 +213,7 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode } from '~/composables/useConfig';
 import {
   Listbox,
   ListboxButton,

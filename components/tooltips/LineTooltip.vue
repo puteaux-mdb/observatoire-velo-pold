@@ -8,11 +8,11 @@
         <div
           v-for="line in lines"
           :key="line"
-          class="h-8 w-8 rounded-full flex items-center justify-center text-white text-base font-bold"
+          class="h-8 min-w-8 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white text-base font-bold"
           :style="`background-color: ${getLineColor(line)}`"
         >
-          <a :href="assetUrl(`/${config.slug}-${line}`)">
-            {{ line }}
+          <a :href="assetUrl(`/${getLineCode(line).toLowerCase()}`)">
+            {{ getLineCode(line) }}
           </a>
         </div>
       </div>
@@ -49,6 +49,18 @@
           {{ typologyNames[feature.properties.type] ?? 'Inconnu' }}
         </div>
       </div>
+      <div class="py-1 flex items-start justify-between gap-2">
+        <div class="text-sm font-bold">Réseau</div>
+        <div class="text-sm text-right">{{ featureNetworkLabels }}</div>
+      </div>
+      <div class="py-1 flex items-start justify-between gap-2">
+        <div class="text-sm font-bold">Maître d’ouvrage</div>
+        <div class="text-sm text-right">{{ feature.properties.owners?.join(', ') || 'Non renseigné' }}</div>
+      </div>
+      <div v-if="feature.properties.horizon" class="py-1 flex items-center justify-between">
+        <div class="text-sm font-bold">Horizon</div>
+        <div class="text-sm">{{ feature.properties.horizon }}</div>
+      </div>
       <div v-if="feature.properties.comment" class="py-1">
         <div class="text-sm font-bold">Commentaire</div>
         <div class="text-sm">{{ feature.properties.comment }}</div>
@@ -77,12 +89,18 @@
 </template>
 
 <script setup lang="ts">
+import { getLineCode, getLineNetwork, getNetworkLabel } from '~/composables/useConfig';
 import { getStatusDefinition } from '~/helpers/statuses';
-import config from '~/config.json';
 import type { LaneQuality, LineStringFeature } from '~/types';
 
 const { getLineColor } = useColors();
 const assetUrl = useAssetUrl();
+const featureNetworkLabels = computed(() => {
+  const ids = feature.properties.networks?.length
+    ? feature.properties.networks
+    : [getLineNetwork(feature.properties.line)].filter(Boolean);
+  return ids.map((id) => getNetworkLabel(id as string)).join(', ') || 'Non renseigné';
+});
 const { getRevName, displayQuality } = useConfig();
 const { getDistance, typologyNames, qualityNames } = useStats();
 const { getSectionDetailsUrl } = useUrl();

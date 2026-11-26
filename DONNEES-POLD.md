@@ -48,11 +48,17 @@ Chaque tronçon est une `Feature` `LineString` :
 }
 ```
 
-- `status` : `done` (réalisé), `wip` (en travaux), `planned` (prévu), `postponed` (reporté), `variante`, `variante-postponed`, `tested` (provisoire), `unknown`
+- `status` : `to-define` (à définir), `route-study` (tracé à l'étude), `validated` (tracé validé), `works-study` (travaux à l'étude), `wip` (en travaux), `done` (réalisé), `blocked` (bloqué), `unknown` (pas d'information), `tested` (provisoire)
 - `type` : `bidirectionnelle`, `bilaterale`, `voie-bus`, `voie-bus-elargie`, `velorue`, `voie-verte`, `bandes-cyclables`, `zone-de-rencontre`, `aucun`, `inconnu`
 - `quality` : `satisfactory` / `unsatisfactory`
 - `doneAt` (JJ/MM/AAAA) : date de mise en service, utilisée par la chronologie et l'évolution du réseau
 - `id` (facultatif) : même identifiant pour un tronçon partagé par plusieurs lignes
+- `networks` (facultatif) : réseaux d'appartenance, ex. `["vif", "departemental"]` ; par défaut, celui de la ligne
+- `owners` (facultatif) : maîtres d'ouvrage, ex. `["Puteaux", "Département des Hauts-de-Seine"]`
+- `horizon` (facultatif) : horizon de réalisation, ex. `"2027"`
+- `blockedBy`, `comment`, `blogLink` (facultatifs) : qui bloque, commentaire libre, lien vers un article
+
+Codes de lignes : `V` + n° pour le VIF (V20), `VD` + n° de la route départementale (VD7), `VP` + n° pour les voies POLD (VP1). Le numéro interne (`number`) est libre mais unique, par exemple 20 pour V20, 1007 pour VD7, 2001 pour VP1.
 
 Points facultatifs dans le même fichier :
 

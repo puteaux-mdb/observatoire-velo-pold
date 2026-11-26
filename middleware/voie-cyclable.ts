@@ -1,8 +1,6 @@
-const { getVoieCyclableRegex } = useUrl();
 export default defineNuxtRouteMiddleware((to) => {
-  const voieCyclableRegex = getVoieCyclableRegex();
-  const isVoieCyclableValid = voieCyclableRegex.test(to.fullPath);
-  if (!isVoieCyclableValid) {
+  const { getLineFromPath } = useUrl();
+  if (!getLineFromPath(to.path)) {
     return navigateTo('/404');
   }
 });

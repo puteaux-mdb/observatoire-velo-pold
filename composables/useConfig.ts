@@ -1,6 +1,31 @@
 import config from '~/config.json';
 
 export type SiteFeature = keyof typeof config.features;
+export type NetworkId = (typeof config.networks)[number]['id'];
+export type LineDefinition = { number: number; code: string; network: string };
+
+const lines = config.lines as LineDefinition[];
+
+/** Code affiché d'une ligne (ex. 20 -> « V20 », 107 -> « VD7 ») */
+export function getLineCode(line: number | string | undefined | null): string {
+  const number = Number(line);
+  return lines.find((l) => l.number === number)?.code ?? String(line ?? '');
+}
+
+/** Numéro interne d'une ligne à partir de son code (« v20 » -> 20) */
+export function getLineNumberFromCode(code: string | undefined | null): number | undefined {
+  if (!code) return undefined;
+  return lines.find((l) => l.code.toLowerCase() === code.toLowerCase())?.number;
+}
+
+/** Réseau d'appartenance par défaut d'une ligne (vif, departemental, pold, communal…) */
+export function getLineNetwork(line: number | undefined | null): string | undefined {
+  return lines.find((l) => l.number === Number(line))?.network;
+}
+
+export function getNetworkLabel(id: string): string {
+  return config.networks.find((n) => n.id === id)?.label ?? id;
+}
 
 export const useConfig = () => {
   function getRevName(gram: 'plural' | 'singular' = 'plural'): string {
@@ -15,13 +40,13 @@ export const useConfig = () => {
     return config.assoLink;
   }
 
-  /** Numéros des lignes du réseau (ex. [4, 20] pour V4 et V20) */
+  /** Numéros internes des lignes du réseau */
   function getLineNumbers(): number[] {
-    return config.lines;
+    return lines.map((l) => l.number);
   }
 
   function getNbVoiesCyclables(): number {
-    return config.lines.length;
+    return lines.length;
   }
 
   function displayQuality(): boolean {
@@ -48,6 +73,10 @@ export const useConfig = () => {
     getAssoLink,
     getNbVoiesCyclables,
     getLineNumbers,
+    getLineCode,
+    getLineNumberFromCode,
+    getLineNetwork,
+    getNetworkLabel,
     displayQuality,
     displayQualityOnHomePage,
     displayCounters,
