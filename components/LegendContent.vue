@@ -3,7 +3,7 @@
     <div :class="['my-auto rounded-md border-gray-500 border', borderClass]">
       <div :class="['bg-lvv-blue-600', lineHeightClass]" />
     </div>
-    <div class="my-auto">terminé</div>
+    <div class="my-auto">réalisé</div>
 
     <div :class="['my-auto rounded-md border-gray-500 border relative', borderClass]">
       <div :class="['relative overflow-hidden', lineHeightClass]">
@@ -28,7 +28,12 @@
         </div>
       </div>
     </div>
-    <div class="my-auto">prévu pour {{ config.horizonYear }}</div>
+    <div class="my-auto">tracé validé, travaux à l’étude</div>
+
+    <div :class="['my-auto rounded-md border-gray-500 border', borderClass]">
+      <div :class="['bg-lvv-blue-600 opacity-40', lineHeightClass]" />
+    </div>
+    <div class="my-auto">tracé à l’étude, à définir</div>
 
     <div :class="['my-auto rounded-md border-gray-500 border relative', borderClass]">
       <div :class="['bg-white', lineHeightClass]" />
@@ -38,12 +43,11 @@
         </svg>
       </div>
     </div>
-    <div class="my-auto">reporté après {{ config.horizonYear }}</div>
+    <div class="my-auto">bloqué</div>
   </div>
 </template>
 
 <script setup lang="ts">
-import config from '~/config.json';
 import { createConstructionIcon } from '~/helpers/map-utils';
 
 const props = withDefaults(

@@ -54,7 +54,6 @@
 </template>
 
 <script setup lang="ts">
-import config from '~/config.json';
 import type { Collections } from '@nuxt/content';
 import { CROSS_ICON_SIZE, createConstructionIcon } from '~/helpers/map-utils';
 import { SECTION_STYLE } from '~/composables/useMap';
@@ -95,10 +94,10 @@ const constructionIcon = createConstructionIcon(4).toDataURL();
 type LegendStatus = { label: string; dashes?: number[]; crosses?: boolean; icon?: string; unsatisfactory?: boolean };
 
 const statuses = computed<LegendStatus[]>(() => [
-  { label: 'terminé' },
+  { label: 'réalisé' },
   { label: 'en travaux', dashes: SECTION_STYLE.wipDasharray, icon: constructionIcon },
-  { label: `prévu pour ${config.horizonYear}`, dashes: SECTION_STYLE.plannedDasharray },
-  { label: `reporté après ${config.horizonYear}`, crosses: true },
+  { label: 'tracé validé, travaux à l’étude', dashes: SECTION_STYLE.plannedDasharray },
+  { label: 'bloqué', crosses: true },
   ...(props.showUnsatisfactory ? [{ label: 'non satisfaisant', unsatisfactory: true }] : []),
 ]);
 

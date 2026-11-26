@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import config from '~/config.json';
+import { getStatusDefinition } from '~/helpers/statuses';
 import type { LaneQuality, LineStringFeature } from '~/types';
 
 const { getLineColor } = useColors();
@@ -81,44 +81,12 @@ function getDoneAtText(doneAt: string): string {
 }
 
 function getStatus(properties: LineStringFeature['properties']): { label: string; class: string; date?: string } {
-  const statusMapping = {
-    done: {
-      label: 'terminée',
-      date: properties.doneAt && getDoneAtText(properties.doneAt),
-      class: 'text-white bg-lvv-blue-600 rounded-xl px-2 w-fit',
-    },
-    wip: {
-      label: 'en travaux',
-      class: 'text-lvv-blue-600 rounded-xl px-2 border border-dashed border-lvv-blue-600',
-    },
-    planned: {
-      label: 'prévue',
-      class: 'text-lvv-blue-600 rounded-xl px-2 border border-lvv-blue-600',
-    },
-    tested: {
-      label: 'en test',
-      class: 'text-lvv-blue-600 rounded-xl px-2 border border-dashed border-lvv-blue-600',
-    },
-    postponed: {
-      label: 'reportée',
-      date: `après ${config.horizonYear}`,
-      class: 'text-white bg-lvv-pink rounded-xl px-2',
-    },
-    variante: {
-      label: 'variante',
-      class: '',
-    },
-    'variante-postponed': {
-      label: 'variante reportée',
-      date: `après ${config.horizonYear}`,
-      class: 'text-white bg-lvv-pink rounded-xl px-2',
-    },
-    unknown: {
-      label: 'à définir',
-      class: 'text-gray-900 bg-gray-200 rounded-xl px-2',
-    },
+  const definition = getStatusDefinition(properties.status);
+  return {
+    label: definition.label,
+    class: definition.badgeClass,
+    date: properties.status === 'done' && properties.doneAt ? getDoneAtText(properties.doneAt) : undefined,
   };
-  return statusMapping[properties.status];
 }
 
 function getQuality(quality: LaneQuality): { label: string; class: string; icon: string; classIcon: string } {

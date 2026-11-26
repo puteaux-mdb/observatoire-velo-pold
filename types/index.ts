@@ -14,12 +14,19 @@ export type LaneType =
   | 'inconnu';
 
 export type LaneStatus =
-  | 'done'
-  | 'wip'
+  // états de l'observatoire POLD (voir helpers/statuses.ts)
+  | 'to-define' // à définir : rien n'est décidé
+  | 'route-study' // tracé à l'étude
+  | 'validated' // tracé validé (comité de ligne)
+  | 'works-study' // travaux à l'étude
+  | 'wip' // en travaux
+  | 'done' // réalisé
+  | 'blocked' // bloqué (préciser blockedBy)
+  | 'unknown' // pas d'information
+  | 'tested' // provisoire
+  // états hérités de Cyclopolis
   | 'planned'
-  | 'tested'
   | 'postponed'
-  | 'unknown'
   | 'variante'
   | 'variante-postponed';
 
@@ -36,6 +43,9 @@ export type LineStringFeature = {
     doneAt?: string; // si applicable, date de fin des travaux (utile pour suivre la progression)
     link?: string;
     quality?: LaneQuality; // tronçon de qualité ou non
+    blockedBy?: string; // si bloqué : par qui / pourquoi
+    comment?: string; // commentaire libre (ex. « aménagement préexistant »)
+    blogLink?: string; // lien vers un article qui détaille la situation
   };
   geometry: {
     type: 'LineString';

@@ -67,7 +67,7 @@
       "properties": {
         "line": 1,
         "name": "Nanterre Préfecture – La Défense (exemple)",
-        "status": "planned",
+        "status": "validated",
         "type": "bilaterale",
         "link": "/ligne-velo-1#nanterre-préfecture-la-défense",
         "quality": "satisfactory"
@@ -95,7 +95,7 @@
       "properties": {
         "line": 1,
         "name": "Courbevoie – Levallois (exemple)",
-        "status": "postponed",
+        "status": "blocked",
         "type": "bandes-cyclables",
         "link": "/ligne-velo-1#courbevoie-levallois",
         "quality": "satisfactory"

@@ -95,19 +95,16 @@
 </template>
 
 <script setup lang="ts">
+import { STATUSES } from '~/helpers/statuses';
 import config from '~/config.json';
 import type { SearchResult } from '~/composables/useGlobalSearch';
 
 const StatusBadge = defineComponent({
   props: { status: { type: String, required: true } },
   setup(props) {
-    const labels: Record<string, string> = {
-      done: 'Terminé',
-      wip: 'En travaux',
-      tested: 'En travaux',
-      planned: 'Prévu',
-      postponed: 'Reporté',
-    };
+    const labels: Record<string, string> = Object.fromEntries(
+      Object.entries(STATUSES).map(([key, def]) => [key, def.label.charAt(0).toUpperCase() + def.label.slice(1)]),
+    );
 
     const colors: Record<string, string> = {
       done: 'bg-green-100 text-green-700',
@@ -115,6 +112,12 @@ const StatusBadge = defineComponent({
       tested: 'bg-blue-100 text-blue-700',
       planned: 'bg-gray-100 text-gray-600',
       postponed: 'bg-pink-100 text-pink-700',
+      blocked: 'bg-pink-100 text-pink-700',
+      'works-study': 'bg-gray-100 text-gray-600',
+      validated: 'bg-gray-100 text-gray-600',
+      'route-study': 'bg-gray-100 text-gray-500',
+      'to-define': 'bg-gray-100 text-gray-500',
+      unknown: 'bg-gray-100 text-gray-500',
     };
 
     return () =>

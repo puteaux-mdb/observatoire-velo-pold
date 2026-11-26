@@ -66,6 +66,11 @@ export default defineContentConfig({
                 line: z.number(),
                 name: z.string(),
                 status: z.enum([
+                  'to-define',
+                  'route-study',
+                  'validated',
+                  'works-study',
+                  'blocked',
                   'planned',
                   'postponed',
                   'variante-postponed',
@@ -91,6 +96,9 @@ export default defineContentConfig({
                 quality: z.enum(['satisfactory', 'unsatisfactory']),
                 text: z.string().optional(),
                 doneAt: z.string().optional(),
+                blockedBy: z.string().optional(),
+                comment: z.string().optional(),
+                blogLink: z.string().optional(),
               }),
               geometry: z.object({
                 type: z.enum(['LineString']),

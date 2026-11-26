@@ -1,4 +1,5 @@
 import type { Collections } from '@nuxt/content';
+import { getStatusDefinition, statusesOfGroup, type StatusGroup } from '~/helpers/statuses';
 import { groupBy } from '~/helpers/helpers';
 import { isLineStringFeature, type LaneType, type LaneQuality, isDangerFeature, type LaneStatus } from '~/types';
 
@@ -127,17 +128,12 @@ export const useStats = () => {
 
   function getStats(voies: Collections['voiesCyclablesGeojson'][]) {
     const features = getAllUniqLineStrings(voies);
-    const doneFeatures = features.filter((feature) => {
-      return feature.properties.status === 'variante' || feature.properties.status === 'done';
-    });
-
-    const wipFeatures = features.filter((feature) => ['wip', 'tested'].includes(feature.properties.status ?? ''));
-    const plannedFeatures = features.filter((feature) =>
-      ['planned', 'unknown'].includes(feature.properties.status ?? ''),
-    );
-    const postponedFeatures = features.filter((feature) =>
-      ['postponed', 'variante-postponed'].includes(feature.properties.status ?? ''),
-    );
+    const inGroup = (group: StatusGroup) => (feature: (typeof features)[number]) =>
+      getStatusDefinition(feature.properties.status).group === group;
+    const doneFeatures = features.filter(inGroup('done'));
+    const wipFeatures = features.filter(inGroup('wip'));
+    const plannedFeatures = features.filter(inGroup('planned'));
+    const postponedFeatures = features.filter(inGroup('postponed'));
 
     const totalDistance = getDistance({ features });
     const doneDistance = getDistance({ features: doneFeatures });
@@ -167,28 +163,28 @@ export const useStats = () => {
         distance: doneDistance,
         percent: getPercent(doneDistance),
         class: 'text-lvv-blue-600 font-semibold',
-        link: generateLink(['done', 'variante']),
+        link: generateLink(statusesOfGroup('done')),
       },
       wip: {
         name: 'En travaux',
         distance: wipDistance,
         percent: getPercent(wipDistance),
         class: 'text-lvv-blue-600 font-normal',
-        link: generateLink(['wip', 'tested']),
+        link: generateLink(statusesOfGroup('wip')),
       },
       planned: {
-        name: 'Prévus',
+        name: 'À venir',
         distance: plannedDistance,
         percent: getPercent(plannedDistance),
         class: 'text-black font-semibold',
-        link: generateLink(['planned', 'unknown']),
+        link: generateLink(statusesOfGroup('planned')),
       },
       postponed: {
-        name: 'Reportés',
+        name: 'Bloqués',
         distance: postponedDistance,
         percent: getPercent(postponedDistance),
         class: 'text-lvv-pink font-semibold',
-        link: generateLink(['postponed', 'variante-postponed']),
+        link: generateLink(statusesOfGroup('postponed')),
       },
     };
   }
@@ -205,7 +201,9 @@ export const useStats = () => {
     const totalDistance = getDistance({ features });
     const unsatisfactoryFeatures = features.filter((feature) => feature.properties.quality === 'unsatisfactory');
     const unsatisfactoryDistance = getDistance({ features: unsatisfactoryFeatures });
-    const postponedFeatures = features.filter((feature) => feature.properties.status === 'postponed');
+    const postponedFeatures = features.filter(
+      (feature) => getStatusDefinition(feature.properties.status).render === 'postponed',
+    );
     const postponedDistance = getDistance({ features: postponedFeatures });
 
     const percent = totalDistance === 0 ? 0 : Math.round((unsatisfactoryDistance / totalDistance) * 100);

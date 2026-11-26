@@ -35,6 +35,10 @@
           </div>
         </div>
       </div>
+      <div v-if="feature.properties.status === 'blocked' && feature.properties.blockedBy" class="py-1">
+        <div class="text-sm font-bold text-lvv-pink">Bloqué par</div>
+        <div class="text-sm">{{ feature.properties.blockedBy }}</div>
+      </div>
       <div class="py-1 flex items-center justify-between">
         <div class="text-base font-bold">Longueur</div>
         <div class="text-sm">{{ Math.round(getDistance({ features: [feature] }) / 25) * 25 }}m</div>
@@ -44,6 +48,13 @@
         <div class="text-sm text-right">
           {{ typologyNames[feature.properties.type] ?? 'Inconnu' }}
         </div>
+      </div>
+      <div v-if="feature.properties.comment" class="py-1">
+        <div class="text-sm font-bold">Commentaire</div>
+        <div class="text-sm">{{ feature.properties.comment }}</div>
+      </div>
+      <div v-if="feature.properties.blogLink" class="py-1 text-sm">
+        <a :href="feature.properties.blogLink" class="underline text-lvv-blue-600">En savoir plus</a>
       </div>
       <div v-if="displayQuality() && feature.properties.quality" class="py-1 flex items-center justify-between">
         <div class="text-base font-bold">Qualité</div>
@@ -66,6 +77,7 @@
 </template>
 
 <script setup lang="ts">
+import { getStatusDefinition } from '~/helpers/statuses';
 import config from '~/config.json';
 import type { LaneQuality, LineStringFeature } from '~/types';
 
@@ -96,44 +108,12 @@ function getDoneAtText(doneAt: string): string {
 }
 
 function getStatus(properties: LineStringFeature['properties']): { label: string; class: string; date?: string } {
-  const statusMapping = {
-    done: {
-      label: 'terminé',
-      date: properties.doneAt && getDoneAtText(properties.doneAt),
-      class: 'text-white bg-lvv-blue-600 rounded-xl px-2 w-fit',
-    },
-    wip: {
-      label: 'en travaux',
-      class: 'text-lvv-blue-600 rounded-xl px-2 border border-dashed border-lvv-blue-600',
-    },
-    planned: {
-      label: 'prévu',
-      class: 'text-lvv-blue-600 rounded-xl px-2 border border-lvv-blue-600',
-    },
-    tested: {
-      label: 'en test',
-      class: 'text-lvv-blue-600 rounded-xl px-2 border border-dashed border-lvv-blue-600',
-    },
-    postponed: {
-      label: 'reporté',
-      date: `après ${config.horizonYear}`,
-      class: 'text-white bg-lvv-pink rounded-xl px-2',
-    },
-    variante: {
-      label: 'variante',
-      class: '',
-    },
-    'variante-postponed': {
-      label: 'variante reportée',
-      date: `après ${config.horizonYear}`,
-      class: 'text-white bg-lvv-pink rounded-xl px-2',
-    },
-    unknown: {
-      label: 'à définir',
-      class: 'text-gray-900 bg-gray-200 rounded-xl px-2',
-    },
+  const definition = getStatusDefinition(properties.status);
+  return {
+    label: definition.label,
+    class: definition.badgeClass,
+    date: properties.status === 'done' && properties.doneAt ? getDoneAtText(properties.doneAt) : undefined,
   };
-  return statusMapping[properties.status];
 }
 
 function getQuality(quality: LaneQuality): { label: string; class: string; icon: string; classIcon: string } {

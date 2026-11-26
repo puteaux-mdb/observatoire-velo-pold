@@ -25,7 +25,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
 
   const statusFilters = ref([
     {
-      label: 'Terminé',
+      label: 'Réalisé',
       isEnabled: true,
       statuses: ['done', 'variante'],
     },
@@ -42,26 +42,35 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
       },
     },
     {
-      label: `Prévu pour ${config.horizonYear}`,
+      label: 'Travaux à l’étude',
       isEnabled: true,
-      statuses: ['planned'],
-      customStyle: {
-        backgroundColor: '#8B7FA0',
-        borderColor: '#8B7FA0',
-        textColor: '#FFFFFF',
-      },
+      statuses: ['works-study', 'planned'],
+      customStyle: { backgroundColor: '#8B7FA0', borderColor: '#8B7FA0', textColor: '#FFFFFF' },
     },
     {
-      label: 'Reporté',
+      label: 'Tracé validé',
       isEnabled: true,
-      statuses: ['postponed', 'variante-postponed'],
-      customStyle: {
-        backgroundColor: '#C84271',
-        borderColor: '#C84271',
-        textColor: '#FFFFFF',
-      },
+      statuses: ['validated'],
+      customStyle: { backgroundColor: '#A99FBB', borderColor: '#A99FBB', textColor: '#FFFFFF' },
     },
-    // { label: 'Inconnu', isEnabled: true, statuses: ['unknown'] },
+    {
+      label: 'Tracé à l’étude / à définir',
+      isEnabled: true,
+      statuses: ['route-study', 'to-define'],
+      customStyle: { backgroundColor: '#E5E7EB', borderColor: '#9CA3AF', textColor: '#111827' },
+    },
+    {
+      label: 'Bloqué',
+      isEnabled: true,
+      statuses: ['blocked', 'postponed', 'variante-postponed'],
+      customStyle: { backgroundColor: '#C84271', borderColor: '#C84271', textColor: '#FFFFFF' },
+    },
+    {
+      label: 'Pas d’information',
+      isEnabled: true,
+      statuses: ['unknown'],
+      customStyle: { backgroundColor: '#FFFFFF', borderColor: '#9CA3AF', textColor: '#374151' },
+    },
   ]);
 
   const typeFilters = ref([

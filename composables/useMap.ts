@@ -1,4 +1,5 @@
 import type { Collections } from '@nuxt/content';
+import { getStatusDefinition } from '~/helpers/statuses';
 import type * as maplibregl from 'maplibre-gl';
 import type { GeoJSONSource, MapOptions, Map as MaplibreType, PaddingOptions } from 'maplibre-gl';
 import { LngLatBounds, Popup } from 'maplibre-gl';
@@ -223,7 +224,7 @@ export const useMap = ({
     }
 
     const allButWipTestedFeatures = features.filter(
-      (feature) => feature.properties.status !== 'wip' && feature.properties.status !== 'tested',
+      (feature) => getStatusDefinition(feature.properties.status).render !== 'wip',
     );
 
     upsertMapSource(
@@ -653,7 +654,7 @@ export const useMap = ({
           'symbol-placement': 'line',
           'symbol-spacing': 150,
           'text-font': ['Open Sans Regular'],
-          'text-field': 'reporté',
+          'text-field': ['coalesce', ['get', 'text'], 'reporté'],
           'text-size': statusTextSize,
         },
       });
@@ -1057,16 +1058,20 @@ export const useMap = ({
     const postponed: ColoredLineStringFeature[] = [];
 
     for (const feature of sections) {
-      if (feature.properties.quality === 'unsatisfactory' && feature.properties.status !== 'postponed') {
+      const definition = getStatusDefinition(feature.properties.status);
+      if (feature.properties.quality === 'unsatisfactory' && definition.render !== 'postponed') {
         unsatisfactory.push(feature);
       }
+      // texte écrit le long du tracé (« tracé à l'étude », « bloqué »…), sauf s'il est déjà renseigné
+      if (definition.mapText && !(feature.properties as { text?: string }).text) {
+        (feature.properties as { text?: string }).text = definition.mapText;
+      }
 
-      switch (feature.properties.status) {
+      switch (definition.render) {
         case 'done':
           done.push(feature);
           break;
         case 'wip':
-        case 'tested':
           wip.push(feature);
           break;
         case 'planned':
