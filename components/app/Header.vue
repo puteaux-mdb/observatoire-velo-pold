@@ -3,15 +3,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center py-3 sm:py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start items-center lg:w-0 lg:flex-1">
-          <NuxtLink to="/" class="flex space-x-2">
-            <span class="sr-only">Cyclopolis</span>
+          <NuxtLink to="/" class="flex items-center gap-3">
             <img
               v-if="config.assoLogoUrl"
-              class="h-7 w-auto sm:h-8"
+              class="h-10 w-auto sm:h-12"
               :src="assetUrl(config.assoLogoUrl)"
               :alt="`logo ${getAssoName()}`"
             />
-            <img class="h-8 w-auto sm:h-10" :src="assetUrl(config.siteLogoUrl)" :alt="`logo ${config.siteName}`" />
+            <span class="text-base sm:text-lg font-bold leading-tight text-lvv-blue-600">Observatoire vélo</span>
           </NuxtLink>
         </div>
         <div class="-mr-2 -my-2 md:hidden flex items-center gap-1">

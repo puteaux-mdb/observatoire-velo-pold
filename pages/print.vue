@@ -170,7 +170,7 @@
                     :alt="`logo ${getAssoName()}`"
                     style="height: 11mm"
                   />
-                  <img :src="assetUrl(config.siteLogoUrl)" :alt="`logo ${config.siteName}`" style="height: 13mm" />
+                  <span style="font-weight: 700; font-size: 5mm; color: #152b68">Observatoire vélo</span>
                 </div>
                 <div v-if="title" class="print-title__main">{{ title }}</div>
                 <p v-if="subtitle" class="print-title__message">

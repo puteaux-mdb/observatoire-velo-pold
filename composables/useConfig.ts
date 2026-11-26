@@ -12,7 +12,7 @@ export function resolveSiteLink(link: string): string {
   return useAssetUrl()(link);
 }
 
-/** Code affiché d'une ligne (ex. 20 -> « V20 », 107 -> « VD7 ») */
+/** Code affiché d'une ligne (ex. 20 -> « V20 », 9207 -> « V92-7 ») */
 export function getLineCode(line: number | string | undefined | null): string {
   const number = Number(line);
   return lines.find((l) => l.number === number)?.code ?? String(line ?? '');

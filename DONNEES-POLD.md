@@ -60,7 +60,12 @@ Chaque tronçon est une `Feature` `LineString` :
 - `reviewedAt` : date de dernière revue, quand on a vérifié que les informations sont toujours justes, même sans rien changer (JJ/MM/AAAA)
 - `blockedBy`, `comment`, `blogLink` (facultatifs) : qui bloque, commentaire libre, lien vers un article
 
-Codes de lignes : `V` + n° pour le VIF (V20), `VD` + n° de la route départementale (VD7), `VP` + n° pour les voies POLD (VP1). Le numéro interne (`number`) est libre mais unique, par exemple 20 pour V20, 1007 pour VD7, 2001 pour VP1.
+Codes de lignes :
+- `V` + n° pour le VIF (V20) ;
+- `V92-` + n° de la route départementale suivie pour les itinéraires du Département (V92-7 pour la RD7, V92-913 pour la RD913). Convention transposable aux autres départements d'Île-de-France (V93-…, V94-…) ;
+- `VP` + n° pour les voies POLD (VP1).
+
+Le numéro interne (`number`) est libre mais unique, par exemple 20 pour V20, 9207 pour V92-7, 2001 pour VP1.
 
 Points facultatifs dans le même fichier :
 
