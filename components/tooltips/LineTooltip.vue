@@ -50,6 +50,23 @@
         <div class="text-sm font-bold">Maître d’ouvrage</div>
         <div class="text-sm text-right">{{ feature.properties.owners?.join(', ') || 'Non renseigné' }}</div>
       </div>
+      <div v-if="featureCommitments.length" class="py-1">
+        <div class="text-sm font-bold">Engagements</div>
+        <ul class="mt-0.5 space-y-1">
+          <li v-for="c in featureCommitments" :key="c.id" class="text-sm">
+            <div>{{ c.label }}</div>
+            <div class="text-xs text-gray-600">
+              {{ c.period }} · échéance <strong>{{ c.deadline }}</strong>
+              <span
+                v-if="isCommitmentOverdue(c, feature.properties.status)"
+                class="ml-1 inline-block rounded px-1.5 py-0.5 text-[11px] font-semibold bg-amber-100 text-amber-800"
+              >
+                échéance dépassée
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
       <div v-if="feature.properties.horizon" class="py-1 flex items-center justify-between">
         <div class="text-sm font-bold">Horizon</div>
         <div class="text-sm">{{ feature.properties.horizon }}</div>
@@ -103,10 +120,14 @@
 <script setup lang="ts">
 import LineBadge from '~/components/line/LineBadge.vue';
 import { getLineCode, getLineNetwork, getNetworkLabel } from '~/composables/useConfig';
+import { getCommitment, isCommitmentOverdue, type Commitment } from '~/helpers/commitments';
 import { getStatusDefinition } from '~/helpers/statuses';
 import type { LaneQuality, LineStringFeature } from '~/types';
 
 const assetUrl = useAssetUrl();
+const featureCommitments = computed(
+  () => (feature.properties.engagements ?? []).map((id) => getCommitment(id)).filter(Boolean) as Commitment[],
+);
 const featureNetworkLabels = computed(() => {
   const ids = feature.properties.networks?.length
     ? feature.properties.networks

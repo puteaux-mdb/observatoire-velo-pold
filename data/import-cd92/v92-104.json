@@ -30,7 +30,10 @@
    "type": "inconnu",
    "comment": "Piste provisoire (« coronapiste ») ouverte en 2020 sur le pont, de Puteaux à Neuilly-sur-Seine. Sa pérennisation est inscrite en projet par le Département. Le plan vélo départemental prévoit de pérenniser les pistes provisoires, notamment sur les franchissements de Seine.",
    "text": "La piste provisoire installée en 2020 relie Puteaux à Neuilly-sur-Seine par le pont. Le Département a inscrit sa pérennisation en projet ; son plan vélo prévoit de pérenniser les pistes provisoires, notamment sur les franchissements de Seine.",
-   "quality": "unsatisfactory"
+   "quality": "unsatisfactory",
+   "engagements": [
+    "cd92-2022-2028"
+   ]
   }
  ]
 }

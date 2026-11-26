@@ -457,5 +457,66 @@
       "link": "",
       "enCreation": true
     }
+  ],
+  "commitments": [
+    {
+      "id": "vif-phase-1",
+      "plan": "VIF",
+      "label": "Réseau Vélo Île-de-France (VIF) – phase 1",
+      "short": "VIF phase 1",
+      "owner": "Région Île-de-France",
+      "period": "2021-2025",
+      "deadline": 2025,
+      "note": "Réseau inscrit au SDRIF-E par la Région"
+    },
+    {
+      "id": "vif-phase-2",
+      "plan": "VIF",
+      "label": "Réseau Vélo Île-de-France (VIF) – phase 2",
+      "short": "VIF phase 2",
+      "owner": "Région Île-de-France",
+      "period": "2025-2030",
+      "deadline": 2030,
+      "note": "Réseau inscrit au SDRIF-E par la Région"
+    },
+    {
+      "id": "vif",
+      "plan": "VIF",
+      "label": "Réseau Vélo Île-de-France (VIF) – phase à préciser",
+      "short": "VIF",
+      "owner": "Région Île-de-France",
+      "period": "2021-2030",
+      "deadline": 2030,
+      "note": "Réseau inscrit au SDRIF-E par la Région ; achèvement de l'ensemble du réseau prévu en 2030"
+    },
+    {
+      "id": "cd92-2022-2028",
+      "plan": "Plan vélo départemental",
+      "label": "Plan vélo des Hauts-de-Seine 2022-2028",
+      "short": "Plan vélo 92 2022-2028",
+      "owner": "Département des Hauts-de-Seine",
+      "period": "2022-2028",
+      "deadline": 2028
+    },
+    {
+      "id": "cd92-2028-2034",
+      "plan": "Plan vélo départemental",
+      "label": "Plan vélo des Hauts-de-Seine 2028-2034",
+      "short": "Plan vélo 92 2028-2034",
+      "owner": "Département des Hauts-de-Seine",
+      "period": "2028-2034",
+      "deadline": 2034,
+      "note": "Plan à venir"
+    },
+    {
+      "id": "pold-sdc",
+      "plan": "Schéma directeur POLD",
+      "label": "Schéma directeur cyclable de Paris Ouest La Défense",
+      "short": "Schéma directeur POLD",
+      "owner": "Paris Ouest La Défense",
+      "period": "2021-2025",
+      "deadline": 2025,
+      "note": "Objectif du plan climat (PCAE) : 80 % des axes du schéma réalisés d'ici 2025"
+    }
   ]
 }

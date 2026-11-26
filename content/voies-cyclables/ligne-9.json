@@ -9,6 +9,9 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v9#vaucresson-traversée"
@@ -35,6 +38,9 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v9#vaucresson-traversée"
@@ -77,6 +83,9 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v9#vaucresson-traversée"
@@ -111,6 +120,9 @@
         "status": "validated",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v9#garches-partie-ouest"
@@ -137,6 +149,9 @@
         "status": "validated",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v9#garches-partie-ouest"
@@ -163,6 +178,9 @@
         "status": "validated",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v9#garches-partie-ouest"
@@ -189,6 +207,9 @@
         "status": "done",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v9#garches-saint-cloud-partie-réalisée"
@@ -235,6 +256,9 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v9#saint-cloud-traversée-vers-le-pont-de-saint-cloud"
@@ -337,6 +361,9 @@
         "status": "works-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v9#saint-cloud-arrivée-au-pont-de-saint-cloud"

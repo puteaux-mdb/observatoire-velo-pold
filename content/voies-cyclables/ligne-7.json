@@ -9,6 +9,9 @@
         "status": "works-study",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v7#rueil-malmaison-entrée-ouest-tronc-commun-v5-et-v7",
@@ -37,6 +40,9 @@
         "status": "done",
         "type": "voie-verte",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v7#rueil-malmaison-voie-verte-des-bords-de-seine-partie-sud"
@@ -111,6 +117,9 @@
         "status": "validated",
         "type": "voie-verte",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v7#rueil-malmaison-voie-verte-des-bords-de-seine-partie-nord"
@@ -193,6 +202,9 @@
         "status": "route-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v7#rueil-malmaison-nanterre-jusqu-à-la-limite-nord-variante",
@@ -292,6 +304,9 @@
         "status": "route-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v7#levallois-perret-traversée-variante-a",
@@ -347,6 +362,9 @@
         "status": "route-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v7#levallois-perret-traversée-variante-b",

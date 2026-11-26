@@ -50,6 +50,25 @@
     />
 
     <FilterSection
+      v-if="filters.commitmentFilters.value.length > 1"
+      title="Filtrer par engagement"
+      :filters="filters.commitmentFilters.value"
+      :show-selection-buttons="true"
+      @toggle-filter="(index: number) => actions.toggleAttributeFilter('commitmentFilters', index)"
+      @select-all="filters.commitmentFilters.value.forEach((item: AttributeFilterItem) => (item.isEnabled = true))"
+      @deselect-all="filters.commitmentFilters.value.forEach((item: AttributeFilterItem) => (item.isEnabled = false))"
+    />
+    <label class="mt-2 flex items-center gap-3 cursor-pointer">
+      <input
+        type="checkbox"
+        :checked="filters.showOverdueOnly.value"
+        class="h-4 w-4 rounded border-gray-300 text-lvv-blue-600 focus:ring-lvv-blue-600"
+        @change="actions.toggleShowOverdueOnly"
+      />
+      <span class="text-base font-medium">Seulement les engagements dont l’échéance est dépassée</span>
+    </label>
+
+    <FilterSection
       v-if="filters.horizonFilters.value.length > 1"
       title="Filtrer par horizon de réalisation"
       :filters="filters.horizonFilters.value"

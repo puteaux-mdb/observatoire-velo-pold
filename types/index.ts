@@ -51,6 +51,7 @@ export type LineStringFeature = {
     blockedBy?: string; // si bloqué : par qui / pourquoi
     comment?: string; // commentaire libre (ex. « aménagement préexistant »)
     blogLink?: string; // lien vers un article qui détaille la situation
+    engagements?: string[]; // plans dans lesquels le tronçon est inscrit (identifiants de config.commitments)
     source?: string; // source des données du tronçon (ex. open data du Département)
     sourceUrl?: string; // lien vers cette source
   };
@@ -213,6 +214,8 @@ export interface FiltersState {
   networkFilters: Ref<Array<AttributeFilterItem>>;
   ownerFilters: Ref<Array<AttributeFilterItem>>;
   horizonFilters: Ref<Array<AttributeFilterItem>>;
+  commitmentFilters: Ref<Array<AttributeFilterItem>>;
+  showOverdueOnly: Ref<boolean>;
 }
 
 export interface FilterActions {
@@ -224,7 +227,11 @@ export interface FilterActions {
   toggleShowCounters: () => void;
   toggleShowTerritory: () => void;
   toggleShowVifContext: () => void;
-  toggleAttributeFilter: (group: 'networkFilters' | 'ownerFilters' | 'horizonFilters', index: number) => void;
+  toggleAttributeFilter: (
+    group: 'networkFilters' | 'ownerFilters' | 'horizonFilters' | 'commitmentFilters',
+    index: number,
+  ) => void;
+  toggleShowOverdueOnly: () => void;
 }
 
 export interface UseBikeLaneFiltersOptions {

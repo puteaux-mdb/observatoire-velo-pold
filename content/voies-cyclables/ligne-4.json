@@ -9,6 +9,9 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-nord-entrée-sur-le-territoire"
@@ -47,6 +50,9 @@
         "status": "wip",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-nord-boucle-branche-est"
@@ -85,6 +91,9 @@
         "status": "done",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-nord-boucle-liaison",
@@ -136,6 +145,9 @@
         "status": "done",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-nord-boucle-liaison",
@@ -163,6 +175,9 @@
         "status": "done",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-nord-boucle-liaison",
@@ -226,6 +241,9 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-piste-bidirectionnelle-vers-l-université"
@@ -284,6 +302,9 @@
         "status": "done",
         "type": "velorue",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-vélorue"
@@ -318,6 +339,9 @@
         "status": "tested",
         "type": "velorue",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-université-vélorue-provisoire",
@@ -353,6 +377,9 @@
         "status": "done",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-de-l-université-vers-les-terrasses",
@@ -380,6 +407,9 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-carrefour-sens-1"
@@ -406,6 +436,9 @@
         "status": "done",
         "type": "bilaterale",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-carrefour-sens-2"
@@ -444,6 +477,9 @@
         "status": "wip",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-terrasses-variante-en-travaux",
@@ -479,6 +515,9 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#nanterre-terrasses-jusqu-à-la-défense"
@@ -537,6 +576,9 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#courbevoie-la-défense-nord-tracé-provisoire",
@@ -564,6 +606,9 @@
         "status": "tested",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#courbevoie-la-défense-nord-aménagement-provisoire",
@@ -603,6 +648,9 @@
         "status": "tested",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#courbevoie-la-défense-nord-aménagement-provisoire",
@@ -678,6 +726,9 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#courbevoie-de-la-défense-vers-le-pont-de-neuilly"
@@ -736,6 +787,9 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#carrefour-du-pont-de-neuilly-côté-courbevoie-tronc-commun-v4-et-v20",
@@ -780,6 +834,9 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5",
@@ -816,6 +873,9 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5",
@@ -844,6 +904,9 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v4#neuilly-avenue-charles-de-gaulle-jusqu-à-la-porte-maillot-tronc-commun-v4-et-v5",

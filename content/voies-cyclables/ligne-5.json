@@ -9,6 +9,9 @@
         "status": "works-study",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#rueil-malmaison-entrée-ouest-tronc-commun-v5-et-v7",
@@ -37,6 +40,9 @@
         "status": "works-study",
         "type": "bilaterale",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#rd-913-rueil-malmaison-traversée-de-rueil-vers-nanterre"
@@ -71,6 +77,9 @@
         "status": "works-study",
         "type": "bilaterale",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#rd-913-nanterre-avenue-georges-clemenceau"
@@ -101,6 +110,9 @@
         "status": "works-study",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#rd-913-nanterre-puteaux-jusqu-à-l-approche-de-la-défense"
@@ -139,6 +151,9 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#puteaux-approche-de-la-défense-par-l-ouest"
@@ -169,6 +184,9 @@
         "status": "route-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#la-défense-traversée-variante-a",
@@ -204,6 +222,9 @@
         "status": "route-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#la-défense-traversée-variante-b",
@@ -291,6 +312,9 @@
         "status": "route-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#la-défense-traversée-variante-c",
@@ -350,6 +374,9 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#puteaux-courbevoie-de-la-défense-vers-le-pont-de-neuilly"
@@ -396,6 +423,9 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#carrefour-du-pont-de-neuilly-tronc-commun-v5-et-v20",
@@ -448,6 +478,9 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5",
@@ -484,6 +517,9 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5",
@@ -512,6 +548,9 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v5#neuilly-avenue-charles-de-gaulle-jusqu-à-la-porte-maillot-tronc-commun-v4-et-v5",

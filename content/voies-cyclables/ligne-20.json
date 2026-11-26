@@ -9,6 +9,9 @@
         "status": "works-study",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#d7-saint-cloud-quai-du-président-carnot-partie-sud"
@@ -43,6 +46,9 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#d7-saint-cloud-quai-du-président-carnot-jusqu-au-pont-de-saint-cloud"
@@ -77,6 +83,9 @@
         "status": "works-study",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#d7-saint-cloud-du-pont-de-saint-cloud-vers-suresnes"
@@ -151,6 +160,9 @@
         "status": "works-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#d7-limite-saint-cloud-suresnes-quai-gallieni"
@@ -197,6 +209,9 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#d7-suresnes-puteaux-jusqu-au-pont-de-puteaux"
@@ -259,6 +274,9 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#d7-puteaux-quai-de-dion-bouton-depuis-le-pont-de-puteaux"
@@ -289,6 +307,9 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#d7-puteaux-quai-de-dion-bouton-depuis-le-pont-de-puteaux"
@@ -315,6 +336,9 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#d7-puteaux-quai-de-dion-bouton-partie-nord"
@@ -349,6 +373,9 @@
         "status": "done",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#puteaux-sortie-du-quai-vers-le-pont-de-neuilly",
@@ -380,6 +407,9 @@
         "status": "works-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#puteaux-abords-du-pont-de-neuilly"
@@ -438,6 +468,9 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#carrefour-du-pont-de-neuilly-côté-puteaux"
@@ -468,6 +501,9 @@
         "status": "wip",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#carrefour-du-pont-de-neuilly-tronc-commun-v5-et-v20",
@@ -520,6 +556,9 @@
         "status": "done",
         "type": "bidirectionnelle",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#carrefour-du-pont-de-neuilly-côté-courbevoie-tronc-commun-v4-et-v20",
@@ -564,6 +603,9 @@
         "status": "validated",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#courbevoie-du-pont-de-neuilly-vers-le-nord-est"
@@ -598,6 +640,9 @@
         "status": "done",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#courbevoie-quai-paul-doumer",
@@ -645,6 +690,9 @@
         "status": "validated",
         "type": "velorue",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#courbevoie-vélorue-jusqu-au-pont-de-courbevoie"
@@ -695,6 +743,9 @@
         "status": "validated",
         "type": "velorue",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#courbevoie-vélorue-jusqu-au-pont-de-courbevoie"
@@ -721,6 +772,9 @@
         "status": "done",
         "type": "bilaterale",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#pont-de-courbevoie-vers-l-île-de-la-jatte"
@@ -755,6 +809,9 @@
         "status": "works-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#neuilly-île-de-la-jatte-jusqu-au-pont-de-levallois"
@@ -789,6 +846,9 @@
         "status": "works-study",
         "type": "inconnu",
         "quality": "satisfactory",
+        "engagements": [
+          "vif"
+        ],
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v20#levallois-du-pont-de-levallois-à-la-limite-de-clichy"

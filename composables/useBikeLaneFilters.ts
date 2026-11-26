@@ -1,3 +1,4 @@
+import { COMMITMENTS, getCommitment, hasOverdueCommitment } from '~/helpers/commitments';
 import { getLineCode, getLineNetwork } from '~/composables/useConfig';
 import {
   type FiltersState,
@@ -121,6 +122,13 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     { label: 'Non renseigné', isEnabled: true, value: NONE },
   ]);
   const horizonFilters = ref<AttributeFilterItem[]>([]);
+  // Engagements : plans d'inscription du tronçon (VIF, plan départemental, schéma directeur POLD)
+  const commitmentFilters = ref<AttributeFilterItem[]>([
+    ...COMMITMENTS.map((c) => ({ label: `${c.short} (échéance ${c.deadline})`, isEnabled: true, value: c.id })),
+    { label: 'Aucun engagement', isEnabled: true, value: NONE },
+  ]);
+  // n'afficher que les tronçons dont un engagement a dépassé son échéance sans être réalisé
+  const showOverdueOnly = ref(false);
   watch(
     allFeatures,
     (features) => {
@@ -158,6 +166,11 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     if (!featureOwners.some((o) => owners.has(o) || (o !== NONE && !config.owners.includes(o)))) return false;
     const horizons = enabled(horizonFilters.value);
     if (!horizons.has(feature.properties.horizon || NONE)) return false;
+    const commitments = enabled(commitmentFilters.value);
+    const featureCommitments = feature.properties.engagements?.length ? feature.properties.engagements : [NONE];
+    if (!featureCommitments.some((c) => commitments.has(c) || (c !== NONE && !getCommitment(c)))) return false;
+    if (showOverdueOnly.value && !hasOverdueCommitment(feature.properties.engagements, feature.properties.status))
+      return false;
     return true;
   }
   const showTerritory = ref(config.territoryBoundary.defaultVisible);
@@ -487,6 +500,8 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     networkFilters,
     ownerFilters,
     horizonFilters,
+    commitmentFilters,
+    showOverdueOnly,
   };
 
   const actions: FilterActions = {
@@ -514,8 +529,11 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     toggleShowVifContext() {
       showVifContext.value = !showVifContext.value;
     },
+    toggleShowOverdueOnly() {
+      showOverdueOnly.value = !showOverdueOnly.value;
+    },
     toggleAttributeFilter(group, index) {
-      const list = { networkFilters, ownerFilters, horizonFilters }[group].value;
+      const list = { networkFilters, ownerFilters, horizonFilters, commitmentFilters }[group].value;
       const item = list[index];
       if (item) item.isEnabled = !item.isEnabled;
     },
