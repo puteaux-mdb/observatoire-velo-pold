@@ -23,9 +23,9 @@
       "Vaucresson"
     ]
   },
-  "assoName": "Association à compléter",
+  "assoName": "Collectif Vélo Paris-Ouest La Défense",
   "assoLink": "https://example.org",
-  "assoLogoUrl": "",
+  "assoLogoUrl": "/associations/collectif-velo-pold.png",
   "siteLogoUrl": "/logo-observatoire-pold.svg",
   "mapLogoUrl": "/logo-observatoire-pold-carte.svg",
   "membershipLink": "",
@@ -41,7 +41,7 @@
   },
   "home": {
     "heroImage": "",
-    "heroText": "pour suivre le développement du réseau cyclable du territoire Paris Ouest La Défense (11 communes des Hauts-de-Seine).",
+    "heroText": "pour suivre le développement du réseau cyclable du territoire Paris Ouest La Défense.",
     "whatIsText": "C'est le nom donné ici au réseau cyclable structurant prévu sur les 11 communes du territoire Paris Ouest La Défense : Courbevoie, Garches, La Garenne-Colombes, Levallois-Perret, Nanterre, Neuilly-sur-Seine, Puteaux, Rueil-Malmaison, Saint-Cloud, Suresnes et Vaucresson. Il réunit les itinéraires portés par le Département des Hauts-de-Seine, les communes, la Métropole du Grand Paris et la Région (réseau VIF).",
     "progressText": "Texte à compléter : état d'avancement global du réseau cyclable du territoire.",
     "stats": [
@@ -55,7 +55,7 @@
       }
     ]
   },
-  "ctaText": "Soutenez la promotion et l'usage du vélo sur le territoire Paris Ouest La Défense, ainsi que le développement d'infrastructures cyclables continues et sécurisées en adhérant à l'association.",
+  "ctaText": "Soutenez la promotion et l'usage du vélo sur le territoire Paris Ouest La Défense, ainsi que le développement d'infrastructures cyclables continues et sécurisées, en rejoignant l'une des associations du collectif.",
   "slug": "ligne-velo",
   "center": [2.2275, 48.8775],
   "bounds": [
@@ -316,5 +316,73 @@
     "Saint-Cloud",
     "Suresnes",
     "Vaucresson"
+  ],
+  "associations": [
+    {
+      "name": "Collectif Vélo Nanterre",
+      "communes": ["Nanterre"],
+      "logo": "/associations/collectif-velo-nanterre.png",
+      "link": ""
+    },
+    {
+      "name": "La Rustine de Nanterre",
+      "communes": ["Nanterre"],
+      "logo": "/associations/la-rustine-de-nanterre.png",
+      "link": ""
+    },
+    {
+      "name": "Rueil à Vélo",
+      "communes": ["Rueil-Malmaison"],
+      "logo": "/associations/rueil-a-velo.png",
+      "link": ""
+    },
+    {
+      "name": "MDB Saint-Cloud – Garches",
+      "communes": ["Saint-Cloud", "Garches"],
+      "logo": "/associations/mdb-saint-cloud-garches.png",
+      "link": ""
+    },
+    {
+      "name": "Cyclonade – Suresnes à vélo",
+      "communes": ["Suresnes"],
+      "logo": "/associations/cyclonade-suresnes.png",
+      "link": ""
+    },
+    {
+      "name": "MDB Puteaux",
+      "communes": ["Puteaux"],
+      "logo": "/associations/mdb-puteaux.png",
+      "link": ""
+    },
+    {
+      "name": "MDB Courbevoie",
+      "communes": ["Courbevoie"],
+      "logo": "/associations/mdb-courbevoie.png",
+      "link": ""
+    },
+    {
+      "name": "MDB La Garenne-Colombes",
+      "communes": ["La Garenne-Colombes"],
+      "logo": "/associations/mdb-la-garenne-colombes.png",
+      "link": ""
+    },
+    {
+      "name": "MDB Neuilly à Vélo",
+      "communes": ["Neuilly-sur-Seine"],
+      "logo": "/associations/mdb-neuilly-a-velo.png",
+      "link": ""
+    },
+    {
+      "name": "MDB Vélo à Levallois",
+      "communes": ["Levallois-Perret"],
+      "logo": "/associations/mdb-velo-a-levallois.png",
+      "link": ""
+    },
+    {
+      "name": "Paris en Selle Levallois",
+      "communes": ["Levallois-Perret"],
+      "logo": "/associations/paris-en-selle-levallois.png",
+      "link": ""
+    }
   ]
 }

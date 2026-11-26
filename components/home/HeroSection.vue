@@ -40,7 +40,7 @@
               </span>
             </h1>
             <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-              Une initiative de l'association
+              Une initiative des associations du
               <a
                 :href="getAssoLink()"
                 target="_blank"
