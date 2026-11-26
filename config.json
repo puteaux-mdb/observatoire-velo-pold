@@ -509,12 +509,12 @@
     {
       "id": "pold-sdc",
       "plan": "Schéma directeur POLD",
-      "label": "Schéma directeur cyclable de Paris Ouest La Défense",
-      "short": "Schéma directeur POLD",
+      "label": "Schéma directeur cyclable POLD : 80 % des axes réalisés en 2025",
+      "short": "Schéma directeur POLD (80 % en 2025)",
       "owner": "Paris Ouest La Défense",
       "period": "2021-2025",
       "deadline": 2025,
-      "note": "Objectif du plan climat (PCAE) : 80 % des axes du schéma réalisés d'ici 2025"
+      "note": "Objectif du plan climat-air-énergie de POLD (PCAE, adopté le 25 juin 2019)"
     }
   ]
 }

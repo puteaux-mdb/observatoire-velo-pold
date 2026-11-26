@@ -51,7 +51,7 @@
 
     <FilterSection
       v-if="filters.commitmentFilters.value.length > 1"
-      title="Filtrer par engagement"
+      title="Filtrer par objectif fixé"
       :filters="filters.commitmentFilters.value"
       :show-selection-buttons="true"
       @toggle-filter="(index: number) => actions.toggleAttributeFilter('commitmentFilters', index)"
@@ -65,7 +65,7 @@
         class="h-4 w-4 rounded border-gray-300 text-lvv-blue-600 focus:ring-lvv-blue-600"
         @change="actions.toggleShowOverdueOnly"
       />
-      <span class="text-base font-medium">Seulement les engagements dont l’échéance est dépassée</span>
+      <span class="text-base font-medium">Seulement les objectifs dont l’échéance est dépassée</span>
     </label>
 
     <FilterSection

@@ -125,7 +125,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
   // Engagements : plans d'inscription du tronçon (VIF, plan départemental, schéma directeur POLD)
   const commitmentFilters = ref<AttributeFilterItem[]>([
     ...COMMITMENTS.map((c) => ({ label: `${c.short} (échéance ${c.deadline})`, isEnabled: true, value: c.id })),
-    { label: 'Aucun engagement', isEnabled: true, value: NONE },
+    { label: 'Aucun objectif fixé', isEnabled: true, value: NONE },
   ]);
   // n'afficher que les tronçons dont un engagement a dépassé son échéance sans être réalisé
   const showOverdueOnly = ref(false);

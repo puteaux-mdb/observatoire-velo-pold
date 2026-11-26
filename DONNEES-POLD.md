@@ -110,7 +110,7 @@ pnpm generate   # site statique dans .output/public, à déposer sur n'importe q
 
 Propriétés facultatives `source` (texte) et `sourceUrl` (lien), affichées dans l'infobulle. Exemple : `"source": "Open data « Aménagements cyclables » du Département des Hauts-de-Seine"`.
 
-### Engagements d'un tronçon
+### Objectifs fixés d'un tronçon (propriété `engagements`)
 
 Propriété facultative `engagements` : liste des plans dans lesquels le tronçon est inscrit, par identifiant (définis dans `config.json`, rubrique `commitments`, avec période et échéance) :
 
@@ -121,6 +121,6 @@ Propriété facultative `engagements` : liste des plans dans lesquels le tronço
 | `vif` | VIF, phase à préciser | 2021-2030 | 2030 |
 | `cd92-2022-2028` | Plan vélo des Hauts-de-Seine | 2022-2028 | 2028 |
 | `cd92-2028-2034` | Plan vélo des Hauts-de-Seine (à venir) | 2028-2034 | 2034 |
-| `pold-sdc` | Schéma directeur cyclable POLD (objectif PCAE : 80 % des axes en 2025) | 2021-2025 | 2025 |
+| `pold-sdc` | Schéma directeur cyclable POLD : 80 % des axes réalisés en 2025 (objectif du PCAE de 2019) | 2021-2025 | 2025 |
 
 Exemple : `"engagements": ["vif-phase-1", "pold-sdc"]`. Un tronçon non réalisé dont l'échéance est passée est signalé « échéance dépassée » dans l'infobulle et peut être isolé avec le filtre correspondant.

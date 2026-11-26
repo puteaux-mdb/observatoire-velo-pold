@@ -51,7 +51,7 @@
         <div class="text-sm text-right">{{ feature.properties.owners?.join(', ') || 'Non renseigné' }}</div>
       </div>
       <div v-if="featureCommitments.length" class="py-1">
-        <div class="text-sm font-bold">Engagements</div>
+        <div class="text-sm font-bold">Objectifs fixés</div>
         <ul class="mt-0.5 space-y-1">
           <li v-for="c in featureCommitments" :key="c.id" class="text-sm">
             <div>{{ c.label }}</div>
