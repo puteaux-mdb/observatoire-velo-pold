@@ -1,10 +1,16 @@
 import config from '~/config.json';
+import { useAssetUrl } from '~/composables/useAssetUrl';
 
 export type SiteFeature = keyof typeof config.features;
 export type NetworkId = (typeof config.networks)[number]['id'];
 export type LineDefinition = { number: number; code: string; network: string };
 
 const lines = config.lines as LineDefinition[];
+
+/** Préfixe un chemin interne (« /#associations ») par la base du site (sous-dossier GitHub Pages) */
+export function resolveSiteLink(link: string): string {
+  return useAssetUrl()(link);
+}
 
 /** Code affiché d'une ligne (ex. 20 -> « V20 », 107 -> « VD7 ») */
 export function getLineCode(line: number | string | undefined | null): string {
@@ -36,8 +42,9 @@ export const useConfig = () => {
     return config.assoName;
   }
 
+  /** Lien vers le collectif : un chemin interne (« /#associations ») est préfixé par la base du site */
   function getAssoLink(): string {
-    return config.assoLink;
+    return resolveSiteLink(config.assoLink);
   }
 
   /** Numéros internes des lignes du réseau */

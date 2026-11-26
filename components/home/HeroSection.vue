@@ -43,8 +43,6 @@
               Une initiative des associations du
               <a
                 :href="getAssoLink()"
-                target="_blank"
-                rel="noopener"
                 class="text-lvv-blue-600 font-medium hover:underline"
                 ><strong>{{ assoName }}</strong></a
               >

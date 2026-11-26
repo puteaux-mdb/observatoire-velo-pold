@@ -79,7 +79,7 @@
       <div class="mt-6 prose prose-lg text-gray-500 mx-auto">
         <h2>Éditeur</h2>
         <p>
-          Ce site est édité par {{ getAssoName() }} (<a :href="getAssoLink()" target="_blank">{{ getAssoLink() }}</a
+          Ce site est édité par {{ getAssoName() }} (<a :href="getAssoLink()">{{ getAssoLink() }}</a
           >).
           <span v-if="config.contactEmail">
             Contact : <a :href="`mailto:${config.contactEmail}`">{{ config.contactEmail }}</a></span
@@ -107,7 +107,7 @@
           détails écrits des tronçons de chaque ligne doivent faire systématiquement mention du nom de la plateforme «
           Cyclopolis » (avec lien vers <a href="https://cyclopolis.fr" target="_blank">https://cyclopolis.fr</a>) et du
           nom de l’association contributrice « {{ getAssoName() }} » (avec lien vers
-          <a :href="`${getAssoLink()}`" target="_blank">{{ getAssoLink() }}</a
+          <a :href="getAssoLink()">{{ getAssoLink() }}</a
           >).
         </p>
 

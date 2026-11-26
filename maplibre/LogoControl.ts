@@ -43,7 +43,10 @@ export default class LogoControl {
     // on click, go to the logo's website in a new tab
     this._image.style.cursor = 'pointer';
     this._image.onclick = () => {
-      if (this._href) window.open(this._href, '_blank');
+      if (!this._href) return;
+      // lien interne (ex. signet des associations) : même onglet
+      if (this._href.startsWith('/')) window.location.href = this._href;
+      else window.open(this._href, '_blank');
     };
 
     this._container.appendChild(this._image);

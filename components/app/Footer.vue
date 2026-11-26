@@ -44,7 +44,9 @@ const links = [
 const socials = [
   ...config.socials,
   ...(config.repoUrl ? [{ name: 'Github', href: config.repoUrl, icon: 'mdi:github' }] : []),
-  ...(config.assoLink ? [{ name: 'Site web', href: config.assoLink, icon: 'mdi:link' }] : []),
+  ...(config.assoLink && !config.assoLink.startsWith('/')
+    ? [{ name: 'Site web', href: config.assoLink, icon: 'mdi:link' }]
+    : []),
   ...(config.contactEmail ? [{ name: 'Email', href: `mailto:${config.contactEmail}`, icon: 'mdi:email-outline' }] : []),
 ] as { name: string; href: string; icon: string }[];
 </script>

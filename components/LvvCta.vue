@@ -31,7 +31,6 @@
           </div>
           <a
             :href="getAssoLink()"
-            target="_blank"
             type="button"
             class="mt-3 flex max-h-12 items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-lvv-pink bg-white transition duration-300 transform hover:scale-105 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0"
           >

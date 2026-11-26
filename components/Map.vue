@@ -45,6 +45,7 @@
 <script setup lang="ts">
 import { plotTerritoryBoundary } from '~/helpers/territory';
 import LimitsControl from '~/maplibre/LimitsControl';
+import { resolveSiteLink } from '~/composables/useConfig';
 import type { Collections } from '@nuxt/content';
 import { useMediaQuery } from '@vueuse/core';
 import {
@@ -366,7 +367,7 @@ onMounted(() => {
   if (options.logo) {
     const logoControl = new LogoControl({
       src: assetUrl(config.mapLogoUrl),
-      href: config.assoLink,
+      href: resolveSiteLink(config.assoLink),
       alt: `logo ${config.assoName}`,
       width: 75,
       height: 75,
