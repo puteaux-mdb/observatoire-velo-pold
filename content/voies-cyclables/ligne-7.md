@@ -3,7 +3,7 @@ name: Ligne V7
 line: 7
 from: Mantes-la-Jolie
 to: Saint-Fargeau-Ponthierry / Melun
-description: "Ligne V7 du réseau Vélo Île-de-France (VIF), de Mantes-la-Jolie à Saint-Fargeau-Ponthierry ou Melun, via Limay, Guitrancourt, Issou, Gargenville, Juziers, Mézy-sur-Seine, Hardricourt, Meulan-en-Yvelines, Vaux-sur-Seine, Triel-sur-Seine, Carrières-sous-Poissy, Andrésy, Conflans-Sainte-Honorine, Herblay, La Frette-sur-Seine, Cormeilles-en-Parisis, Sartrouville, Montesson, Le Pecq, Croissy-sur-Seine, Chatou, Rueil-Malmaison, Nanterre, Colombes, Gennevilliers, Argenteuil, Épinay-sur-Seine, Saint-Denis, Saint-Ouen, Clichy, Levallois-Perret, Paris, Ivry-sur-Seine, Vitry-sur-Seine, Choisy-le-Roi, Orly, Villeneuve-le-Roi, puis deux branches : vers Saint-Fargeau-Ponthierry via Ablon-sur-Seine, Athis-Mons, Juvisy-sur-Orge, Draveil, Ris-Orangis, Évry, Corbeil-Essonnes et Le Coudray-Montceaux, et vers Melun via Villeneuve-Saint-Georges, Montgeron, Soisy-sur-Seine, Étiolles, Tigery, Lieusaint, Saint-Pierre-du-Perray, Nandy, Savigny-le-Temple, Cesson, Vert-Saint-Denis et Le Mée-sur-Seine. Sur le territoire Paris Ouest La Défense : bords de Seine à Rueil-Malmaison et Nanterre, et traversée de Levallois-Perret, environ 10.3 km."
+description: "Ligne V7 du réseau Vélo Île-de-France (VIF), de Mantes-la-Jolie à Saint-Fargeau-Ponthierry ou Melun, via Rueil-Malmaison, Nanterre et Levallois-Perret. Environ 10.3 km sur le territoire Paris Ouest La Défense."
 trafic: à compléter
 cover: ""
 ---

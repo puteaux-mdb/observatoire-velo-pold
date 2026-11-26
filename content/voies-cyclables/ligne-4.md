@@ -3,7 +3,7 @@ name: Ligne V4
 line: 4
 from: Cergy-Pontoise
 to: Marne-la-Vallée Chessy
-description: "Ligne V4 du réseau Vélo Île-de-France (VIF), de Cergy-Pontoise à Marne-la-Vallée Chessy, via Neuville-sur-Oise, Jouy-le-Moutier, Maurecourt, Andrésy, Conflans-Sainte-Honorine, Achères, Saint-Germain-en-Laye, Maisons-Laffitte, Sartrouville, Houilles, Carrières-sur-Seine, Bezons, Nanterre, Courbevoie, Neuilly-sur-Seine, Paris, Saint-Mandé, Vincennes, Nogent-sur-Marne, Le Perreux-sur-Marne, Neuilly-Plaisance, Neuilly-sur-Marne, Gagny, Gournay-sur-Marne, Chelles, Vaires-sur-Marne, Torcy, Saint-Thibault-des-Vignes, Lagny-sur-Marne, Conches-sur-Gondoire, Bussy-Saint-Georges, Chanteloup-en-Brie et Montévrain. Sur le territoire Paris Ouest La Défense : de Nanterre à la porte Maillot, via Courbevoie et Neuilly-sur-Seine, environ 8.5 km."
+description: "Ligne V4 du réseau Vélo Île-de-France (VIF), de Cergy-Pontoise à Marne-la-Vallée Chessy, via Nanterre, Courbevoie et Neuilly-sur-Seine. Environ 8.5 km sur le territoire Paris Ouest La Défense."
 trafic: à compléter
 cover: ""
 ---

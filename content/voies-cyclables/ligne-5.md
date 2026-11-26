@@ -3,7 +3,7 @@ name: Ligne V5
 line: 5
 from: Poissy
 to: Pontault-Combault
-description: "Ligne V5 du réseau Vélo Île-de-France (VIF), de Poissy à Pontault-Combault, via Saint-Germain-en-Laye, Le Pecq, Le Vésinet, Chatou, Rueil-Malmaison, Nanterre, Puteaux, La Défense, Courbevoie, Neuilly-sur-Seine, Paris, Charenton-le-Pont, Saint-Maurice, Joinville-le-Pont, Champigny-sur-Marne, Chennevières-sur-Marne, Ormesson-sur-Marne et La Queue-en-Brie. Sur le territoire Paris Ouest La Défense, d'ouest en est : de Rueil-Malmaison à la porte Maillot, via Nanterre, Puteaux, La Défense, Courbevoie et Neuilly-sur-Seine, environ 10.6 km."
+description: "Ligne V5 du réseau Vélo Île-de-France (VIF), de Poissy à Pontault-Combault, via Rueil-Malmaison, Nanterre, Puteaux, La Défense, Courbevoie et Neuilly-sur-Seine. Environ 10.6 km sur le territoire Paris Ouest La Défense."
 trafic: à compléter
 cover: ""
 ---
