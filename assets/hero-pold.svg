@@ -34,23 +34,23 @@
 <path d="M512.4,238.3 L460.4,212.8" fill="none" stroke="#FFFFFF" stroke-width="9.6" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M100.7,191.8 L98.1,191.2" fill="none" stroke="#FFFFFF" stroke-width="9.6" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M102.0,186.8 L99.4,186.1" fill="none" stroke="#FFFFFF" stroke-width="9.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M308.1,473.6 L314.0,346.0 L335.6,292.7 L380.8,240.2 M380.8,240.2 L404.2,212.2 L396.1,204.2 L404.6,186.0 M408.2,181.1 L451.5,145.0 L458.3,143.6 L468.8,159.3 L487.9,143.3 M487.9,143.4 L487.9,143.3 M487.9,143.3 L544.5,110.1" fill="none" stroke="#8C5C2A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M276.6,83.7 L249.2,67.1 M276.6,83.7 L277.5,83.2 L278.8,83.7 L277.6,83.5 L276.8,83.8 L276.6,83.7 M294.0,137.3 L251.4,109.0 L276.6,83.7 M294.0,137.3 L294.0,137.3 M297.5,138.8 L294.0,137.3 M294.0,137.3 L304.0,131.2 L348.5,147.2 L371.6,137.7 L374.5,154.2 M408.2,181.1 L385.3,154.2 L374.6,154.2" fill="none" stroke="#0263AF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M374.4,187.2 L370.2,178.9 L352.4,189.4 L328.1,203.9 L325.8,205.6 L207.2,188.6 L133.7,197.7 L101.3,189.3 M374.2,187.8 L370.1,196.3 L353.5,188.8 L364.5,190.3 L374.2,187.8 M374.2,187.8 L374.4,187.2 M374.2,187.8 L375.3,187.5 L374.4,187.2 M374.4,187.2 L374.4,187.2 M404.6,186.0 L380.6,174.2 L376.3,183.0" fill="none" stroke="#BF4393" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M101.5,189.4 L101.3,189.4 M101.5,189.4 L102.1,191.1 L108.5,191.6 L108.5,191.3 L101.5,189.4 M305.9,18.7 L258.9,66.6 L206.0,102.2 L160.6,117.9 L180.4,138.5 L159.5,164.3 L127.7,142.7 L101.5,189.4 M582.3,159.9 L557.0,180.0 L525.1,123.2 M586.1,164.5 L557.9,122.0" fill="none" stroke="#99D3E1" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M37.7,465.5 L37.2,465.5 M75.3,461.1 L37.3,465.3 M100.1,460.9 L84.3,461.1 M115.3,460.2 L112.8,460.7 M159.1,458.4 L144.7,458.4 M313.0,441.5 L305.8,439.1 L299.4,416.0 L290.4,429.6 L177.7,456.9" fill="none" stroke="#F18C42" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M405.8,183.7 L414.2,188.3" fill="none" stroke="#BF4393" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M403.3,188.3 L411.7,192.9" fill="none" stroke="#8C5C2A" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M410.5,179.9 L415.3,189.5" fill="none" stroke="#0263AF" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M405.9,182.2 L410.6,191.8" fill="none" stroke="#8C5C2A" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M430.0,203.7 L411.6,192.9" fill="none" stroke="#0263AF" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M432.7,199.2 L414.3,188.4" fill="none" stroke="#BF4393" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M458.1,217.5 L430.2,203.8" fill="none" stroke="#0263AF" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M460.4,212.8 L432.5,199.2" fill="none" stroke="#BF4393" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M510.1,243.0 L458.1,217.5" fill="none" stroke="#0263AF" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M512.4,238.3 L460.4,212.8" fill="none" stroke="#BF4393" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M100.7,191.8 L98.1,191.2" fill="none" stroke="#BF4393" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M102.0,186.8 L99.4,186.1" fill="none" stroke="#99D3E1" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M308.1,473.6 L314.0,346.0 L335.6,292.7 L380.8,240.2 M380.8,240.2 L404.2,212.2 L396.1,204.2 L404.6,186.0 M408.2,181.1 L451.5,145.0 L458.3,143.6 L468.8,159.3 L487.9,143.3 M487.9,143.4 L487.9,143.3 M487.9,143.3 L544.5,110.1" fill="none" stroke="#6E491E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M276.6,83.7 L249.2,67.1 M276.6,83.7 L277.5,83.2 L278.8,83.7 L277.6,83.5 L276.8,83.8 L276.6,83.7 M294.0,137.3 L251.4,109.0 L276.6,83.7 M294.0,137.3 L294.0,137.3 M297.5,138.8 L294.0,137.3 M294.0,137.3 L304.0,131.2 L348.5,147.2 L371.6,137.7 L374.5,154.2 M408.2,181.1 L385.3,154.2 L374.6,154.2" fill="none" stroke="#0055C8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M374.4,187.2 L370.2,178.9 L352.4,189.4 L328.1,203.9 L325.8,205.6 L207.2,188.6 L133.7,197.7 L101.3,189.3 M374.2,187.8 L370.1,196.3 L353.5,188.8 L364.5,190.3 L374.2,187.8 M374.2,187.8 L374.4,187.2 M374.2,187.8 L375.3,187.5 L374.4,187.2 M374.4,187.2 L374.4,187.2 M404.6,186.0 L380.6,174.2 L376.3,183.0" fill="none" stroke="#A0006E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M101.5,189.4 L101.3,189.4 M101.5,189.4 L102.1,191.1 L108.5,191.6 L108.5,191.3 L101.5,189.4 M305.9,18.7 L258.9,66.6 L206.0,102.2 L160.6,117.9 L180.4,138.5 L159.5,164.3 L127.7,142.7 L101.5,189.4 M582.3,159.9 L557.0,180.0 L525.1,123.2 M586.1,164.5 L557.9,122.0" fill="none" stroke="#82C8E6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M37.7,465.5 L37.2,465.5 M75.3,461.1 L37.3,465.3 M100.1,460.9 L84.3,461.1 M115.3,460.2 L112.8,460.7 M159.1,458.4 L144.7,458.4 M313.0,441.5 L305.8,439.1 L299.4,416.0 L290.4,429.6 L177.7,456.9" fill="none" stroke="#FF5A00" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M405.8,183.7 L414.2,188.3" fill="none" stroke="#A0006E" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M403.3,188.3 L411.7,192.9" fill="none" stroke="#6E491E" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M410.5,179.9 L415.3,189.5" fill="none" stroke="#0055C8" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M405.9,182.2 L410.6,191.8" fill="none" stroke="#6E491E" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M430.0,203.7 L411.6,192.9" fill="none" stroke="#0055C8" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M432.7,199.2 L414.3,188.4" fill="none" stroke="#A0006E" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M458.1,217.5 L430.2,203.8" fill="none" stroke="#0055C8" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M460.4,212.8 L432.5,199.2" fill="none" stroke="#A0006E" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M510.1,243.0 L458.1,217.5" fill="none" stroke="#0055C8" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M512.4,238.3 L460.4,212.8" fill="none" stroke="#A0006E" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100.7,191.8 L98.1,191.2" fill="none" stroke="#A0006E" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M102.0,186.8 L99.4,186.1" fill="none" stroke="#82C8E6" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
 <g transform="translate(241.8,77.7) scale(1.3)"><rect x="-9" y="-7" width="18" height="12" rx="3" fill="#FFFFFF"/><path d="M-7,-3 H7 M-4,-3 V3 M4,-3 V3" stroke="#111111" stroke-width="2.4" fill="none"/></g>
 <g transform="translate(507.0,118.1) scale(1.3)"><rect x="-9" y="-7" width="18" height="12" rx="3" fill="#FFFFFF"/><path d="M-7,-3 H7 M-4,-3 V3 M4,-3 V3" stroke="#111111" stroke-width="2.4" fill="none"/></g>
 <g transform="translate(462.1,151.9) scale(1.3)"><rect x="-9" y="-7" width="18" height="12" rx="3" fill="#FFFFFF"/><path d="M-7,-3 H7 M-4,-3 V3 M4,-3 V3" stroke="#111111" stroke-width="2.4" fill="none"/></g>
@@ -90,28 +90,23 @@
 <text x="650" y="58" font-size="34" font-weight="800" fill="#111111">Réseau cyclable</text>
 <text x="650" y="88" font-size="19" fill="#444444">Paris Ouest La Défense</text>
 <text x="650" y="136" font-size="17" font-weight="700" fill="#111111" letter-spacing="1">RÉSEAU VÉLO IDF (VIF)</text>
-<rect x="650" y="151" width="58" height="30" rx="15" fill="#0263AF"/>
-<text x="679" y="173" text-anchor="middle" font-size="19" font-weight="800" fill="#FFFFFF">V4</text>
-<rect x="716" y="151" width="58" height="30" rx="15" fill="#BF4393"/>
-<text x="745" y="173" text-anchor="middle" font-size="19" font-weight="800" fill="#FFFFFF">V5</text>
-<rect x="782" y="151" width="58" height="30" rx="15" fill="#99D3E1"/>
-<text x="811" y="173" text-anchor="middle" font-size="19" font-weight="800" fill="#1f2937">V7</text>
-<rect x="848" y="151" width="58" height="30" rx="15" fill="#F18C42"/>
-<text x="877" y="173" text-anchor="middle" font-size="19" font-weight="800" fill="#FFFFFF">V9</text>
-<rect x="914" y="151" width="58" height="30" rx="15" fill="#8C5C2A"/>
-<text x="943" y="173" text-anchor="middle" font-size="19" font-weight="800" fill="#FFFFFF">V20</text>
-<path d="M650,216 H702" stroke="#262626" stroke-width="7" stroke-linecap="round"/>
-<text x="720" y="223" font-size="21" font-weight="600" fill="#111111">Itinéraires du Département</text>
-<text x="720" y="246" font-size="16" fill="#555555">structurants et interdépartementaux</text>
-<path d="M650,278 H702" stroke="#111111" stroke-width="3.4" stroke-dasharray="9 5"/>
-<text x="720" y="285" font-size="21" font-weight="600" fill="#111111">Axes priorité 1</text>
-<text x="720" y="308" font-size="16" fill="#555555">schéma directeur cyclable POLD</text>
-<polygon points="676.0,329.0 678.9,336.0 686.5,336.6 680.7,341.5 682.5,348.9 676.0,344.9 669.5,348.9 671.3,341.5 665.5,336.6 673.1,336.0" fill="#E30613" stroke="#111111" stroke-width="1.4" stroke-linejoin="round"/>
-<text x="720" y="347" font-size="21" font-weight="600" fill="#111111">Points durs</text>
-<text x="720" y="370" font-size="16" fill="#555555">carrefours complexes</text>
-<g transform="translate(676.0,402.0) scale(1.5)"><rect x="-9" y="-7" width="18" height="12" rx="3" fill="#FFFFFF"/><path d="M-7,-3 H7 M-4,-3 V3 M4,-3 V3" stroke="#111111" stroke-width="2.4" fill="none"/></g>
-<text x="720" y="409" font-size="21" font-weight="600" fill="#111111">Ponts et passerelles</text>
-<path d="M650,448 H702" stroke="#BFD3E6" stroke-width="14" stroke-linecap="round"/>
-<text x="720" y="455" font-size="21" font-weight="600" fill="#111111">La Seine</text>
+<g transform="translate(650,142) scale(0.1539)"><path d="M28.3,311.8C12.7,311.8,0,299.1,0,283.5V28.3C0,12.7,12.7,0,28.3,0h255.1c15.6,0,28.3,12.7,28.3,28.3v255.1 c0,15.6-12.7,28.3-28.3,28.3H28.3z" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="8"/><path d="M283.5,56.7H28.3c-7.8,0-14.2-6.3-14.2-14.2V28.3c0-7.8,6.3-14.2,14.2-14.2h255.1c7.8,0,14.2,6.3,14.2,14.2 v14.2C297.6,50.3,291.3,56.7,283.5,56.7 M297.6,283.5v-14.2c0-7.8-6.4-14.2-14.2-14.2H28.3c-7.8,0-14.2,6.3-14.2,14.2v14.2 c0,7.8,6.3,14.2,14.2,14.2h255.1C291.3,297.6,297.6,291.3,297.6,283.5" fill="#0055C8"/><path d="M125.2,211.1H99.9L61.3,101.9h25.8l19.6,59.5c3.7,11.4,5.6,20.1,6.3,24.3h0.3c0.8-4.2,2.5-12.1,6.3-23.9l19.8-59.8h24.3 L125.2,211.1z" fill="#000"/><path d="M237.7,188.3V211h-21.6v-22.7h-49.1V168l42.3-66.1h28.4v69.4h12.8v17H237.7z M216.1,121.1h-0.3c-0.5,1.9-3.6,8.5-7.9,15.3 l-22.2,34.9h30.4V121.1z" fill="#000"/></g>
+<g transform="translate(712,142) scale(0.1539)"><path d="M28.3,311.8C12.7,311.8,0,299.1,0,283.5V28.3C0,12.7,12.7,0,28.3,0h255.1c15.6,0,28.3,12.7,28.3,28.3v255.1 c0,15.6-12.7,28.3-28.3,28.3H28.3z" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="8"/><path d="M283.5,56.7H28.3c-7.8,0-14.2-6.3-14.2-14.2V28.3c0-7.8,6.3-14.2,14.2-14.2h255.1c7.8,0,14.2,6.3,14.2,14.2 v14.2C297.6,50.3,291.3,56.7,283.5,56.7 M297.6,283.5v-14.2c0-7.8-6.4-14.2-14.2-14.2H28.3c-7.8,0-14.2,6.3-14.2,14.2v14.2 c0,7.8,6.3,14.2,14.2,14.2h255.1C291.3,297.6,297.6,291.3,297.6,283.5" fill="#A0006E"/><path d="M128.5,211.2h-25.3L64.5,101.9h25.8l19.6,59.5c3.7,11.4,5.6,20.1,6.3,24.3h0.3c0.8-4.2,2.5-12.1,6.3-23.9l19.8-59.8H167 L128.5,211.2z" fill="#000"/><path d="M205.9,213.6c-12.7,0-22.4-2.8-30.7-7.9l8.8-17c6,4.2,12.2,7,20.7,7s19.2-5.1,19.2-17.9c0-7.9-5.3-18.7-25.3-19 c-6.2,0-13.4-0.2-17-0.2l4.3-56.7h57.3v18.2h-39.2l-1.5,20.7c0.6,0,2,0.2,3.1,0.2c29.8,1.4,41.9,18.2,41.9,34.6 C247.3,196.5,230.8,213.6,205.9,213.6z" fill="#000"/></g>
+<g transform="translate(774,142) scale(0.1539)"><path d="M28.3,311.8C12.7,311.8,0,299.1,0,283.5V28.3C0,12.7,12.7,0,28.3,0h255.1c15.6,0,28.3,12.7,28.3,28.3v255.1 c0,15.6-12.7,28.3-28.3,28.3H28.3z" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="8"/><path d="M283.5,56.7H28.3c-7.8,0-14.2-6.3-14.2-14.2V28.3c0-7.8,6.3-14.2,14.2-14.2h255.1c7.8,0,14.2,6.3,14.2,14.2 v14.2C297.6,50.3,291.3,56.7,283.5,56.7 M297.6,283.5v-14.2c0-7.8-6.4-14.2-14.2-14.2H28.3c-7.8,0-14.2,6.3-14.2,14.2v14.2 c0,7.8,6.3,14.2,14.2,14.2h255.1C291.3,297.6,297.6,291.3,297.6,283.5" fill="#82C8E6"/><path d="M127.1,211.2h-25.3L63.1,101.9h25.8l19.6,59.5c3.7,11.4,5.6,20.1,6.3,24.3h0.3c0.8-4.2,2.5-12.1,6.3-23.9l19.8-59.8h24.3 L127.1,211.2z" fill="#000"/><path d="M210.2,211h-24.9c0-14.4,3.9-23.6,13.4-41.4l26.6-49.4h-53v-18.2h76.3v17.8C224.7,161.3,210.2,193.9,210.2,211z" fill="#000"/></g>
+<g transform="translate(836,142) scale(0.1539)"><path d="M28.3,311.8C12.7,311.8,0,299.1,0,283.5V28.3C0,12.7,12.7,0,28.3,0h255.1c15.6,0,28.3,12.7,28.3,28.3v255.1 c0,15.6-12.7,28.3-28.3,28.3H28.3z" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="8"/><path d="M283.5,56.7H28.3c-7.8,0-14.2-6.3-14.2-14.2V28.3c0-7.8,6.3-14.2,14.2-14.2h255.1c7.8,0,14.2,6.3,14.2,14.2 v14.2C297.6,50.3,291.3,56.7,283.5,56.7 M297.6,283.5v-14.2c0-7.8-6.4-14.2-14.2-14.2H28.3c-7.8,0-14.2,6.3-14.2,14.2v14.2 c0,7.8,6.3,14.2,14.2,14.2h255.1C291.3,297.6,297.6,291.3,297.6,283.5" fill="#FF5A00"/><path d="M127.2,210.9h-25.3L63.3,101.6h25.8l19.6,59.5c3.7,11.4,5.6,20.1,6.3,24.3h0.3c0.8-4.2,2.5-12.1,6.3-23.9l19.8-59.8h24.3 L127.2,210.9z" fill="#000"/><path d="M195.8,213.6c-6.2,0-11.7-0.8-16.4-1.9l3.4-18.5c2.9,1.2,8.7,2.6,15,2.6c15.3,0,26.4-12.2,28-34.1 c-3.7,3.2-10.8,7.4-22.6,7.4c-18.1,0-32.6-11.9-32.6-32.3c0-21.8,14.5-37.9,37.4-37.9c29.8,0,40.5,20.7,40.5,49.6 C248.5,186.4,230.8,213.6,195.8,213.6z M209,116.1c-10.8,0-16.4,8.8-16.4,18.2c0,10.2,6.8,17.6,17.6,17.6c7,0,12.5-2.6,14.7-6 c1.2-1.9,1.2-6.2,1.2-9.4C226.1,126.2,220.1,116.1,209,116.1z" fill="#000"/></g>
+<g transform="translate(898,142) scale(0.1539)"><path d="M28.3,311.8C12.7,311.8,0,299.1,0,283.5V28.3C0,12.7,12.7,0,28.3,0h255.1c15.6,0,28.3,12.7,28.3,28.3v255.1 c0,15.6-12.7,28.3-28.3,28.3H28.3z" fill="#FFFFFF" stroke="#BBBBBB" stroke-width="8"/><path d="M283.5,56.7H28.3c-7.8,0-14.2-6.3-14.2-14.2V28.3c0-7.8,6.3-14.2,14.2-14.2h255.1c7.8,0,14.2,6.3,14.2,14.2 v14.2C297.6,50.3,291.3,56.7,283.5,56.7 M297.6,283.5v-14.2c0-7.8-6.4-14.2-14.2-14.2H28.3c-7.8,0-14.2,6.3-14.2,14.2v14.2 c0,7.8,6.3,14.2,14.2,14.2h255.1C291.3,297.6,297.6,291.3,297.6,283.5" fill="#6E491E"/><path d="M87,211.5H61.7L23,102.2h25.8l19.6,59.5c3.7,11.4,5.6,20.1,6.3,24.3h0.3c0.8-4.2,2.5-12.1,6.3-23.9l19.8-59.8h24.3 L87,211.5z" fill="#000"/><path d="M131,211.3v-14.4c2.8-12.7,15.3-24.3,29.8-36.9c7.3-6.3,15.1-14.2,15.1-24.7c0-9.4-6.2-17.3-18.1-17.3 c-9.6,0-16.2,7-18.8,9.9l-11.4-15.1c10.5-9.1,20.2-13.4,34.9-13.4c19.2,0,37.2,11.1,37.2,33.4c0,18.7-11.9,27.5-25,39.4 c-5.6,5.1-16.5,14.7-17.9,21h45v18.2H131z" fill="#000"/><path d="M248.8,214.3c-32.9,0-39.4-32.4-39.4-57.6s7.1-57.6,40-57.6s39.4,32.4,39.4,57.6S281.7,214.3,248.8,214.3z M249.1,117.4 c-15.8,0-16.2,28.1-16.2,39.2c0,11,0.8,39.4,16.2,39.4c15.4,0,16.1-28.6,16.1-39.4C265.1,145.2,264.7,117.4,249.1,117.4z" fill="#000"/></g>
+<path d="M650,230 H702" stroke="#262626" stroke-width="7" stroke-linecap="round"/>
+<text x="720" y="237" font-size="21" font-weight="600" fill="#111111">Itinéraires du Département</text>
+<text x="720" y="260" font-size="16" fill="#555555">structurants et interdépartementaux</text>
+<path d="M650,292 H702" stroke="#111111" stroke-width="3.4" stroke-dasharray="9 5"/>
+<text x="720" y="299" font-size="21" font-weight="600" fill="#111111">Axes priorité 1</text>
+<text x="720" y="322" font-size="16" fill="#555555">schéma directeur cyclable POLD</text>
+<polygon points="676.0,343.0 678.9,350.0 686.5,350.6 680.7,355.5 682.5,362.9 676.0,358.9 669.5,362.9 671.3,355.5 665.5,350.6 673.1,350.0" fill="#E30613" stroke="#111111" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="720" y="361" font-size="21" font-weight="600" fill="#111111">Points durs</text>
+<text x="720" y="384" font-size="16" fill="#555555">carrefours complexes</text>
+<g transform="translate(676.0,416.0) scale(1.5)"><rect x="-9" y="-7" width="18" height="12" rx="3" fill="#FFFFFF"/><path d="M-7,-3 H7 M-4,-3 V3 M4,-3 V3" stroke="#111111" stroke-width="2.4" fill="none"/></g>
+<text x="720" y="423" font-size="21" font-weight="600" fill="#111111">Ponts et passerelles</text>
+<path d="M650,462 H702" stroke="#BFD3E6" stroke-width="14" stroke-linecap="round"/>
+<text x="720" y="469" font-size="21" font-weight="600" fill="#111111">La Seine</text>
 <text x="982" y="547" text-anchor="end" font-size="14" fill="#7A7A7A">Schéma indicatif · sources : Région IDF, CD92, POLD</text>
 </svg>
