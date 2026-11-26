@@ -5,9 +5,9 @@
         <div class="flex justify-start items-center lg:w-0 lg:flex-1">
           <NuxtLink to="/" class="flex items-center gap-3 text-base sm:text-lg font-bold leading-tight text-lvv-blue-600">
             <img
-              v-if="config.assoLogoUrl"
-              class="h-11 w-auto sm:h-12"
-              :src="assetUrl(config.assoLogoUrl)"
+              v-if="config.roundLogoUrl"
+              class="h-11 w-11 sm:h-12 sm:w-12 rounded-full shadow-sm"
+              :src="assetUrl(config.roundLogoUrl)"
               :alt="`logo ${getAssoName()}`"
             />
             <span class="flex flex-col">

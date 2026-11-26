@@ -52,11 +52,11 @@ export default class LogoControl {
     this._container.appendChild(this._image);
 
     // pastille blanche autour du logo, avec une marge par rapport au bord de la carte
+    // logo rond, avec une marge par rapport au bord de la carte
     this._container.style.margin = '0 10px 10px 0';
-    this._container.style.padding = '4px';
-    this._container.style.background = '#ffffff';
-    this._container.style.borderRadius = '8px';
-    this._container.style.boxShadow = '0 0 0 1px rgba(0, 0, 0, 0.08)';
+    this._container.style.borderRadius = '9999px';
+    this._container.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.25)';
+    this._container.style.lineHeight = '0';
 
     return this._container;
   }

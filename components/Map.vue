@@ -391,9 +391,9 @@ onMounted(() => {
       src: assetUrl(config.mapLogoUrl),
       href: resolveSiteLink(config.assoLink),
       alt: `logo ${config.assoName}`,
-      // logo du Collectif Vélo POLD (324 × 360 px)
-      width: 72,
-      height: 80,
+      // logo rond du Collectif Vélo POLD
+      width: 64,
+      height: 64,
     });
     map.addControl(logoControl, 'bottom-right');
   }
