@@ -5,6 +5,243 @@
       "type": "Feature",
       "properties": {
         "line": 92005,
+        "name": "Boulevard Washington – partie sud",
+        "status": "done",
+        "type": "bandes-cyclables",
+        "quality": "satisfactory",
+        "networks": [
+          "departemental"
+        ],
+        "owners": [
+          "Département des Hauts-de-Seine"
+        ],
+        "comment": "Aménagement ouvert en 2024 (BCY3 - Bande cyclable unidirectionnelle de chaque côté de l'axe).",
+        "source": "Open data « Aménagements cyclables » du Département des Hauts-de-Seine (mise à jour du 12/11/2025)",
+        "sourceUrl": "https://www.data.gouv.fr/datasets/amenagements-cyclables",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v92-5#boulevard-washington-partie-sud"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.217483,
+            48.86988
+          ],
+          [
+            2.217526,
+            48.869942
+          ],
+          [
+            2.217631,
+            48.870046
+          ],
+          [
+            2.21804,
+            48.870379
+          ],
+          [
+            2.218076,
+            48.870428
+          ],
+          [
+            2.218107,
+            48.870482
+          ],
+          [
+            2.218124,
+            48.870507
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 92005,
+        "name": "Boulevard Washington – raccord",
+        "status": "done",
+        "type": "bilaterale",
+        "quality": "satisfactory",
+        "networks": [
+          "departemental"
+        ],
+        "owners": [
+          "Département des Hauts-de-Seine"
+        ],
+        "comment": "Aménagement ouvert en 2024 (PCY3 - Piste unidirectionnelle de chaque côté de l'axe).",
+        "source": "Open data « Aménagements cyclables » du Département des Hauts-de-Seine (mise à jour du 12/11/2025)",
+        "sourceUrl": "https://www.data.gouv.fr/datasets/amenagements-cyclables",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v92-5#boulevard-washington-raccord"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.218124,
+            48.870507
+          ],
+          [
+            2.218183,
+            48.870594
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 92005,
+        "name": "Boulevard Washington",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "networks": [
+          "departemental"
+        ],
+        "owners": [
+          "Département des Hauts-de-Seine"
+        ],
+        "comment": "Aménagement ouvert en 2024 (PCY1 - Piste cyclable bidirectionnelle).",
+        "source": "Open data « Aménagements cyclables » du Département des Hauts-de-Seine (mise à jour du 12/11/2025)",
+        "sourceUrl": "https://www.data.gouv.fr/datasets/amenagements-cyclables",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v92-5#boulevard-washington"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.218183,
+            48.870594
+          ],
+          [
+            2.218271,
+            48.870723
+          ],
+          [
+            2.218501,
+            48.871125
+          ],
+          [
+            2.218917,
+            48.871819
+          ],
+          [
+            2.218925,
+            48.871848
+          ],
+          [
+            2.218942,
+            48.871906
+          ],
+          [
+            2.218935,
+            48.871997
+          ],
+          [
+            2.218909,
+            48.872057
+          ],
+          [
+            2.21888,
+            48.872094
+          ],
+          [
+            2.218858,
+            48.872117
+          ],
+          [
+            2.218841,
+            48.872136
+          ],
+          [
+            2.218789,
+            48.872177
+          ],
+          [
+            2.218573,
+            48.872325
+          ],
+          [
+            2.218074,
+            48.872642
+          ],
+          [
+            2.217733,
+            48.872873
+          ],
+          [
+            2.217629,
+            48.87299
+          ],
+          [
+            2.217563,
+            48.873107
+          ],
+          [
+            2.217521,
+            48.873262
+          ],
+          [
+            2.217517,
+            48.873273
+          ],
+          [
+            2.217531,
+            48.87361
+          ],
+          [
+            2.217564,
+            48.873954
+          ],
+          [
+            2.217571,
+            48.87401
+          ],
+          [
+            2.217585,
+            48.874121
+          ],
+          [
+            2.217658,
+            48.874603
+          ],
+          [
+            2.217716,
+            48.875
+          ],
+          [
+            2.217716,
+            48.875004
+          ],
+          [
+            2.217735,
+            48.875244
+          ],
+          [
+            2.217738,
+            48.87534
+          ],
+          [
+            2.217725,
+            48.87541
+          ],
+          [
+            2.217713,
+            48.875438
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 92005,
         "name": "Rue des Fusillés-de-la-Résistance",
         "status": "done",
         "type": "bidirectionnelle",
