@@ -135,8 +135,8 @@
                     >
                       <div class="flex-shrink-0">
                         <div
-                          class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white font-bold"
-                          :style="`background-color: ${getLineColor(voie.line)}`"
+                          class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center font-bold"
+                          :style="`background-color: ${getLineColor(voie.line)}; color: ${getLineTextColor(voie.line)}`"
                         >
                           {{ getLineCode(voie.line) }}
                         </div>
@@ -361,8 +361,8 @@
               >
                 <div class="flex-shrink-0">
                   <div
-                    class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white font-bold"
-                    :style="`background-color: ${getLineColor(voie.line)}`"
+                    class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center font-bold"
+                    :style="`background-color: ${getLineColor(voie.line)}; color: ${getLineTextColor(voie.line)}`"
                   >
                     {{ getLineCode(voie.line) }}
                   </div>
@@ -382,7 +382,7 @@ import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/
 import { useMediaQuery } from '@vueuse/core';
 import SettingsPopover from './SettingsPopover.vue';
 import type GlobalSearch from '~/components/GlobalSearch.vue';
-const { getLineColor } = useColors();
+const { getLineColor, getLineTextColor } = useColors();
 const { getVoieCyclablePath } = useUrl();
 const { config, getAssoName, hasFeature, displayCounters } = useConfig();
 const assetUrl = useAssetUrl();

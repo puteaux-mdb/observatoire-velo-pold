@@ -64,8 +64,8 @@
                 <StatusBadge v-if="result.status" :status="result.status" />
                 <div
                   v-if="result.line"
-                  class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold text-white"
-                  :style="{ backgroundColor: getLineColor(result.line) }"
+                  class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold"
+                  :style="{ backgroundColor: getLineColor(result.line), color: getLineTextColor(result.line) }"
                 >
                   {{ result.line }}
                 </div>
@@ -131,7 +131,7 @@ const StatusBadge = defineComponent({
   },
 });
 
-const { getLineColor } = useColors();
+const { getLineColor, getLineTextColor } = useColors();
 const { results, loading, search, loadIndex } = useGlobalSearch();
 const router = useRouter();
 

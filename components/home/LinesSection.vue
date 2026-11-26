@@ -7,8 +7,8 @@
     >
       <div class="flex-shrink-0">
         <div
-          class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white font-bold"
-          :style="`background-color: ${getLineColor(voie.line)}`"
+          class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center font-bold"
+          :style="`background-color: ${getLineColor(voie.line)}; color: ${getLineTextColor(voie.line)}`"
         >
           {{ getLineCode(voie.line) }}
         </div>
@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { getLineCode } from '~/composables/useConfig';
-const { getLineColor } = useColors();
+const { getLineColor, getLineTextColor } = useColors();
 const { getVoieCyclablePath } = useUrl();
 
 const { voies } = await useGetVoiesCyclablesNums();

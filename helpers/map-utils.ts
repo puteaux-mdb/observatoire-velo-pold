@@ -1,3 +1,4 @@
+import { getContrastTextColor } from './colors';
 import type { Collections } from '@nuxt/content';
 
 type ColoredLineStringFeature = Extract<
@@ -80,7 +81,7 @@ export function createLineShieldIcon(lineLabel: string | number, color: string, 
   ctx.stroke();
 
   // line number
-  ctx.fillStyle = '#ffffff';
+  ctx.fillStyle = getContrastTextColor(color);
   const label = String(lineLabel);
   ctx.font = `bold ${label.length <= 2 ? 28 : label.length === 3 ? 22 : 17}px sans-serif`;
   ctx.textAlign = 'center';
@@ -129,7 +130,7 @@ export function createCompositeLineShieldIcon(
     ctx.stroke();
 
     // line number
-    ctx.fillStyle = '#ffffff';
+    ctx.fillStyle = getContrastTextColor(color);
     const label = String(lineLabel);
     ctx.font = `bold ${label.length <= 2 ? 28 : label.length === 3 ? 22 : 17}px sans-serif`;
     ctx.textAlign = 'center';

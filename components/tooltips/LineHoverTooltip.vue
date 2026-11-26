@@ -5,8 +5,8 @@
         <div
           v-for="line in lines"
           :key="line"
-          class="h-8 min-w-8 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white text-base font-bold"
-          :style="`background-color: ${getLineColor(line)}`"
+          class="h-8 min-w-8 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-base font-bold"
+          :style="`background-color: ${getLineColor(line)}; color: ${getLineTextColor(line)}`"
         >
           {{ getLineCode(line) }}
         </div>
@@ -59,7 +59,7 @@ import { getLineCode } from '~/composables/useConfig';
 import { getStatusDefinition } from '~/helpers/statuses';
 import type { LaneQuality, LineStringFeature } from '~/types';
 
-const { getLineColor } = useColors();
+const { getLineColor, getLineTextColor } = useColors();
 const { getDistance, typologyNames, qualityNames } = useStats();
 const { getSectionDetailsUrl } = useUrl();
 

@@ -1,3 +1,4 @@
+import { getContrastTextColor } from '~/helpers/colors';
 import config from '~/config.json';
 
 export const useColors = () => {
@@ -30,5 +31,9 @@ export const useColors = () => {
     return lineConfig.color;
   }
 
-  return { getLineColor };
+  function getLineTextColor(line: number): string {
+    return getContrastTextColor(getLineColor(line));
+  }
+
+  return { getLineColor, getLineTextColor };
 };

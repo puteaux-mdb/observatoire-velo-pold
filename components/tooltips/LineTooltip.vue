@@ -8,8 +8,8 @@
         <div
           v-for="line in lines"
           :key="line"
-          class="h-8 min-w-8 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-white text-base font-bold"
-          :style="`background-color: ${getLineColor(line)}`"
+          class="h-8 min-w-8 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-base font-bold"
+          :style="`background-color: ${getLineColor(line)}; color: ${getLineTextColor(line)}`"
         >
           <a :href="assetUrl(`/${getLineCode(line).toLowerCase()}`)">
             {{ getLineCode(line) }}
@@ -97,7 +97,7 @@ import { getLineCode, getLineNetwork, getNetworkLabel } from '~/composables/useC
 import { getStatusDefinition } from '~/helpers/statuses';
 import type { LaneQuality, LineStringFeature } from '~/types';
 
-const { getLineColor } = useColors();
+const { getLineColor, getLineTextColor } = useColors();
 const assetUrl = useAssetUrl();
 const featureNetworkLabels = computed(() => {
   const ids = feature.properties.networks?.length

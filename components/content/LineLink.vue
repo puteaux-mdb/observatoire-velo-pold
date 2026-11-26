@@ -4,8 +4,8 @@
       getRevName('singular')
     }}</span>
     <span
-      class="not-prose inline-flex no-underline items-center justify-center rounded-full text-white leading-none"
-      :style="`background-color: ${color};`"
+      class="not-prose inline-flex no-underline items-center justify-center rounded-full leading-none"
+      :style="`background-color: ${color}; color: ${textColor};`"
       :class="size === 'sm' ? 'text-lg h-6 min-w-6 w-fit px-1.5 whitespace-nowrap' : 'h-10 w-10'"
     >
       {{ getLineCode(line) }}
@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { getLineCode } from '~/composables/useConfig';
-const { getLineColor } = useColors();
+const { getLineColor, getLineTextColor } = useColors();
 const { getRevName } = useConfig();
 const { getVoieCyclablePath } = useUrl();
 
@@ -32,6 +32,7 @@ const props = withDefaults(
 );
 
 const color = computed(() => getLineColor(Number(props.line)));
+const textColor = computed(() => getLineTextColor(Number(props.line)));
 
 const href = props.anchor
   ? `${getVoieCyclablePath(Number(props.line))}#${props.anchor}`

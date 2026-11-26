@@ -75,43 +75,43 @@
   "colors": [
     {
       "line": 1,
-      "color": "#60A75B"
+      "color": "#E0041B"
     },
     {
       "line": 2,
-      "color": "#AC4D35"
+      "color": "#FDCE00"
     },
     {
       "line": 3,
-      "color": "#3B7B64"
+      "color": "#02804D"
     },
     {
       "line": 4,
-      "color": "#E4007C"
+      "color": "#0263AF"
     },
     {
       "line": 5,
-      "color": "#F39200"
+      "color": "#BF4393"
     },
     {
       "line": 6,
-      "color": "#396083"
+      "color": "#D5C700"
     },
     {
       "line": 7,
-      "color": "#7AB51D"
+      "color": "#99D3E1"
     },
     {
       "line": 8,
-      "color": "#7E6D98"
+      "color": "#642383"
     },
     {
       "line": 9,
-      "color": "#0072BC"
+      "color": "#F18C42"
     },
     {
       "line": 10,
-      "color": "#9A8A4B"
+      "color": "#F3A5BA"
     },
     {
       "line": 11,
@@ -123,49 +123,49 @@
     },
     {
       "line": 20,
-      "color": "#00A19A"
+      "color": "#8C5C2A"
     }
   ],
   "accessibleColors": [
     {
       "line": 1,
-      "color": "#000000"
+      "color": "#B00315"
     },
     {
       "line": 2,
-      "color": "#D32F2F"
+      "color": "#8A6D00"
     },
     {
       "line": 3,
-      "color": "#388E3C"
+      "color": "#02653D"
     },
     {
       "line": 4,
-      "color": "#AD1457"
+      "color": "#0263AF"
     },
     {
       "line": 5,
-      "color": "#E65100"
+      "color": "#9C2F76"
     },
     {
       "line": 6,
-      "color": "#1976D2"
+      "color": "#7A7200"
     },
     {
       "line": 7,
-      "color": "#2E7D32"
+      "color": "#1F7A93"
     },
     {
       "line": 8,
-      "color": "#8f9628"
+      "color": "#642383"
     },
     {
       "line": 9,
-      "color": "#1565C0"
+      "color": "#B85A14"
     },
     {
       "line": 10,
-      "color": "#5D4037"
+      "color": "#B4456A"
     },
     {
       "line": 11,
@@ -177,7 +177,7 @@
     },
     {
       "line": 20,
-      "color": "#00796B"
+      "color": "#6E4520"
     }
   ],
   "transports": [
