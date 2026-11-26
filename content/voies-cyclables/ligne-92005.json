@@ -1,0 +1,87 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 92005,
+        "name": "Rue des Fusillés-de-la-Résistance",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "networks": [
+          "departemental"
+        ],
+        "owners": [
+          "Département des Hauts-de-Seine"
+        ],
+        "comment": "Aménagement ouvert en 2020 (PCY1 - Piste cyclable bidirectionnelle).",
+        "source": "Open data « Aménagements cyclables » du Département des Hauts-de-Seine (mise à jour du 12/11/2025)",
+        "sourceUrl": "https://www.data.gouv.fr/datasets/amenagements-cyclables",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v92-5#rue-des-fusilles-de-la-resistance"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.223616,
+            48.882764
+          ],
+          [
+            2.224336,
+            48.88324
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 92005,
+        "name": "Route des Fusillés-de-la-Résistance",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "networks": [
+          "departemental"
+        ],
+        "owners": [
+          "Département des Hauts-de-Seine"
+        ],
+        "comment": "Aménagement ouvert en 2018 (PCY1 - Piste cyclable bidirectionnelle).",
+        "source": "Open data « Aménagements cyclables » du Département des Hauts-de-Seine (mise à jour du 12/11/2025)",
+        "sourceUrl": "https://www.data.gouv.fr/datasets/amenagements-cyclables",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v92-5#route-des-fusilles-de-la-resistance"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.22466,
+            48.883454
+          ],
+          [
+            2.224867,
+            48.883591
+          ],
+          [
+            2.22489,
+            48.883606
+          ],
+          [
+            2.225706,
+            48.884127
+          ],
+          [
+            2.226293,
+            48.884498
+          ]
+        ]
+      }
+    }
+  ]
+}
