@@ -51,6 +51,8 @@ export type LineStringFeature = {
     blockedBy?: string; // si bloqué : par qui / pourquoi
     comment?: string; // commentaire libre (ex. « aménagement préexistant »)
     blogLink?: string; // lien vers un article qui détaille la situation
+    source?: string; // source des données du tronçon (ex. open data du Département)
+    sourceUrl?: string; // lien vers cette source
   };
   geometry: {
     type: 'LineString';

@@ -104,3 +104,8 @@ pnpm install
 pnpm dev        # http://localhost:3000
 pnpm generate   # site statique dans .output/public, à déposer sur n'importe quel hébergement statique
 ```
+
+
+### Source d'un tronçon
+
+Propriétés facultatives `source` (texte) et `sourceUrl` (lien), affichées dans l'infobulle. Exemple : `"source": "Open data « Aménagements cyclables » du Département des Hauts-de-Seine"`.

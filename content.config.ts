@@ -104,6 +104,8 @@ export default defineContentConfig({
                 blockedBy: z.string().optional(),
                 comment: z.string().optional(),
                 blogLink: z.string().optional(),
+                source: z.string().optional(),
+                sourceUrl: z.string().optional(),
               }),
               geometry: z.object({
                 type: z.enum(['LineString']),

@@ -62,6 +62,21 @@
         <div class="text-sm font-bold">Commentaire</div>
         <div class="text-sm">{{ feature.properties.comment }}</div>
       </div>
+      <div v-if="feature.properties.source" class="py-1">
+        <div class="text-sm font-bold">Source</div>
+        <div class="text-sm">
+          <a
+            v-if="feature.properties.sourceUrl"
+            :href="feature.properties.sourceUrl"
+            target="_blank"
+            rel="noopener"
+            class="underline text-lvv-blue-600"
+          >
+            {{ feature.properties.source }}
+          </a>
+          <span v-else>{{ feature.properties.source }}</span>
+        </div>
+      </div>
       <div v-if="feature.properties.blogLink" class="py-1 text-sm">
         <a :href="feature.properties.blogLink" class="underline text-lvv-blue-600">En savoir plus</a>
       </div>

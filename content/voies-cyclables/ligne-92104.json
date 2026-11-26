@@ -15,7 +15,9 @@
         "owners": [
           "Département des Hauts-de-Seine"
         ],
-        "comment": "Piste provisoire (« coronapiste ») ouverte en 2020 sur le pont, de Puteaux à Neuilly-sur-Seine. Sa pérennisation est inscrite en projet par le Département (jeu de données « Aménagements cyclables » du CD92, mis à jour le 12/11/2025). Le plan vélo départemental prévoit de pérenniser les pistes provisoires, notamment sur les franchissements de Seine.",
+        "comment": "Piste provisoire (« coronapiste ») ouverte en 2020 sur le pont, de Puteaux à Neuilly-sur-Seine. Sa pérennisation est inscrite en projet par le Département. Le plan vélo départemental prévoit de pérenniser les pistes provisoires, notamment sur les franchissements de Seine.",
+        "source": "Open data « Aménagements cyclables » du Département des Hauts-de-Seine (mise à jour du 12/11/2025)",
+        "sourceUrl": "https://www.data.gouv.fr/datasets/amenagements-cyclables",
         "updatedAt": "26/11/2026",
         "reviewedAt": "26/11/2026",
         "link": "/v92-104#pont-de-puteaux"
