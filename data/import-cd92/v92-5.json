@@ -1,0 +1,9 @@
+{"line":92005,"code":"V92-5","from":"Suresnes","to":"Puteaux","date":"26/11/2026",
+ "description":"Itinéraire départemental V92-5 (RD 5) : boulevard Washington à Suresnes, puis rue et route des Fusillés-de-la-Résistance à Puteaux. Environ {total} m renseignés sur le territoire Paris Ouest La Défense.",
+ "troncons":[
+  {"name":"Boulevard Washington – partie sud","match":{"nom_voie":"BD WASHINGTON","statut":"BCY3 - Bande cyclable unidirectionnelle de chaque côté de l'axe"}},
+  {"name":"Boulevard Washington – raccord","match":{"nom_voie":"BD WASHINGTON","statut":"PCY3 - Piste unidirectionnelle de chaque côté de l'axe"}},
+  {"name":"Boulevard Washington","match":{"nom_voie":"BD WASHINGTON","statut":"PCY1 - Piste cyclable bidirectionnelle"}},
+  {"name":"Rue des Fusillés-de-la-Résistance","match":{"nom_voie":"R DES FUSILLES DE LA RESISTANCE"}},
+  {"name":"Route des Fusillés-de-la-Résistance","match":{"nom_voie":"RTE DES FUSILLES DE LA RESISTANCE"}}
+ ]}

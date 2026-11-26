@@ -174,7 +174,7 @@
         "name": "Pont de Puteaux",
         "status": "tested",
         "type": "inconnu",
-        "quality": "satisfactory",
+        "quality": "unsatisfactory",
         "networks": [
           "departemental"
         ],
