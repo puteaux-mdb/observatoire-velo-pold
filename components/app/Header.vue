@@ -3,9 +3,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center py-3 sm:py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start items-center lg:w-0 lg:flex-1">
-          <NuxtLink to="/" class="flex flex-col text-base sm:text-lg font-bold leading-tight text-lvv-blue-600">
-            <span>Observatoire vélo</span>
-            <span>Paris-Ouest La Défense</span>
+          <NuxtLink to="/" class="flex items-center gap-3 text-base sm:text-lg font-bold leading-tight text-lvv-blue-600">
+            <img
+              v-if="config.assoLogoUrl"
+              class="h-11 w-auto sm:h-12"
+              :src="assetUrl(config.assoLogoUrl)"
+              :alt="`logo ${getAssoName()}`"
+            />
+            <span class="flex flex-col">
+              <span>Observatoire vélo</span>
+              <span>Paris-Ouest La Défense</span>
+            </span>
           </NuxtLink>
         </div>
         <div class="-mr-2 -my-2 md:hidden flex items-center gap-1">

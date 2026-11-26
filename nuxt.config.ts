@@ -12,7 +12,12 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'fr' },
       title: TITLE,
-      link: [{ rel: 'icon', href: `${process.env.NUXT_APP_BASE_URL ?? '/'}favicon.ico` }],
+      // favicon : logo du Collectif Vélo POLD dans un rond
+      link: [
+        { rel: 'icon', href: `${process.env.NUXT_APP_BASE_URL ?? '/'}favicon.ico`, sizes: 'any' },
+        { rel: 'icon', type: 'image/png', href: `${process.env.NUXT_APP_BASE_URL ?? '/'}favicon-32.png`, sizes: '32x32' },
+        { rel: 'apple-touch-icon', href: `${process.env.NUXT_APP_BASE_URL ?? '/'}apple-touch-icon.png` },
+      ],
       meta: [
         { hid: 'description', name: 'description', content: DESCRIPTION },
         // facebook
