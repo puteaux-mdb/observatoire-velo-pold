@@ -16,9 +16,26 @@
             :is="asso.link ? 'a' : 'div'"
             :href="asso.link || undefined"
             :target="asso.link ? '_blank' : undefined"
-            class="flex h-32 w-32 items-center justify-center"
+            class="relative flex h-32 w-32 items-center justify-center"
           >
-            <img :src="assetUrl(asso.logo)" :alt="`logo ${asso.name}`" class="max-h-32 max-w-32 object-contain" />
+            <img
+              :src="assetUrl(asso.logo)"
+              :alt="`logo ${asso.name}`"
+              class="max-h-32 max-w-32 object-contain"
+              :class="{ 'opacity-50': 'enChantier' in asso && asso.enChantier }"
+            />
+            <template v-if="'enChantier' in asso && asso.enChantier">
+              <img
+                :src="assetUrl('/associations/plots-chantier.png')"
+                alt=""
+                class="absolute -bottom-1 -right-3 w-20 drop-shadow"
+              />
+              <span
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-12 rounded bg-yellow-400 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-gray-900 shadow"
+              >
+                En chantier
+              </span>
+            </template>
           </component>
           <p class="mt-2 text-sm font-semibold text-gray-900">{{ asso.name }}</p>
           <p class="text-xs text-gray-500">{{ asso.communes.join(', ') }}</p>

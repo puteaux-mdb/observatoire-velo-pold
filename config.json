@@ -364,7 +364,8 @@
       "name": "MDB La Garenne-Colombes",
       "communes": ["La Garenne-Colombes"],
       "logo": "/associations/mdb-la-garenne-colombes.png",
-      "link": ""
+      "link": "",
+      "enChantier": true
     },
     {
       "name": "MDB Neuilly à Vélo",
