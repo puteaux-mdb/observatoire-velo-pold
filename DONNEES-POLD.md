@@ -56,6 +56,8 @@ Chaque tronçon est une `Feature` `LineString` :
 - `networks` (facultatif) : réseaux d'appartenance, ex. `["vif", "departemental"]` ; par défaut, celui de la ligne
 - `owners` (facultatif) : maîtres d'ouvrage, ex. `["Puteaux", "Département des Hauts-de-Seine"]`
 - `horizon` (facultatif) : horizon de réalisation, ex. `"2027"`
+- `updatedAt` : date de dernière mise à jour des informations du tronçon (JJ/MM/AAAA)
+- `reviewedAt` : date de dernière revue, quand on a vérifié que les informations sont toujours justes, même sans rien changer (JJ/MM/AAAA)
 - `blockedBy`, `comment`, `blogLink` (facultatifs) : qui bloque, commentaire libre, lien vers un article
 
 Codes de lignes : `V` + n° pour le VIF (V20), `VD` + n° de la route départementale (VD7), `VP` + n° pour les voies POLD (VP1). Le numéro interne (`number`) est libre mais unique, par exemple 20 pour V20, 1007 pour VD7, 2001 pour VP1.

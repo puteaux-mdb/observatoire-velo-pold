@@ -45,6 +45,8 @@ export type LineStringFeature = {
     quality?: LaneQuality; // tronçon de qualité ou non
     networks?: string[]; // réseaux d'appartenance (vif, departemental, metropolitain, pold, communal) ; par défaut celui de la ligne
     owners?: string[]; // maîtres d'ouvrage (commune(s), Département des Hauts-de-Seine, Paris La Défense)
+    updatedAt?: string; // date de dernière mise à jour des informations du tronçon (JJ/MM/AAAA)
+    reviewedAt?: string; // date de dernière revue / vérification du tronçon (JJ/MM/AAAA)
     horizon?: string; // horizon de réalisation (ex. « 2027 », « court terme »)
     blockedBy?: string; // si bloqué : par qui / pourquoi
     comment?: string; // commentaire libre (ex. « aménagement préexistant »)

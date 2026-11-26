@@ -61,6 +61,10 @@
         <div class="text-sm font-bold">Horizon</div>
         <div class="text-sm">{{ feature.properties.horizon }}</div>
       </div>
+      <div v-if="feature.properties.updatedAt || feature.properties.reviewedAt" class="py-1 text-xs text-gray-500">
+        <div v-if="feature.properties.updatedAt">Mis à jour le {{ feature.properties.updatedAt }}</div>
+        <div v-if="feature.properties.reviewedAt">Revu le {{ feature.properties.reviewedAt }}</div>
+      </div>
       <div v-if="feature.properties.comment" class="py-1">
         <div class="text-sm font-bold">Commentaire</div>
         <div class="text-sm">{{ feature.properties.comment }}</div>

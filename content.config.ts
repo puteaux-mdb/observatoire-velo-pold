@@ -99,6 +99,8 @@ export default defineContentConfig({
                 networks: z.array(z.string()).optional(),
                 owners: z.array(z.string()).optional(),
                 horizon: z.string().optional(),
+                updatedAt: z.string().optional(),
+                reviewedAt: z.string().optional(),
                 blockedBy: z.string().optional(),
                 comment: z.string().optional(),
                 blogLink: z.string().optional(),
