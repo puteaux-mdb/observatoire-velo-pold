@@ -1,0 +1,134 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 92104,
+        "name": "Pont de Puteaux",
+        "status": "tested",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "networks": [
+          "departemental"
+        ],
+        "owners": [
+          "Département des Hauts-de-Seine"
+        ],
+        "comment": "Piste provisoire (« coronapiste ») ouverte en 2020 sur le pont, de Puteaux à Neuilly-sur-Seine. Sa pérennisation est inscrite en projet par le Département (jeu de données « Aménagements cyclables » du CD92, mis à jour le 12/11/2025). Le plan vélo départemental prévoit de pérenniser les pistes provisoires, notamment sur les franchissements de Seine.",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v92-104#pont-de-puteaux"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.242473,
+            48.878372
+          ],
+          [
+            2.242601,
+            48.878283
+          ],
+          [
+            2.242628,
+            48.878247
+          ],
+          [
+            2.242785,
+            48.878148
+          ],
+          [
+            2.242966,
+            48.878017
+          ],
+          [
+            2.242986,
+            48.877983
+          ],
+          [
+            2.243472,
+            48.877651
+          ],
+          [
+            2.243654,
+            48.877501
+          ],
+          [
+            2.243763,
+            48.877423
+          ],
+          [
+            2.243876,
+            48.877343
+          ],
+          [
+            2.243967,
+            48.877276
+          ],
+          [
+            2.244217,
+            48.877125
+          ],
+          [
+            2.244582,
+            48.876922
+          ],
+          [
+            2.244688,
+            48.876863
+          ],
+          [
+            2.244722,
+            48.876846
+          ],
+          [
+            2.244837,
+            48.876789
+          ],
+          [
+            2.244884,
+            48.876767
+          ],
+          [
+            2.245174,
+            48.876638
+          ],
+          [
+            2.24518,
+            48.876635
+          ],
+          [
+            2.245635,
+            48.876436
+          ],
+          [
+            2.245666,
+            48.876421
+          ],
+          [
+            2.245666,
+            48.876421
+          ],
+          [
+            2.246146,
+            48.876231
+          ],
+          [
+            2.246219,
+            48.876191
+          ],
+          [
+            2.246466,
+            48.876103
+          ],
+          [
+            2.246494,
+            48.876095
+          ]
+        ]
+      }
+    }
+  ]
+}
