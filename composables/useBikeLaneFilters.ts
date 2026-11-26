@@ -161,6 +161,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     return true;
   }
   const showTerritory = ref(config.territoryBoundary.defaultVisible);
+  const showVifContext = ref(config.vifContext.defaultVisible);
 
   const dateRange = ref<[number, number]>([0, 0]);
   const minDate = ref(0);
@@ -195,6 +196,10 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
 
     if (Object.hasOwn(query, 'limites')) {
       showTerritory.value = query.limites === '1';
+    }
+
+    if (Object.hasOwn(query, 'vif')) {
+      showVifContext.value = query.vif === '1';
     }
 
     if (lineFilters.value.length > 0 && Object.hasOwn(query, 'lines')) {
@@ -328,7 +333,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
   });
 
   watch(
-    [statusFilters, typeFilters, qualityFilters, lineFilters, dateRange, showCounters, showTerritory],
+    [statusFilters, typeFilters, qualityFilters, lineFilters, dateRange, showCounters, showTerritory, showVifContext],
     () => {
       if (!isReady.value) {
         return;
@@ -367,6 +372,12 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
         newQuery.limites = showTerritory.value ? '1' : '0';
       } else {
         delete newQuery.limites;
+      }
+
+      if (showVifContext.value !== config.vifContext.defaultVisible) {
+        newQuery.vif = showVifContext.value ? '1' : '0';
+      } else {
+        delete newQuery.vif;
       }
 
       if (lineFilters.value.length > 0) {
@@ -472,6 +483,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     dateSteps,
     showCounters,
     showTerritory,
+    showVifContext,
     networkFilters,
     ownerFilters,
     horizonFilters,
@@ -498,6 +510,9 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     },
     toggleShowTerritory() {
       showTerritory.value = !showTerritory.value;
+    },
+    toggleShowVifContext() {
+      showVifContext.value = !showVifContext.value;
     },
     toggleAttributeFilter(group, index) {
       const list = { networkFilters, ownerFilters, horizonFilters }[group].value;

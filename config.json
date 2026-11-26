@@ -252,6 +252,10 @@
     "label": "Limites de Paris Ouest La Défense et des communes",
     "defaultVisible": false
   },
+  "vifContext": {
+    "label": "Réseau VIF hors du territoire",
+    "defaultVisible": false
+  },
   "lines": [
     {
       "number": 4,

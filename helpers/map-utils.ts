@@ -2,8 +2,15 @@ import { getContrastTextColor } from './colors';
 import { VIF_LOGO_BACKGROUND, VIF_LOGO_BARS, VIF_LOGO_VIEWBOX, type VifLogo } from './vif-logos';
 import type { Collections } from '@nuxt/content';
 
-/** Dessine le logo officiel d'une ligne VIF (carré blanc, bandeaux de couleur, « V » et numéro) */
-function drawVifLogo(ctx: CanvasRenderingContext2D, logo: VifLogo, x: number, y: number, size: number) {
+/** Dessine le logo officiel d'une ligne VIF (carré blanc, bandeaux de couleur, « V » et numéro) ; « muted » : version grisée */
+function drawVifLogo(
+  ctx: CanvasRenderingContext2D,
+  logo: VifLogo,
+  x: number,
+  y: number,
+  size: number,
+  muted = false,
+) {
   ctx.save();
   ctx.translate(x, y);
   ctx.scale(size / VIF_LOGO_VIEWBOX, size / VIF_LOGO_VIEWBOX);
@@ -11,12 +18,12 @@ function drawVifLogo(ctx: CanvasRenderingContext2D, logo: VifLogo, x: number, y:
   ctx.fillStyle = '#FFFFFF';
   ctx.fill(background);
   // fin liseré pour détacher le logo du fond de carte
-  ctx.strokeStyle = 'rgba(0, 0, 0, 0.35)';
+  ctx.strokeStyle = muted ? 'rgba(0, 0, 0, 0.15)' : 'rgba(0, 0, 0, 0.35)';
   ctx.lineWidth = 8;
   ctx.stroke(background);
-  ctx.fillStyle = logo.color;
+  ctx.fillStyle = muted ? '#D1D5DB' : logo.color;
   ctx.fill(new Path2D(VIF_LOGO_BARS));
-  ctx.fillStyle = '#000000';
+  ctx.fillStyle = muted ? '#9CA3AF' : '#000000';
   logo.glyphs.forEach((glyph) => ctx.fill(new Path2D(glyph)));
   ctx.restore();
 }
@@ -70,6 +77,21 @@ export function getCrossIconUrl(pixelRatio = 1, lineWidth = 3): string {
   context.stroke();
 
   return canvas.toDataURL();
+}
+
+/** Logo VIF grisé, pour les lignes affichées hors du territoire */
+export function createMutedVifLogoIcon(logo: VifLogo, pixelRatio = 1): HTMLCanvasElement {
+  const canvas = document.createElement('canvas');
+  const size = 64;
+  canvas.width = size * pixelRatio;
+  canvas.height = size * pixelRatio;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) {
+    return canvas;
+  }
+  ctx.scale(pixelRatio, pixelRatio);
+  drawVifLogo(ctx, logo, 4, 4, size - 8, true);
+  return canvas;
 }
 
 export function createLineShieldIcon(

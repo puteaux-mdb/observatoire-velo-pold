@@ -44,6 +44,7 @@
 
 <script setup lang="ts">
 import { plotTerritoryBoundary } from '~/helpers/territory';
+import { plotVifContext } from '~/helpers/vif-context';
 import LimitsControl from '~/maplibre/LimitsControl';
 import { resolveSiteLink } from '~/composables/useConfig';
 import type { Collections } from '@nuxt/content';
@@ -87,6 +88,16 @@ function toggleTerritory() {
     props.actions.toggleShowTerritory();
   } else {
     localTerritoryVisible.value = !localTerritoryVisible.value;
+  }
+}
+// Réseau VIF hors du territoire : même principe que les limites
+const localVifContextVisible = ref(config.vifContext.defaultVisible);
+const isVifContextVisible = () => props.filters?.showVifContext.value ?? localVifContextVisible.value;
+function toggleVifContext() {
+  if (props.actions && props.filters) {
+    props.actions.toggleShowVifContext();
+  } else {
+    localVifContextVisible.value = !localVifContextVisible.value;
   }
 }
 const { displayDistanceInKm, displayPercent } = useStats();
@@ -364,6 +375,17 @@ onMounted(() => {
     limitsControl.setActive(isTerritoryVisible());
   }
 
+  let vifContextControl: LimitsControl | null = null;
+  if (options.limits) {
+    vifContextControl = new LimitsControl({
+      onClick: toggleVifContext,
+      title: config.vifContext.label,
+      className: 'maplibregl-vif-context',
+    });
+    map.addControl(vifContextControl, 'top-right');
+    vifContextControl.setActive(isVifContextVisible());
+  }
+
   if (options.logo) {
     const logoControl = new LogoControl({
       src: assetUrl(config.mapLogoUrl),
@@ -418,6 +440,7 @@ onMounted(() => {
     await loadImages({ map, features: props.features });
     plotFeatures({ map, features: props.features });
     plotTerritoryBoundary(map, isTerritoryVisible());
+    plotVifContext(map, isVifContextVisible());
     highlightLines({ map, selections: null });
 
     if (route.query.modal === 'counter' && route.query.counterLink) {
@@ -509,6 +532,16 @@ onMounted(() => {
     { deep: true },
   );
 
+  watch(isVifContextVisible, (visible) => {
+    vifContextControl?.setActive(visible);
+    if (!mapReady.value) return;
+    try {
+      plotVifContext(map, visible);
+    } catch (e) {
+      console.warn('not able to plot VIF context', e);
+    }
+  });
+
   watch(isTerritoryVisible, (visible) => {
     limitsControl?.setActive(visible);
     if (!mapReady.value) return;
@@ -526,6 +559,7 @@ onMounted(() => {
         await loadImages({ map, features: props.features, force: true });
         plotFeatures({ map, features: props.features });
         plotTerritoryBoundary(map, isTerritoryVisible());
+    plotVifContext(map, isVifContextVisible());
         highlightLines({ map, selections: props.highlightedSections ?? null });
         if (props.highlightedCounter) {
           highlightCounter({ map, counterName: props.highlightedCounter });
@@ -701,6 +735,18 @@ defineExpose({ fitToFeatures });
 
 .maplibregl-limits--active {
   background-color: #fbe9ef;
+}
+
+.maplibregl-vif-context {
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: auto;
+  background-image: url('~/maplibre/vif-context.svg');
+  background-size: 80%;
+}
+
+.maplibregl-vif-context--active {
+  background-color: #e5e7eb;
 }
 
 .maplibregl-filter {

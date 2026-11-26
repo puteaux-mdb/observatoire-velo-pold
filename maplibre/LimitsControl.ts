@@ -5,15 +5,18 @@ export default class LimitsControl {
   _container!: HTMLDivElement;
   _onClick: () => void;
   _title: string;
+  _className: string;
 
-  constructor({ onClick, title }: { onClick: () => void; title: string }) {
+  // className : classe CSS du bouton (icône), réutilisée pour d'autres couches à afficher / masquer
+  constructor({ onClick, title, className = 'maplibregl-limits' }: { onClick: () => void; title: string; className?: string }) {
     this._onClick = onClick;
     this._title = title;
+    this._className = className;
   }
 
   onAdd() {
     this._btn = document.createElement('button');
-    this._btn.className = 'maplibregl-limits maplibregl-ctrl-icon';
+    this._btn.className = `${this._className} maplibregl-ctrl-icon`;
     this._btn.type = 'button';
     this._btn.title = this._title;
     this._btn.setAttribute('aria-label', this._title);
@@ -28,7 +31,7 @@ export default class LimitsControl {
 
   setActive(isActive: boolean) {
     if (!this._btn) return;
-    this._btn.classList.toggle('maplibregl-limits--active', isActive);
+    this._btn.classList.toggle(`${this._className}--active`, isActive);
     this._btn.setAttribute('aria-pressed', String(isActive));
   }
 

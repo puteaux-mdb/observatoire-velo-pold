@@ -207,6 +207,7 @@ export interface FiltersState {
   dateSteps: Ref<number[]>;
   showCounters: Ref<boolean>;
   showTerritory: Ref<boolean>;
+  showVifContext: Ref<boolean>;
   networkFilters: Ref<Array<AttributeFilterItem>>;
   ownerFilters: Ref<Array<AttributeFilterItem>>;
   horizonFilters: Ref<Array<AttributeFilterItem>>;
@@ -220,6 +221,7 @@ export interface FilterActions {
   setDateRange: (newDateRange: [number, number]) => void;
   toggleShowCounters: () => void;
   toggleShowTerritory: () => void;
+  toggleShowVifContext: () => void;
   toggleAttributeFilter: (group: 'networkFilters' | 'ownerFilters' | 'horizonFilters', index: number) => void;
 }
 

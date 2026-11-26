@@ -79,6 +79,15 @@
         />
         <span class="text-base font-medium">{{ config.territoryBoundary.label }}</span>
       </label>
+      <label class="mt-2 flex items-center gap-3 cursor-pointer">
+        <input
+          type="checkbox"
+          :checked="filters.showVifContext.value"
+          class="h-4 w-4 rounded border-gray-300 text-lvv-blue-600 focus:ring-lvv-blue-600"
+          @change="actions.toggleShowVifContext"
+        />
+        <span class="text-base font-medium">{{ config.vifContext.label }}</span>
+      </label>
     </section>
 
     <section v-if="options.showCounters">
