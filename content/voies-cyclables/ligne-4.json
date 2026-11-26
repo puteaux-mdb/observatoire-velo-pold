@@ -1,0 +1,872 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre nord – entrée sur le territoire",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-nord-entrée-sur-le-territoire"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.208285,
+            48.909581
+          ],
+          [
+            2.207933,
+            48.909648
+          ],
+          [
+            2.206606,
+            48.910246
+          ],
+          [
+            2.20619,
+            48.910465
+          ],
+          [
+            2.205627,
+            48.910745
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre nord – boucle, branche est",
+        "status": "wip",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-nord-boucle-branche-est"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.208285,
+            48.909581
+          ],
+          [
+            2.208671,
+            48.909425
+          ],
+          [
+            2.209667,
+            48.909064
+          ],
+          [
+            2.212592,
+            48.908136
+          ],
+          [
+            2.212574,
+            48.908112
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre nord – boucle, liaison",
+        "status": "done",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-nord-boucle-liaison",
+        "comment": "Type d'aménagement « Autre » dans les données de la Région (préexistant ?)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.213371,
+            48.907676
+          ],
+          [
+            2.21252,
+            48.907896
+          ],
+          [
+            2.212525,
+            48.908057
+          ],
+          [
+            2.212266,
+            48.908128
+          ],
+          [
+            2.212258,
+            48.908153
+          ],
+          [
+            2.212286,
+            48.908154
+          ],
+          [
+            2.21254,
+            48.908097
+          ],
+          [
+            2.212574,
+            48.908112
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre nord – boucle, liaison",
+        "status": "done",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-nord-boucle-liaison",
+        "comment": "Type d'aménagement « Autre » dans les données de la Région (préexistant ?)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.212963,
+            48.907335
+          ],
+          [
+            2.213371,
+            48.907676
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre nord – boucle, liaison",
+        "status": "done",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-nord-boucle-liaison",
+        "comment": "Type d'aménagement « Autre » dans les données de la Région (préexistant ?)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.213371,
+            48.907676
+          ],
+          [
+            2.213411,
+            48.907709
+          ],
+          [
+            2.213486,
+            48.907742
+          ],
+          [
+            2.213619,
+            48.907774
+          ],
+          [
+            2.213717,
+            48.907761
+          ],
+          [
+            2.21385,
+            48.907724
+          ],
+          [
+            2.213977,
+            48.90767
+          ],
+          [
+            2.21397,
+            48.907639
+          ],
+          [
+            2.213633,
+            48.907712
+          ],
+          [
+            2.213418,
+            48.907663
+          ],
+          [
+            2.213371,
+            48.907676
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre – piste bidirectionnelle vers l'université",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-piste-bidirectionnelle-vers-l-université"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.206267,
+            48.902979
+          ],
+          [
+            2.209394,
+            48.905016
+          ],
+          [
+            2.209629,
+            48.905187
+          ],
+          [
+            2.210013,
+            48.905463
+          ],
+          [
+            2.210384,
+            48.905688
+          ],
+          [
+            2.210979,
+            48.90607
+          ],
+          [
+            2.211725,
+            48.906546
+          ],
+          [
+            2.212119,
+            48.906786
+          ],
+          [
+            2.212253,
+            48.906878
+          ],
+          [
+            2.212963,
+            48.907335
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre – vélorue",
+        "status": "done",
+        "type": "velorue",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-vélorue"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.210119,
+            48.901305
+          ],
+          [
+            2.207459,
+            48.902136
+          ],
+          [
+            2.206302,
+            48.902944
+          ],
+          [
+            2.206267,
+            48.902979
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre-Université – vélorue provisoire",
+        "status": "tested",
+        "type": "velorue",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-université-vélorue-provisoire",
+        "comment": "Itinéraire provisoire selon la Région · Variante selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.21379,
+            48.898984
+          ],
+          [
+            2.214054,
+            48.899958
+          ],
+          [
+            2.212391,
+            48.901298
+          ],
+          [
+            2.210119,
+            48.901305
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre – de l'université vers les Terrasses",
+        "status": "done",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-de-l-université-vers-les-terrasses",
+        "comment": "Type d'aménagement « Autre » dans les données de la Région (préexistant ?)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.218119,
+            48.897785
+          ],
+          [
+            2.21379,
+            48.898984
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre – carrefour, sens 1",
+        "status": "validated",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-carrefour-sens-1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.219259,
+            48.897453
+          ],
+          [
+            2.218119,
+            48.897785
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre – carrefour, sens 2",
+        "status": "done",
+        "type": "bilaterale",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-carrefour-sens-2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.219626,
+            48.898011
+          ],
+          [
+            2.219382,
+            48.898139
+          ],
+          [
+            2.218881,
+            48.89826
+          ],
+          [
+            2.218661,
+            48.898215
+          ],
+          [
+            2.218275,
+            48.897739
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre – Terrasses, variante en travaux",
+        "status": "wip",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-terrasses-variante-en-travaux",
+        "comment": "Variante selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.224383,
+            48.897351
+          ],
+          [
+            2.22307,
+            48.897722
+          ],
+          [
+            2.221085,
+            48.898857
+          ],
+          [
+            2.219626,
+            48.898011
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Nanterre – Terrasses jusqu'à La Défense",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#nanterre-terrasses-jusqu-à-la-défense"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.224383,
+            48.897351
+          ],
+          [
+            2.225278,
+            48.897164
+          ],
+          [
+            2.228893,
+            48.896813
+          ],
+          [
+            2.228975,
+            48.896817
+          ],
+          [
+            2.229509,
+            48.896764
+          ],
+          [
+            2.231453,
+            48.896538
+          ],
+          [
+            2.23206,
+            48.896395
+          ],
+          [
+            2.232679,
+            48.896221
+          ],
+          [
+            2.233454,
+            48.895983
+          ],
+          [
+            2.233639,
+            48.895889
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Courbevoie – La Défense nord, tracé provisoire",
+        "status": "validated",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#courbevoie-la-défense-nord-tracé-provisoire",
+        "comment": "Itinéraire provisoire selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.233639,
+            48.895889
+          ],
+          [
+            2.240142,
+            48.897658
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Courbevoie – La Défense nord, aménagement provisoire",
+        "status": "tested",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#courbevoie-la-défense-nord-aménagement-provisoire",
+        "comment": "Type d'aménagement « Autre » dans les données de la Région (préexistant ?) · Itinéraire provisoire selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.240142,
+            48.897658
+          ],
+          [
+            2.240325,
+            48.896134
+          ],
+          [
+            2.240539,
+            48.895528
+          ],
+          [
+            2.240722,
+            48.89502
+          ],
+          [
+            2.240976,
+            48.89459
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Courbevoie – La Défense nord, aménagement provisoire",
+        "status": "tested",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#courbevoie-la-défense-nord-aménagement-provisoire",
+        "comment": "Type d'aménagement « Autre » dans les données de la Région (préexistant ?) · Itinéraire provisoire selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.244011,
+            48.894601
+          ],
+          [
+            2.243909,
+            48.894512
+          ],
+          [
+            2.243845,
+            48.894468
+          ],
+          [
+            2.243605,
+            48.894486
+          ],
+          [
+            2.24302,
+            48.894794
+          ],
+          [
+            2.242688,
+            48.894898
+          ],
+          [
+            2.242493,
+            48.894933
+          ],
+          [
+            2.242103,
+            48.89486
+          ],
+          [
+            2.24171,
+            48.894687
+          ],
+          [
+            2.241574,
+            48.894667
+          ],
+          [
+            2.241315,
+            48.894672
+          ],
+          [
+            2.24124,
+            48.894663
+          ],
+          [
+            2.241091,
+            48.894664
+          ],
+          [
+            2.240978,
+            48.89459
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Courbevoie – de La Défense vers le pont de Neuilly",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#courbevoie-de-la-défense-vers-le-pont-de-neuilly"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.250462,
+            48.889617
+          ],
+          [
+            2.250277,
+            48.8897
+          ],
+          [
+            2.249725,
+            48.889999
+          ],
+          [
+            2.248975,
+            48.890295
+          ],
+          [
+            2.248492,
+            48.890519
+          ],
+          [
+            2.247973,
+            48.890719
+          ],
+          [
+            2.247254,
+            48.891019
+          ],
+          [
+            2.246419,
+            48.891658
+          ],
+          [
+            2.245548,
+            48.892486
+          ],
+          [
+            2.244011,
+            48.894601
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Carrefour du pont de Neuilly – côté Courbevoie (tronc commun V4 et V20)",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#carrefour-du-pont-de-neuilly-côté-courbevoie-tronc-commun-v4-et-v20",
+        "id": "vif-carrefour-du-pont-de-neuilly-côté-courbevoie-tronc-commun-v4-et-v20",
+        "comment": "Tronc commun avec V20"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.250466,
+            48.889613
+          ],
+          [
+            2.25061,
+            48.889263
+          ],
+          [
+            2.251007,
+            48.888544
+          ],
+          [
+            2.251233,
+            48.888333
+          ],
+          [
+            2.251409,
+            48.888035
+          ],
+          [
+            2.251809,
+            48.887844
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Pont de Neuilly et avenue Charles-de-Gaulle, partie ouest (tronc commun V4 et V5)",
+        "status": "wip",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5",
+        "id": "vif-pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5-1",
+        "comment": "Tronc commun avec V5"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.256994,
+            48.885828
+          ],
+          [
+            2.25267,
+            48.887281
+          ],
+          [
+            2.252198,
+            48.887711
+          ],
+          [
+            2.251809,
+            48.887844
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Pont de Neuilly et avenue Charles-de-Gaulle, partie ouest (tronc commun V4 et V5)",
+        "status": "wip",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5",
+        "id": "vif-pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5-2",
+        "comment": "Tronc commun avec V5"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.264863,
+            48.88329
+          ],
+          [
+            2.256992,
+            48.885826
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 4,
+        "name": "Neuilly – avenue Charles-de-Gaulle jusqu'à la porte Maillot (tronc commun V4 et V5)",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v4#neuilly-avenue-charles-de-gaulle-jusqu-à-la-porte-maillot-tronc-commun-v4-et-v5",
+        "id": "vif-neuilly-avenue-charles-de-gaulle-jusqu-à-la-porte-maillot-tronc-commun-v4-et-v5",
+        "comment": "Tronc commun avec V5"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.279517,
+            48.878569
+          ],
+          [
+            2.27608,
+            48.879739
+          ],
+          [
+            2.264863,
+            48.88329
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "Rueil-Malmaison – entrée ouest (tronc commun V5 et V7)",
+        "status": "works-study",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#rueil-malmaison-entrée-ouest-tronc-commun-v5-et-v7",
+        "id": "vif-rueil-malmaison-entrée-ouest-tronc-commun-v5-et-v7",
+        "comment": "Tronc commun avec V7"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.163942,
+            48.888085
+          ],
+          [
+            2.163224,
+            48.888206
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "RD 913 Rueil-Malmaison – traversée de Rueil vers Nanterre",
+        "status": "works-study",
+        "type": "bilaterale",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#rd-913-rueil-malmaison-traversée-de-rueil-vers-nanterre"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.185689,
+            48.887576
+          ],
+          [
+            2.173072,
+            48.886522
+          ],
+          [
+            2.170987,
+            48.886912
+          ],
+          [
+            2.163943,
+            48.888084
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "RD 913 Nanterre – avenue Georges-Clemenceau",
+        "status": "works-study",
+        "type": "bilaterale",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#rd-913-nanterre-avenue-georges-clemenceau"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.200743,
+            48.88704
+          ],
+          [
+            2.1938,
+            48.888225
+          ],
+          [
+            2.185689,
+            48.887576
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "RD 913 Nanterre – Puteaux, jusqu'à l'approche de La Défense",
+        "status": "works-study",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#rd-913-nanterre-puteaux-jusqu-à-l-approche-de-la-défense"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.227874,
+            48.885377
+          ],
+          [
+            2.22722,
+            48.885069
+          ],
+          [
+            2.210251,
+            48.886325
+          ],
+          [
+            2.204651,
+            48.886791
+          ],
+          [
+            2.200743,
+            48.88704
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "Puteaux – approche de La Défense par l'ouest",
+        "status": "wip",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#puteaux-approche-de-la-défense-par-l-ouest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.234745,
+            48.888073
+          ],
+          [
+            2.227974,
+            48.885407
+          ],
+          [
+            2.227874,
+            48.885377
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "La Défense – traversée, variante A",
+        "status": "route-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#la-défense-traversée-variante-a",
+        "comment": "Variante selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.241464,
+            48.889258
+          ],
+          [
+            2.240864,
+            48.88972
+          ],
+          [
+            2.239763,
+            48.890008
+          ],
+          [
+            2.234745,
+            48.888073
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "La Défense – traversée, variante B",
+        "status": "route-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#la-défense-traversée-variante-b",
+        "comment": "Variante selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.235031,
+            48.888183
+          ],
+          [
+            2.235937,
+            48.888532
+          ],
+          [
+            2.2362,
+            48.888433
+          ],
+          [
+            2.236532,
+            48.888161
+          ],
+          [
+            2.236763,
+            48.887971
+          ],
+          [
+            2.236988,
+            48.888288
+          ],
+          [
+            2.238142,
+            48.887897
+          ],
+          [
+            2.238464,
+            48.88839
+          ],
+          [
+            2.238657,
+            48.88833
+          ],
+          [
+            2.23878,
+            48.888429
+          ],
+          [
+            2.239542,
+            48.888158
+          ],
+          [
+            2.239815,
+            48.88851
+          ],
+          [
+            2.240121,
+            48.888553
+          ],
+          [
+            2.240556,
+            48.888443
+          ],
+          [
+            2.240652,
+            48.888323
+          ],
+          [
+            2.241199,
+            48.888419
+          ],
+          [
+            2.240947,
+            48.888471
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "La Défense – traversée, variante C",
+        "status": "route-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#la-défense-traversée-variante-c",
+        "comment": "Variante selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.235031,
+            48.888183
+          ],
+          [
+            2.235437,
+            48.88771
+          ],
+          [
+            2.236456,
+            48.88716
+          ],
+          [
+            2.238071,
+            48.886839
+          ],
+          [
+            2.239723,
+            48.886797
+          ],
+          [
+            2.240313,
+            48.886998
+          ],
+          [
+            2.240882,
+            48.887174
+          ],
+          [
+            2.240952,
+            48.88734
+          ],
+          [
+            2.240281,
+            48.887453
+          ],
+          [
+            2.241464,
+            48.889258
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "Puteaux – Courbevoie, de La Défense vers le pont de Neuilly",
+        "status": "wip",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#puteaux-courbevoie-de-la-défense-vers-le-pont-de-neuilly"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.249445,
+            48.8887
+          ],
+          [
+            2.248866,
+            48.888878
+          ],
+          [
+            2.24805,
+            48.889152
+          ],
+          [
+            2.246194,
+            48.889721
+          ],
+          [
+            2.242675,
+            48.890886
+          ],
+          [
+            2.241467,
+            48.889282
+          ],
+          [
+            2.241463,
+            48.889259
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "Carrefour du pont de Neuilly (tronc commun V5 et V20)",
+        "status": "wip",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#carrefour-du-pont-de-neuilly-tronc-commun-v5-et-v20",
+        "id": "vif-carrefour-du-pont-de-neuilly-tronc-commun-v5-et-v20",
+        "comment": "Tronc commun avec V20"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.249445,
+            48.8887
+          ],
+          [
+            2.251193,
+            48.888139
+          ],
+          [
+            2.251291,
+            48.888075
+          ],
+          [
+            2.251347,
+            48.888019
+          ],
+          [
+            2.251516,
+            48.887883
+          ],
+          [
+            2.251657,
+            48.887834
+          ],
+          [
+            2.251731,
+            48.887828
+          ],
+          [
+            2.251809,
+            48.887844
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "Pont de Neuilly et avenue Charles-de-Gaulle, partie ouest (tronc commun V4 et V5)",
+        "status": "wip",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5",
+        "id": "vif-pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5-1",
+        "comment": "Tronc commun avec V4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.256994,
+            48.885828
+          ],
+          [
+            2.25267,
+            48.887281
+          ],
+          [
+            2.252198,
+            48.887711
+          ],
+          [
+            2.251809,
+            48.887844
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "Pont de Neuilly et avenue Charles-de-Gaulle, partie ouest (tronc commun V4 et V5)",
+        "status": "wip",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5",
+        "id": "vif-pont-de-neuilly-et-avenue-charles-de-gaulle-partie-ouest-tronc-commun-v4-et-v5-2",
+        "comment": "Tronc commun avec V4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.264863,
+            48.88329
+          ],
+          [
+            2.256992,
+            48.885826
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 5,
+        "name": "Neuilly – avenue Charles-de-Gaulle jusqu'à la porte Maillot (tronc commun V4 et V5)",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v5#neuilly-avenue-charles-de-gaulle-jusqu-à-la-porte-maillot-tronc-commun-v4-et-v5",
+        "id": "vif-neuilly-avenue-charles-de-gaulle-jusqu-à-la-porte-maillot-tronc-commun-v4-et-v5",
+        "comment": "Tronc commun avec V4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.279517,
+            48.878569
+          ],
+          [
+            2.27608,
+            48.879739
+          ],
+          [
+            2.264863,
+            48.88329
+          ]
+        ]
+      }
+    }
+  ]
+}

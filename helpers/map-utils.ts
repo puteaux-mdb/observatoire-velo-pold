@@ -91,7 +91,7 @@ export function createLineShieldIcon(lineLabel: string | number, color: string, 
 }
 
 export function createCompositeLineShieldIcon(
-  lineNumbers: number[],
+  lineLabels: Array<string | number>,
   colors: string[],
   pixelRatio = 1,
 ): HTMLCanvasElement {
@@ -101,7 +101,7 @@ export function createCompositeLineShieldIcon(
   const overlapPercent = 0.3; // 30% overlap
   const spacing = iconSize - iconSize * overlapPercent; // Distance between circle centers
 
-  canvas.width = (iconSize + spacing * (lineNumbers.length - 1)) * pixelRatio;
+  canvas.width = (iconSize + spacing * (lineLabels.length - 1)) * pixelRatio;
   canvas.height = iconSize * pixelRatio;
 
   const ctx = canvas.getContext('2d');
@@ -110,7 +110,7 @@ export function createCompositeLineShieldIcon(
   }
   ctx.scale(pixelRatio, pixelRatio);
 
-  lineNumbers.forEach((lineNumber, index) => {
+  lineLabels.forEach((lineLabel, index) => {
     const color = colors[index];
     const x = index * spacing + iconSize / 2;
     const centerY = iconSize / 2;
@@ -134,7 +134,7 @@ export function createCompositeLineShieldIcon(
     ctx.font = `bold ${label.length <= 2 ? 28 : label.length === 3 ? 22 : 17}px sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(String(lineNumber), x, centerY + 3);
+    ctx.fillText(label, x, centerY + 3);
   });
 
   return canvas;

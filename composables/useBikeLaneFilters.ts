@@ -77,7 +77,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
 
   const typeFilters = ref([
     { label: 'Bidirectionnelle', isEnabled: true, types: ['bidirectionnelle'] },
-    { label: 'Bilaterale', isEnabled: true, types: ['bilaterale'] },
+    { label: 'Bilatérale', isEnabled: true, types: ['bilaterale'] },
     { label: 'Voie Bus', isEnabled: true, types: ['voie-bus', 'voie-bus-elargie'] },
     { label: 'Voie verte', isEnabled: true, types: ['voie-verte'] },
     { label: 'Vélorue', isEnabled: true, types: ['velorue'] },

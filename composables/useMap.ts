@@ -185,7 +185,11 @@ export const useMap = ({
 
       const lineNumbers = combo.split('-').map(Number);
       const colors = lineNumbers.map((line) => getLineColor(line));
-      const canvas = createCompositeLineShieldIcon(lineNumbers, colors, iconPixelRatio);
+      const canvas = createCompositeLineShieldIcon(
+        lineNumbers.map((line) => getLineCode(line)),
+        colors,
+        iconPixelRatio,
+      );
       const imageData = canvas.getContext('2d')?.getImageData(0, 0, canvas.width, canvas.height);
       if (imageData) {
         map.addImage(id, imageData, { pixelRatio: iconPixelRatio });

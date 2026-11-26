@@ -78,11 +78,11 @@
     },
     {
       "line": 4,
-      "color": "#DC8953"
+      "color": "#E4007C"
     },
     {
       "line": 5,
-      "color": "#AF7392"
+      "color": "#F39200"
     },
     {
       "line": 6,
@@ -90,7 +90,7 @@
     },
     {
       "line": 7,
-      "color": "#75BCAE"
+      "color": "#7AB51D"
     },
     {
       "line": 8,
@@ -98,7 +98,7 @@
     },
     {
       "line": 9,
-      "color": "#EAAB50"
+      "color": "#0072BC"
     },
     {
       "line": 10,
@@ -132,11 +132,11 @@
     },
     {
       "line": 4,
-      "color": "#F57C00"
+      "color": "#AD1457"
     },
     {
       "line": 5,
-      "color": "#7B1FA2"
+      "color": "#E65100"
     },
     {
       "line": 6,
@@ -144,7 +144,7 @@
     },
     {
       "line": 7,
-      "color": "#AAAAAA"
+      "color": "#2E7D32"
     },
     {
       "line": 8,
@@ -152,7 +152,7 @@
     },
     {
       "line": 9,
-      "color": "#FBC02D"
+      "color": "#1565C0"
     },
     {
       "line": 10,
@@ -244,6 +244,26 @@
     "defaultVisible": false
   },
   "lines": [
+    {
+      "number": 4,
+      "code": "V4",
+      "network": "vif"
+    },
+    {
+      "number": 5,
+      "code": "V5",
+      "network": "vif"
+    },
+    {
+      "number": 7,
+      "code": "V7",
+      "network": "vif"
+    },
+    {
+      "number": 9,
+      "code": "V9",
+      "network": "vif"
+    },
     {
       "number": 20,
       "code": "V20",

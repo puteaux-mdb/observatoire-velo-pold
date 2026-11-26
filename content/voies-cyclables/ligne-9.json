@@ -1,0 +1,359 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 9,
+        "name": "Vaucresson – traversée",
+        "status": "validated",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v9#vaucresson-traversée"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.145997,
+            48.836861
+          ],
+          [
+            2.145859,
+            48.836863
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 9,
+        "name": "Vaucresson – traversée",
+        "status": "validated",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v9#vaucresson-traversée"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.156611,
+            48.837682
+          ],
+          [
+            2.156028,
+            48.837629
+          ],
+          [
+            2.154996,
+            48.837528
+          ],
+          [
+            2.150372,
+            48.837161
+          ],
+          [
+            2.146831,
+            48.836921
+          ],
+          [
+            2.145876,
+            48.8369
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 9,
+        "name": "Vaucresson – traversée",
+        "status": "validated",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v9#vaucresson-traversée"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.163593,
+            48.837722
+          ],
+          [
+            2.162574,
+            48.837729
+          ],
+          [
+            2.160149,
+            48.837645
+          ],
+          [
+            2.159146,
+            48.837687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 9,
+        "name": "Garches – partie ouest",
+        "status": "validated",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v9#garches-partie-ouest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.167891,
+            48.837851
+          ],
+          [
+            2.167184,
+            48.837758
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 9,
+        "name": "Garches – partie ouest",
+        "status": "validated",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v9#garches-partie-ouest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.180223,
+            48.838189
+          ],
+          [
+            2.17617,
+            48.838178
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 9,
+        "name": "Garches – partie ouest",
+        "status": "validated",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v9#garches-partie-ouest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.186599,
+            48.838603
+          ],
+          [
+            2.185482,
+            48.838451
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 9,
+        "name": "Garches – Saint-Cloud, partie réalisée",
+        "status": "done",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v9#garches-saint-cloud-partie-réalisée"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.199167,
+            48.841587
+          ],
+          [
+            2.197049,
+            48.841202
+          ],
+          [
+            2.193616,
+            48.840531
+          ],
+          [
+            2.191899,
+            48.83998
+          ],
+          [
+            2.188799,
+            48.839338
+          ],
+          [
+            2.187554,
+            48.8389
+          ],
+          [
+            2.186599,
+            48.838603
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 9,
+        "name": "Saint-Cloud – traversée vers le pont de Saint-Cloud",
+        "status": "validated",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v9#saint-cloud-traversée-vers-le-pont-de-saint-cloud"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.222447,
+            48.841429
+          ],
+          [
+            2.221595,
+            48.841752
+          ],
+          [
+            2.221345,
+            48.842135
+          ],
+          [
+            2.221047,
+            48.84267
+          ],
+          [
+            2.220473,
+            48.843911
+          ],
+          [
+            2.220102,
+            48.845973
+          ],
+          [
+            2.219781,
+            48.846036
+          ],
+          [
+            2.218568,
+            48.845881
+          ],
+          [
+            2.217882,
+            48.845768
+          ],
+          [
+            2.217581,
+            48.84533
+          ],
+          [
+            2.217474,
+            48.844984
+          ],
+          [
+            2.217388,
+            48.844144
+          ],
+          [
+            2.217367,
+            48.84365
+          ],
+          [
+            2.217239,
+            48.843526
+          ],
+          [
+            2.215987,
+            48.843268
+          ],
+          [
+            2.214882,
+            48.843098
+          ],
+          [
+            2.207104,
+            48.842293
+          ],
+          [
+            2.205797,
+            48.842187
+          ],
+          [
+            2.203008,
+            48.841933
+          ],
+          [
+            2.199585,
+            48.841608
+          ],
+          [
+            2.199167,
+            48.841587
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 9,
+        "name": "Saint-Cloud – arrivée au pont de Saint-Cloud",
+        "status": "works-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v9#saint-cloud-arrivée-au-pont-de-saint-cloud"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.223626,
+            48.841321
+          ],
+          [
+            2.222447,
+            48.841429
+          ]
+        ]
+      }
+    }
+  ]
+}

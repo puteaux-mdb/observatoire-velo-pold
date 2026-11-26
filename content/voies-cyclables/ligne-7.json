@@ -1,0 +1,386 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 7,
+        "name": "Rueil-Malmaison – entrée ouest (tronc commun V5 et V7)",
+        "status": "works-study",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v7#rueil-malmaison-entrée-ouest-tronc-commun-v5-et-v7",
+        "id": "vif-rueil-malmaison-entrée-ouest-tronc-commun-v5-et-v7",
+        "comment": "Tronc commun avec V5"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.163942,
+            48.888085
+          ],
+          [
+            2.163224,
+            48.888206
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 7,
+        "name": "Rueil-Malmaison – voie verte des bords de Seine, partie sud",
+        "status": "done",
+        "type": "voie-verte",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v7#rueil-malmaison-voie-verte-des-bords-de-seine-partie-sud"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.16394,
+            48.88786
+          ],
+          [
+            2.164162,
+            48.887756
+          ],
+          [
+            2.164623,
+            48.887672
+          ],
+          [
+            2.164848,
+            48.887633
+          ],
+          [
+            2.165052,
+            48.887654
+          ],
+          [
+            2.165224,
+            48.887679
+          ],
+          [
+            2.165363,
+            48.887664
+          ],
+          [
+            2.165599,
+            48.887643
+          ],
+          [
+            2.165803,
+            48.887594
+          ],
+          [
+            2.165932,
+            48.887615
+          ],
+          [
+            2.165959,
+            48.887657
+          ],
+          [
+            2.16597,
+            48.887717
+          ],
+          [
+            2.163943,
+            48.888084
+          ],
+          [
+            2.163931,
+            48.888077
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 7,
+        "name": "Rueil-Malmaison – voie verte des bords de Seine, partie nord",
+        "status": "validated",
+        "type": "voie-verte",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v7#rueil-malmaison-voie-verte-des-bords-de-seine-partie-nord"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.166267,
+            48.890859
+          ],
+          [
+            2.166173,
+            48.89076
+          ],
+          [
+            2.166227,
+            48.890682
+          ],
+          [
+            2.166055,
+            48.890531
+          ],
+          [
+            2.165486,
+            48.890129
+          ],
+          [
+            2.16525,
+            48.889899
+          ],
+          [
+            2.165116,
+            48.889638
+          ],
+          [
+            2.165073,
+            48.889543
+          ],
+          [
+            2.164966,
+            48.88936
+          ],
+          [
+            2.164702,
+            48.889101
+          ],
+          [
+            2.164418,
+            48.88877
+          ],
+          [
+            2.164262,
+            48.888611
+          ],
+          [
+            2.164085,
+            48.888287
+          ],
+          [
+            2.16401,
+            48.88816
+          ],
+          [
+            2.163903,
+            48.887913
+          ],
+          [
+            2.16394,
+            48.88786
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 7,
+        "name": "Rueil-Malmaison – Nanterre, jusqu'à la limite nord (variante)",
+        "status": "route-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v7#rueil-malmaison-nanterre-jusqu-à-la-limite-nord-variante",
+        "comment": "Variante selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.221632,
+            48.919733
+          ],
+          [
+            2.208361,
+            48.910841
+          ],
+          [
+            2.193439,
+            48.904246
+          ],
+          [
+            2.187647,
+            48.903053
+          ],
+          [
+            2.183872,
+            48.902344
+          ],
+          [
+            2.18065,
+            48.901325
+          ],
+          [
+            2.181453,
+            48.900003
+          ],
+          [
+            2.186225,
+            48.8975
+          ],
+          [
+            2.183086,
+            48.895176
+          ],
+          [
+            2.180336,
+            48.892733
+          ],
+          [
+            2.175837,
+            48.894601
+          ],
+          [
+            2.174327,
+            48.895147
+          ],
+          [
+            2.171377,
+            48.896732
+          ],
+          [
+            2.169744,
+            48.895529
+          ],
+          [
+            2.168423,
+            48.894238
+          ],
+          [
+            2.167647,
+            48.892825
+          ],
+          [
+            2.167364,
+            48.892061
+          ],
+          [
+            2.167064,
+            48.891627
+          ],
+          [
+            2.166895,
+            48.891419
+          ],
+          [
+            2.166267,
+            48.890859
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 7,
+        "name": "Levallois-Perret – traversée, variante A",
+        "status": "route-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v7#levallois-perret-traversée-variante-a",
+        "comment": "Variante selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.299543,
+            48.89354
+          ],
+          [
+            2.298361,
+            48.892911
+          ],
+          [
+            2.29467,
+            48.890921
+          ],
+          [
+            2.294048,
+            48.890639
+          ],
+          [
+            2.293662,
+            48.890484
+          ],
+          [
+            2.292417,
+            48.889821
+          ],
+          [
+            2.286903,
+            48.896057
+          ],
+          [
+            2.283899,
+            48.899724
+          ],
+          [
+            2.283417,
+            48.900338
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 7,
+        "name": "Levallois-Perret – traversée, variante B",
+        "status": "route-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "updatedAt": "26/11/2026",
+        "reviewedAt": "26/11/2026",
+        "link": "/v7#levallois-perret-traversée-variante-b",
+        "comment": "Variante selon la Région"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.300637,
+            48.892679
+          ],
+          [
+            2.297095,
+            48.895467
+          ],
+          [
+            2.296494,
+            48.895975
+          ],
+          [
+            2.294434,
+            48.89826
+          ],
+          [
+            2.292803,
+            48.900094
+          ],
+          [
+            2.29267,
+            48.900578
+          ]
+        ]
+      }
+    }
+  ]
+}

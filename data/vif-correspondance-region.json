@@ -1,0 +1,268 @@
+{
+  "V20": [
+    {
+      "nom": "D7 Saint-Cloud – quai du Président-Carnot, partie sud",
+      "gidtroncon_region": ["{C756B349-1456-4AEC-B4D1-382C7FE9244A}"]
+    },
+    {
+      "nom": "D7 Saint-Cloud – quai du Président-Carnot jusqu'au pont de Saint-Cloud",
+      "gidtroncon_region": ["{E9CBA080-68D1-482F-84BB-91C988898C11}"]
+    },
+    {
+      "nom": "D7 Saint-Cloud – du pont de Saint-Cloud vers Suresnes",
+      "gidtroncon_region": ["{2F8D1A21-74BD-4934-BEB1-7CF89135A73F}"]
+    },
+    {
+      "nom": "D7 limite Saint-Cloud / Suresnes – quai Gallieni",
+      "gidtroncon_region": ["{3BD8D199-2524-4B9B-A198-1327570CE528}"]
+    },
+    {
+      "nom": "D7 Suresnes – Puteaux, jusqu'au pont de Puteaux",
+      "gidtroncon_region": ["{8B12892C-94A0-47B9-9525-E83225707819}"]
+    },
+    {
+      "nom": "D7 Puteaux – quai de Dion-Bouton, depuis le pont de Puteaux",
+      "gidtroncon_region": ["{F780A364-5E0E-4DE0-8DC0-B39253CAE82E}", "{D6BFE62B-D7D7-41BD-A3E5-AE29A796ABB0}"]
+    },
+    {
+      "nom": "D7 Puteaux – quai de Dion-Bouton, partie nord",
+      "gidtroncon_region": ["{1058036D-7145-4CCC-AB99-F204CDDD75E1}"]
+    },
+    {
+      "nom": "Puteaux – sortie du quai vers le pont de Neuilly",
+      "gidtroncon_region": ["{4EE0C1E3-C326-4197-9EC9-4085A15FF9EB}"]
+    },
+    {
+      "nom": "Puteaux – abords du pont de Neuilly",
+      "gidtroncon_region": ["{E5E22261-ADC0-4E85-B2D2-D7FA1C3BE971}", "{B9D7B694-CFE4-47C6-A779-0956BBABD72E}"]
+    },
+    {
+      "nom": "Carrefour du pont de Neuilly – côté Puteaux",
+      "gidtroncon_region": ["{54B2D3C7-F151-46DC-A680-964769FCF4B8}"]
+    },
+    {
+      "nom": "Carrefour du pont de Neuilly (tronc commun V5 et V20)",
+      "gidtroncon_region": ["{AFA60C20-0132-4198-AB9D-B838D138B50B}"]
+    },
+    {
+      "nom": "Carrefour du pont de Neuilly – côté Courbevoie (tronc commun V4 et V20)",
+      "gidtroncon_region": ["{91B79F97-EFDE-4F8B-A118-A4B30CA6939B}", "{4D3DAEF1-2C21-453A-A20E-9DA3F72242E8}"]
+    },
+    {
+      "nom": "Courbevoie – du pont de Neuilly vers le nord-est",
+      "gidtroncon_region": ["{3B57700F-8C0E-4C3F-BC2B-B1F14A065F12}"]
+    },
+    {
+      "nom": "Courbevoie – quai Paul-Doumer",
+      "gidtroncon_region": ["{C0E4C26E-DD6F-4A80-BBA5-7F68D4CE7B5C}", "{554A599D-E24A-4112-B471-51C3BCE4F53C}"]
+    },
+    {
+      "nom": "Courbevoie – vélorue jusqu'au pont de Courbevoie",
+      "gidtroncon_region": ["{CBA918C4-F559-42AC-A99C-EF16CAFA4136}", "{F86759D4-CA9B-4913-BCF0-7ACD494A4BE6}"]
+    },
+    {
+      "nom": "Pont de Courbevoie – vers l'île de la Jatte",
+      "gidtroncon_region": ["{C13064E9-B97E-4A21-9D80-420EAC3F6FAD}"]
+    },
+    {
+      "nom": "Neuilly – île de la Jatte jusqu'au pont de Levallois",
+      "gidtroncon_region": ["{C1158432-9EED-4D70-8204-39815A2FB819}"]
+    },
+    {
+      "nom": "Levallois – du pont de Levallois à la limite de Clichy",
+      "gidtroncon_region": [
+        "{60FB8436-6D1C-4255-9AEB-C3B69180D9F8}",
+        "{29F03840-EB86-4710-99DA-18F77556A142}",
+        "{D07EA463-0226-4602-B402-601D27733E4E}"
+      ]
+    }
+  ],
+  "V5": [
+    {
+      "nom": "Rueil-Malmaison – entrée ouest (tronc commun V5 et V7)",
+      "gidtroncon_region": ["{BDE3D639-6585-4A50-ADF9-78813B464294}"]
+    },
+    {
+      "nom": "RD 913 Rueil-Malmaison – traversée de Rueil vers Nanterre",
+      "gidtroncon_region": ["{896688BA-2A2F-4C62-A17D-1D35E9F7AEC8}", "{68DB1AE3-7E72-4AE8-AF4C-0E4049DFFE4A}"]
+    },
+    {
+      "nom": "RD 913 Nanterre – avenue Georges-Clemenceau",
+      "gidtroncon_region": ["{AA3B928B-4DB6-4A57-A5C4-336FA0E59BA5}"]
+    },
+    {
+      "nom": "RD 913 Nanterre – Puteaux, jusqu'à l'approche de La Défense",
+      "gidtroncon_region": ["{54967816-4BFD-4F47-A868-A540DD576CE5}"]
+    },
+    {
+      "nom": "Puteaux – approche de La Défense par l'ouest",
+      "gidtroncon_region": ["{4D578A93-DB0E-4141-9D00-C2AA45615C5C}"]
+    },
+    {
+      "nom": "La Défense – traversée, variante A",
+      "gidtroncon_region": ["{C7B2BFD8-C168-4449-AA71-D3523004415C}"]
+    },
+    {
+      "nom": "La Défense – traversée, variante B",
+      "gidtroncon_region": ["{E7B868DD-FECD-46E6-ABF6-E163B3BF6A5A}"]
+    },
+    {
+      "nom": "La Défense – traversée, variante C",
+      "gidtroncon_region": ["{5DBC0076-12B5-4A50-8DCD-BE904EEAA96E}"]
+    },
+    {
+      "nom": "Puteaux – Courbevoie, de La Défense vers le pont de Neuilly",
+      "gidtroncon_region": ["{D5F248A1-A3FE-4B87-91B8-0AD454EF928C}", "{51E08EF8-A380-40DE-BA6F-DBCD87CB26E4}"]
+    },
+    {
+      "nom": "Carrefour du pont de Neuilly (tronc commun V5 et V20)",
+      "gidtroncon_region": ["{AFA60C20-0132-4198-AB9D-B838D138B50B}"]
+    },
+    {
+      "nom": "Pont de Neuilly et avenue Charles-de-Gaulle, partie ouest (tronc commun V4 et V5)",
+      "gidtroncon_region": [
+        "{4026F3E4-A0CE-4641-A141-0B6E2FAA41E0}",
+        "{50A62A9A-E794-4215-9A4B-E4C00389ED7E}",
+        "{044ACC18-71CB-45C4-A4BC-F07D21F24FAE}"
+      ]
+    },
+    {
+      "nom": "Neuilly – avenue Charles-de-Gaulle jusqu'à la porte Maillot (tronc commun V4 et V5)",
+      "gidtroncon_region": ["{86831198-3414-4352-A86B-D12DCBBDD2CB}"]
+    }
+  ],
+  "V4": [
+    {
+      "nom": "Nanterre nord – entrée sur le territoire",
+      "gidtroncon_region": ["{92152145-226D-415B-AB16-8D6CFD702C48}"]
+    },
+    {
+      "nom": "Nanterre nord – boucle, branche est",
+      "gidtroncon_region": ["{6A640AF4-3D71-4C32-962E-B86ED4BD20A2}"]
+    },
+    {
+      "nom": "Nanterre nord – boucle, liaison",
+      "gidtroncon_region": ["{A2174354-ECA9-4D67-A901-6DD65BE92A12}", "{172CBB98-0CCD-4790-B6E4-D58EB1E19EE1}"]
+    },
+    {
+      "nom": "Nanterre – piste bidirectionnelle vers l'université",
+      "gidtroncon_region": [
+        "{8850C342-64A2-4A2D-AD0E-2C8BF595F0E2}",
+        "{FCF35344-D1D5-4F58-9631-FEF09C0184AD}",
+        "{49A1EFB8-9F8A-41FF-A29D-F128177061C2}"
+      ]
+    },
+    {
+      "nom": "Nanterre – vélorue",
+      "gidtroncon_region": ["{146E53AA-712A-4883-8A64-AD480C18C292}"]
+    },
+    {
+      "nom": "Nanterre-Université – vélorue provisoire",
+      "gidtroncon_region": ["{53D5F88C-0F67-4A6E-946E-6CC154A4DD1A}"]
+    },
+    {
+      "nom": "Nanterre – de l'université vers les Terrasses",
+      "gidtroncon_region": ["{E4EDF944-A0F6-4E4A-B85D-3015BC4F374E}"]
+    },
+    {
+      "nom": "Nanterre – carrefour, sens 1",
+      "gidtroncon_region": ["{3A96E25A-47B7-45E9-8528-3A70EF7D77F8}"]
+    },
+    {
+      "nom": "Nanterre – carrefour, sens 2",
+      "gidtroncon_region": ["{40C19FB1-33CF-4E6D-ADC4-BC7E7887345E}"]
+    },
+    {
+      "nom": "Nanterre – Terrasses, variante en travaux",
+      "gidtroncon_region": ["{353C1B4A-D165-4CF3-8EAB-EE2FDDB2714E}"]
+    },
+    {
+      "nom": "Nanterre – Terrasses jusqu'à La Défense",
+      "gidtroncon_region": ["{5F391FF1-1C0A-469C-9F8E-69B3B53A0AA0}", "{1464B959-4C13-4A9E-BCFC-2822E798A0A3}"]
+    },
+    {
+      "nom": "Courbevoie – La Défense nord, tracé provisoire",
+      "gidtroncon_region": ["{4E7C539D-AF0F-44C9-882F-ADE23F2BBC9C}"]
+    },
+    {
+      "nom": "Courbevoie – La Défense nord, aménagement provisoire",
+      "gidtroncon_region": ["{8AE58A88-1E85-47AB-86F3-0C273FE49499}", "{54101B83-5872-44EE-BDAB-21C26626810F}"]
+    },
+    {
+      "nom": "Courbevoie – de La Défense vers le pont de Neuilly",
+      "gidtroncon_region": ["{738C5BCB-2C74-4E7A-AC2C-AFCD60797D66}", "{6DBFA76C-7370-4933-BD93-962A2FAF0E01}"]
+    },
+    {
+      "nom": "Carrefour du pont de Neuilly – côté Courbevoie (tronc commun V4 et V20)",
+      "gidtroncon_region": ["{4D3DAEF1-2C21-453A-A20E-9DA3F72242E8}", "{91B79F97-EFDE-4F8B-A118-A4B30CA6939B}"]
+    },
+    {
+      "nom": "Pont de Neuilly et avenue Charles-de-Gaulle, partie ouest (tronc commun V4 et V5)",
+      "gidtroncon_region": [
+        "{4026F3E4-A0CE-4641-A141-0B6E2FAA41E0}",
+        "{50A62A9A-E794-4215-9A4B-E4C00389ED7E}",
+        "{044ACC18-71CB-45C4-A4BC-F07D21F24FAE}"
+      ]
+    },
+    {
+      "nom": "Neuilly – avenue Charles-de-Gaulle jusqu'à la porte Maillot (tronc commun V4 et V5)",
+      "gidtroncon_region": ["{86831198-3414-4352-A86B-D12DCBBDD2CB}"]
+    }
+  ],
+  "V7": [
+    {
+      "nom": "Rueil-Malmaison – entrée ouest (tronc commun V5 et V7)",
+      "gidtroncon_region": ["{BDE3D639-6585-4A50-ADF9-78813B464294}"]
+    },
+    {
+      "nom": "Rueil-Malmaison – voie verte des bords de Seine, partie sud",
+      "gidtroncon_region": ["{21AA3FF1-3B94-4C41-88D0-31771F5166E8}"]
+    },
+    {
+      "nom": "Rueil-Malmaison – voie verte des bords de Seine, partie nord",
+      "gidtroncon_region": ["{74A20E60-D33C-46B3-AA38-3C83C08B077B}"]
+    },
+    {
+      "nom": "Rueil-Malmaison – Nanterre, jusqu'à la limite nord (variante)",
+      "gidtroncon_region": ["{BDB9990D-105E-45EA-98B7-0270AE5639C3}"]
+    },
+    {
+      "nom": "Levallois-Perret – traversée, variante A",
+      "gidtroncon_region": ["{E871D9FD-627D-4E88-BC82-9E161CB244CA}"]
+    },
+    {
+      "nom": "Levallois-Perret – traversée, variante B",
+      "gidtroncon_region": ["{F7D5C5B8-12B0-43F7-B4B9-C8B3E8F456ED}"]
+    }
+  ],
+  "V9": [
+    {
+      "nom": "Vaucresson – traversée",
+      "gidtroncon_region": [
+        "{76B10728-E87C-4B2B-96CB-42023AA22FED}",
+        "{49EE0368-53B8-42CE-8AB3-742AD1B55228}",
+        "{F3B0CFFC-A896-40A4-B615-58D4E78FCDE6}"
+      ]
+    },
+    {
+      "nom": "Garches – partie ouest",
+      "gidtroncon_region": ["{C928EC6B-44BF-4B2F-AE8E-FDA1FEF8AE57}", "{A7CC41C4-EDE8-45C8-83A1-148C218E2DC0}"]
+    },
+    {
+      "nom": "Garches – Saint-Cloud, partie réalisée",
+      "gidtroncon_region": ["{84D63293-85F1-4968-84F0-C8F07BCB344D}"]
+    },
+    {
+      "nom": "Saint-Cloud – traversée vers le pont de Saint-Cloud",
+      "gidtroncon_region": [
+        "{6F80F5C2-E4DD-4BFA-ACFD-2F0AD0B637A0}",
+        "{B7F857E3-16A8-459D-8A8C-FE485353E86F}",
+        "{179C5BFC-5877-4415-9083-FA737E5B84D1}"
+      ]
+    },
+    {
+      "nom": "Saint-Cloud – arrivée au pont de Saint-Cloud",
+      "gidtroncon_region": ["{1DA0BD56-ACA7-49CC-A995-99DD8915C71A}"]
+    }
+  ]
+}

@@ -3,7 +3,7 @@ name: Ligne V20
 line: 20
 from: Saint-Cloud
 to: Levallois-Perret
-description: "Partie de la ligne V20 du réseau Vélo Île-de-France (VIF) sur le territoire Paris Ouest La Défense : environ 10.9 km le long de la Seine, de Saint-Cloud à Levallois-Perret, via Suresnes, Puteaux, Courbevoie et Neuilly-sur-Seine."
+description: "Partie de la ligne V20 du réseau Vélo Île-de-France (VIF) sur le territoire Paris Ouest La Défense, le long de la Seine, de Saint-Cloud à Levallois-Perret, via Suresnes, Puteaux, Courbevoie et Neuilly-sur-Seine. Environ 10.9 km sur le territoire."
 trafic: à compléter
 cover: ""
 ---
@@ -87,16 +87,24 @@ Description à compléter.
 
 Description à compléter.
 
-### Carrefour du pont de Neuilly – côté Puteaux (tronc commun V5)
+### Carrefour du pont de Neuilly – côté Puteaux
 
 - État : En travaux
-- Longueur : environ 380 m
+- Longueur : environ 180 m
+- Aménagement (Région) : Piste bidirectionnelle
+
+Description à compléter.
+
+### Carrefour du pont de Neuilly (tronc commun V5 et V20)
+
+- État : En travaux
+- Longueur : environ 200 m
 - Aménagement (Région) : Piste bidirectionnelle
 - Tronc commun avec V5
 
 Description à compléter.
 
-### Carrefour du pont de Neuilly – côté Courbevoie (tronc commun V4)
+### Carrefour du pont de Neuilly – côté Courbevoie (tronc commun V4 et V20)
 
 - État : Réalisé
 - Longueur : environ 220 m
