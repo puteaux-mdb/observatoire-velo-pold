@@ -466,8 +466,7 @@
       "short": "VIF phase 1",
       "owner": "Région Île-de-France",
       "period": "2021-2025",
-      "deadline": 2025,
-      "note": "Réseau inscrit au SDRIF-E par la Région"
+      "deadline": 2025
     },
     {
       "id": "vif-phase-2",
@@ -476,8 +475,7 @@
       "short": "VIF phase 2",
       "owner": "Région Île-de-France",
       "period": "2025-2030",
-      "deadline": 2030,
-      "note": "Réseau inscrit au SDRIF-E par la Région"
+      "deadline": 2030
     },
     {
       "id": "vif",
@@ -487,7 +485,7 @@
       "owner": "Région Île-de-France",
       "period": "2021-2030",
       "deadline": 2030,
-      "note": "Réseau inscrit au SDRIF-E par la Région ; achèvement de l'ensemble du réseau prévu en 2030"
+      "note": "Achèvement de l'ensemble du réseau prévu en 2030"
     },
     {
       "id": "cd92-2022-2028",

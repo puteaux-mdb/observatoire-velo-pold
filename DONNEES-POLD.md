@@ -116,7 +116,7 @@ Propriété facultative `engagements` : liste des plans dans lesquels le tronço
 
 | Identifiant | Plan | Période | Échéance |
 |---|---|---|---|
-| `vif-phase-1` | Réseau Vélo Île-de-France (VIF), phase 1 — inscrit au SDRIF-E | 2021-2025 | 2025 |
+| `vif-phase-1` | Réseau Vélo Île-de-France (VIF), phase 1 | 2021-2025 | 2025 |
 | `vif-phase-2` | Réseau Vélo Île-de-France (VIF), phase 2 | 2025-2030 | 2030 |
 | `vif` | VIF, phase à préciser | 2021-2030 | 2030 |
 | `cd92-2022-2028` | Plan vélo des Hauts-de-Seine | 2022-2028 | 2028 |
