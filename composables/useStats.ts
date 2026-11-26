@@ -8,7 +8,12 @@ const featureStatusOrder = [
   'variante',
   'tested',
   'wip',
+  'works-study',
   'planned',
+  'validated',
+  'route-study',
+  'to-define',
+  'blocked',
   'postponed',
   'variante-postponed',
   'unknown',
@@ -238,7 +243,7 @@ export const useStats = () => {
     'bandes-cyclables': 'Bandes cyclables',
     'zone-de-rencontre': 'Zone de rencontre',
     aucun: 'Aucun',
-    inconnu: 'Inconnu',
+    inconnu: 'Pas d’information',
   };
 
   const qualityNames: Record<LaneQuality, string> = {

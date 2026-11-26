@@ -52,7 +52,7 @@ type ColoredLineStringFeature = Extract<
   Collections['voiesCyclablesGeojson']['features'][0],
   { geometry: { type: 'LineString' } }
 > & { properties: { color: string; showLabel?: boolean } };
-const { getNbVoiesCyclables } = useConfig();
+const { getLineNumbers } = useConfig();
 
 // en mode `print`, pas de canvas d'animation et icônes en hd
 const PRINT_ICON_PIXEL_RATIO = 4;
@@ -153,9 +153,7 @@ export const useMap = ({
       }
     }
 
-    const totalLines = getNbVoiesCyclables();
-
-    for (let line = 1; line <= totalLines; line++) {
+    for (const line of getLineNumbers()) {
       const id = `line-shield-${line}`;
       if (map.hasImage(id)) {
         if (!force) {
@@ -610,7 +608,7 @@ export const useMap = ({
   function plotPostponedSections({ map, features }: { map: MaplibreType; features: ColoredLineStringFeature[] }) {
     const featuresByColor = groupFeaturesByColor(features);
 
-    for (let line = 1; line <= getNbVoiesCyclables(); line++) {
+    for (const line of getLineNumbers()) {
       const lineColor = getLineColor(line);
       if (!featuresByColor[lineColor]) {
         upsertMapSource(map, `postponed-sections-${lineColor}`, []);
@@ -1620,9 +1618,9 @@ export const useMap = ({
     };
 
     const { getLineColor } = useColors();
-    const { getNbVoiesCyclables } = useConfig();
+    const { getLineNumbers } = useConfig();
     const postponedLayerIds: string[] = [];
-    for (let line = 1; line <= getNbVoiesCyclables(); line++) {
+    for (const line of getLineNumbers()) {
       const lineColor = getLineColor(line);
       postponedLayerIds.push(`postponed-symbols-${lineColor}`, `postponed-text-${lineColor}`);
     }
@@ -1673,7 +1671,9 @@ export const useMap = ({
         }
       }
 
-      const colors = Array.from({ length: getNbVoiesCyclables() }, (_, i) => getLineColor(i + 1)).reverse();
+      const colors = getLineNumbers()
+        .map((line) => getLineColor(line))
+        .reverse();
 
       for (const color of colors) {
         if (!map.getLayer(`postponed-text-${color}`)) {

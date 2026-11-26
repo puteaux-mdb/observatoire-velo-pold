@@ -1,0 +1,91 @@
+[
+  {
+    "nom": "D7 Saint-Cloud – quai du Président-Carnot, partie sud",
+    "numeros_proposition": [1],
+    "gidtroncon_region": ["{C756B349-1456-4AEC-B4D1-382C7FE9244A}"]
+  },
+  {
+    "nom": "D7 Saint-Cloud – quai du Président-Carnot jusqu'au pont de Saint-Cloud",
+    "numeros_proposition": [2],
+    "gidtroncon_region": ["{E9CBA080-68D1-482F-84BB-91C988898C11}"]
+  },
+  {
+    "nom": "D7 Saint-Cloud – du pont de Saint-Cloud vers Suresnes",
+    "numeros_proposition": [3],
+    "gidtroncon_region": ["{2F8D1A21-74BD-4934-BEB1-7CF89135A73F}"]
+  },
+  {
+    "nom": "D7 limite Saint-Cloud / Suresnes – quai Gallieni",
+    "numeros_proposition": [4],
+    "gidtroncon_region": ["{3BD8D199-2524-4B9B-A198-1327570CE528}"]
+  },
+  {
+    "nom": "D7 Suresnes – Puteaux, jusqu'au pont de Puteaux",
+    "numeros_proposition": [5],
+    "gidtroncon_region": ["{8B12892C-94A0-47B9-9525-E83225707819}"]
+  },
+  {
+    "nom": "D7 Puteaux – quai de Dion-Bouton, depuis le pont de Puteaux",
+    "numeros_proposition": [6, 7],
+    "gidtroncon_region": ["{F780A364-5E0E-4DE0-8DC0-B39253CAE82E}", "{D6BFE62B-D7D7-41BD-A3E5-AE29A796ABB0}"]
+  },
+  {
+    "nom": "D7 Puteaux – quai de Dion-Bouton, partie nord",
+    "numeros_proposition": [8],
+    "gidtroncon_region": ["{1058036D-7145-4CCC-AB99-F204CDDD75E1}"]
+  },
+  {
+    "nom": "Puteaux – sortie du quai vers le pont de Neuilly",
+    "numeros_proposition": [9],
+    "gidtroncon_region": ["{4EE0C1E3-C326-4197-9EC9-4085A15FF9EB}"]
+  },
+  {
+    "nom": "Puteaux – abords du pont de Neuilly",
+    "numeros_proposition": [10, 11],
+    "gidtroncon_region": ["{E5E22261-ADC0-4E85-B2D2-D7FA1C3BE971}", "{B9D7B694-CFE4-47C6-A779-0956BBABD72E}"]
+  },
+  {
+    "nom": "Carrefour du pont de Neuilly – côté Puteaux (tronc commun V5)",
+    "numeros_proposition": [12, 13],
+    "gidtroncon_region": ["{54B2D3C7-F151-46DC-A680-964769FCF4B8}", "{AFA60C20-0132-4198-AB9D-B838D138B50B}"]
+  },
+  {
+    "nom": "Carrefour du pont de Neuilly – côté Courbevoie (tronc commun V4)",
+    "numeros_proposition": [14, 15],
+    "gidtroncon_region": ["{91B79F97-EFDE-4F8B-A118-A4B30CA6939B}", "{4D3DAEF1-2C21-453A-A20E-9DA3F72242E8}"]
+  },
+  {
+    "nom": "Courbevoie – du pont de Neuilly vers le nord-est",
+    "numeros_proposition": [16],
+    "gidtroncon_region": ["{3B57700F-8C0E-4C3F-BC2B-B1F14A065F12}"]
+  },
+  {
+    "nom": "Courbevoie – quai Paul-Doumer",
+    "numeros_proposition": [17, 18],
+    "gidtroncon_region": ["{C0E4C26E-DD6F-4A80-BBA5-7F68D4CE7B5C}", "{554A599D-E24A-4112-B471-51C3BCE4F53C}"]
+  },
+  {
+    "nom": "Courbevoie – vélorue jusqu'au pont de Courbevoie",
+    "numeros_proposition": [19, 20],
+    "gidtroncon_region": ["{CBA918C4-F559-42AC-A99C-EF16CAFA4136}", "{F86759D4-CA9B-4913-BCF0-7ACD494A4BE6}"]
+  },
+  {
+    "nom": "Pont de Courbevoie – vers l'île de la Jatte",
+    "numeros_proposition": [21],
+    "gidtroncon_region": ["{C13064E9-B97E-4A21-9D80-420EAC3F6FAD}"]
+  },
+  {
+    "nom": "Neuilly – île de la Jatte jusqu'au pont de Levallois",
+    "numeros_proposition": [22],
+    "gidtroncon_region": ["{C1158432-9EED-4D70-8204-39815A2FB819}"]
+  },
+  {
+    "nom": "Levallois – du pont de Levallois à la limite de Clichy",
+    "numeros_proposition": [23, 24, 25],
+    "gidtroncon_region": [
+      "{60FB8436-6D1C-4255-9AEB-C3B69180D9F8}",
+      "{29F03840-EB86-4710-99DA-18F77556A142}",
+      "{D07EA463-0226-4602-B402-601D27733E4E}"
+    ]
+  }
+]

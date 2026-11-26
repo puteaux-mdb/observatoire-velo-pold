@@ -1,0 +1,771 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "D7 Saint-Cloud – quai du Président-Carnot, partie sud",
+        "status": "works-study",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#d7-saint-cloud-quai-du-président-carnot-partie-sud"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.222249,
+            48.83536
+          ],
+          [
+            2.222249,
+            48.835553
+          ],
+          [
+            2.221477,
+            48.838858
+          ],
+          [
+            2.221691,
+            48.839932
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "D7 Saint-Cloud – quai du Président-Carnot jusqu'au pont de Saint-Cloud",
+        "status": "wip",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#d7-saint-cloud-quai-du-président-carnot-jusqu-au-pont-de-saint-cloud"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.223225,
+            48.8434
+          ],
+          [
+            2.222553,
+            48.841381
+          ],
+          [
+            2.222135,
+            48.84042
+          ],
+          [
+            2.221691,
+            48.839932
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "D7 Saint-Cloud – du pont de Saint-Cloud vers Suresnes",
+        "status": "works-study",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#d7-saint-cloud-du-pont-de-saint-cloud-vers-suresnes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.223225,
+            48.8434
+          ],
+          [
+            2.223526,
+            48.844615
+          ],
+          [
+            2.223783,
+            48.845278
+          ],
+          [
+            2.223912,
+            48.846224
+          ],
+          [
+            2.223848,
+            48.847255
+          ],
+          [
+            2.223933,
+            48.848201
+          ],
+          [
+            2.223998,
+            48.849063
+          ],
+          [
+            2.223826,
+            48.849995
+          ],
+          [
+            2.22359,
+            48.851025
+          ],
+          [
+            2.222796,
+            48.853058
+          ],
+          [
+            2.222635,
+            48.853658
+          ],
+          [
+            2.222678,
+            48.854626
+          ],
+          [
+            2.223021,
+            48.85579
+          ],
+          [
+            2.223279,
+            48.856666
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "D7 limite Saint-Cloud / Suresnes – quai Gallieni",
+        "status": "works-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#d7-limite-saint-cloud-suresnes-quai-gallieni"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.22768,
+            48.866164
+          ],
+          [
+            2.227184,
+            48.865674
+          ],
+          [
+            2.226325,
+            48.863811
+          ],
+          [
+            2.22566,
+            48.862173
+          ],
+          [
+            2.224265,
+            48.85966
+          ],
+          [
+            2.223901,
+            48.859025
+          ],
+          [
+            2.223279,
+            48.856666
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "D7 Suresnes – Puteaux, jusqu'au pont de Puteaux",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#d7-suresnes-puteaux-jusqu-au-pont-de-puteaux"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.22768,
+            48.866164
+          ],
+          [
+            2.228496,
+            48.867152
+          ],
+          [
+            2.228946,
+            48.867695
+          ],
+          [
+            2.229991,
+            48.868906
+          ],
+          [
+            2.231371,
+            48.870095
+          ],
+          [
+            2.232991,
+            48.871591
+          ],
+          [
+            2.234126,
+            48.872577
+          ],
+          [
+            2.235759,
+            48.87327
+          ],
+          [
+            2.235791,
+            48.873447
+          ],
+          [
+            2.236103,
+            48.873503
+          ],
+          [
+            2.241097,
+            48.877136
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "D7 Puteaux – quai de Dion-Bouton, depuis le pont de Puteaux",
+        "status": "validated",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#d7-puteaux-quai-de-dion-bouton-depuis-le-pont-de-puteaux"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.241097,
+            48.877136
+          ],
+          [
+            2.241969,
+            48.877772
+          ],
+          [
+            2.242744,
+            48.878648
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "D7 Puteaux – quai de Dion-Bouton, depuis le pont de Puteaux",
+        "status": "validated",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#d7-puteaux-quai-de-dion-bouton-depuis-le-pont-de-puteaux"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.24448,
+            48.880069
+          ],
+          [
+            2.242746,
+            48.878648
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "D7 Puteaux – quai de Dion-Bouton, partie nord",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#d7-puteaux-quai-de-dion-bouton-partie-nord"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.24448,
+            48.880069
+          ],
+          [
+            2.246947,
+            48.881899
+          ],
+          [
+            2.247891,
+            48.882689
+          ],
+          [
+            2.24935,
+            48.883846
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Puteaux – sortie du quai vers le pont de Neuilly",
+        "status": "done",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#puteaux-sortie-du-quai-vers-le-pont-de-neuilly",
+        "comment": "Type d'aménagement « Autre » dans les données de la Région (préexistant ?)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.24935,
+            48.883846
+          ],
+          [
+            2.24772,
+            48.884777
+          ],
+          [
+            2.247055,
+            48.885328
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Puteaux – abords du pont de Neuilly",
+        "status": "works-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#puteaux-abords-du-pont-de-neuilly"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.247055,
+            48.885328
+          ],
+          [
+            2.247312,
+            48.885497
+          ],
+          [
+            2.247677,
+            48.885807
+          ],
+          [
+            2.248299,
+            48.886555
+          ],
+          [
+            2.248599,
+            48.886781
+          ],
+          [
+            2.249029,
+            48.886753
+          ],
+          [
+            2.249082,
+            48.886837
+          ],
+          [
+            2.248889,
+            48.887077
+          ],
+          [
+            2.249902,
+            48.887493
+          ],
+          [
+            2.250237,
+            48.887726
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Carrefour du pont de Neuilly – côté Puteaux (tronc commun V5)",
+        "status": "wip",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#carrefour-du-pont-de-neuilly-côté-puteaux-tronc-commun-v5",
+        "id": "vif-carrefour-du-pont-de-neuilly-côté-puteaux-tronc-commun-v5",
+        "comment": "Tronc commun avec V5"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.250237,
+            48.887726
+          ],
+          [
+            2.248961,
+            48.888111
+          ],
+          [
+            2.249445,
+            48.8887
+          ],
+          [
+            2.251193,
+            48.888139
+          ],
+          [
+            2.251291,
+            48.888075
+          ],
+          [
+            2.251347,
+            48.888019
+          ],
+          [
+            2.251516,
+            48.887883
+          ],
+          [
+            2.251657,
+            48.887834
+          ],
+          [
+            2.251731,
+            48.887828
+          ],
+          [
+            2.251809,
+            48.887844
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Carrefour du pont de Neuilly – côté Courbevoie (tronc commun V4)",
+        "status": "done",
+        "type": "bidirectionnelle",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#carrefour-du-pont-de-neuilly-côté-courbevoie-tronc-commun-v4",
+        "id": "vif-carrefour-du-pont-de-neuilly-côté-courbevoie-tronc-commun-v4",
+        "comment": "Tronc commun avec V4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.250466,
+            48.889613
+          ],
+          [
+            2.25061,
+            48.889263
+          ],
+          [
+            2.251007,
+            48.888544
+          ],
+          [
+            2.251233,
+            48.888333
+          ],
+          [
+            2.251409,
+            48.888035
+          ],
+          [
+            2.251809,
+            48.887844
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Courbevoie – du pont de Neuilly vers le nord-est",
+        "status": "validated",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#courbevoie-du-pont-de-neuilly-vers-le-nord-est"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.250466,
+            48.889613
+          ],
+          [
+            2.250832,
+            48.889789
+          ],
+          [
+            2.25123,
+            48.890146
+          ],
+          [
+            2.251829,
+            48.890977
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Courbevoie – quai Paul-Doumer",
+        "status": "done",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#courbevoie-quai-paul-doumer",
+        "comment": "Type d'aménagement « Autre » dans les données de la Région (préexistant ?)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.251829,
+            48.890977
+          ],
+          [
+            2.252162,
+            48.891432
+          ],
+          [
+            2.252816,
+            48.891883
+          ],
+          [
+            2.253626,
+            48.892269
+          ],
+          [
+            2.254538,
+            48.892714
+          ],
+          [
+            2.256281,
+            48.893535
+          ],
+          [
+            2.256619,
+            48.893691
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Courbevoie – vélorue jusqu'au pont de Courbevoie",
+        "status": "validated",
+        "type": "velorue",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#courbevoie-vélorue-jusqu-au-pont-de-courbevoie"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.256619,
+            48.893691
+          ],
+          [
+            2.257574,
+            48.894138
+          ],
+          [
+            2.259108,
+            48.894823
+          ],
+          [
+            2.260305,
+            48.895341
+          ],
+          [
+            2.261168,
+            48.895708
+          ],
+          [
+            2.262686,
+            48.896307
+          ],
+          [
+            2.263389,
+            48.896512
+          ],
+          [
+            2.264167,
+            48.896752
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Courbevoie – vélorue jusqu'au pont de Courbevoie",
+        "status": "validated",
+        "type": "velorue",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#courbevoie-vélorue-jusqu-au-pont-de-courbevoie"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.264592,
+            48.896569
+          ],
+          [
+            2.264167,
+            48.896752
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Pont de Courbevoie – vers l'île de la Jatte",
+        "status": "done",
+        "type": "bilaterale",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#pont-de-courbevoie-vers-l-île-de-la-jatte"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.264592,
+            48.896569
+          ],
+          [
+            2.264674,
+            48.896489
+          ],
+          [
+            2.265755,
+            48.895426
+          ],
+          [
+            2.267557,
+            48.893655
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Neuilly – île de la Jatte jusqu'au pont de Levallois",
+        "status": "works-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#neuilly-île-de-la-jatte-jusqu-au-pont-de-levallois"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.267557,
+            48.893655
+          ],
+          [
+            2.269853,
+            48.894727
+          ],
+          [
+            2.271999,
+            48.895912
+          ],
+          [
+            2.272943,
+            48.896618
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": 20,
+        "name": "Levallois – du pont de Levallois à la limite de Clichy",
+        "status": "works-study",
+        "type": "inconnu",
+        "quality": "satisfactory",
+        "link": "/ligne-velo-20#levallois-du-pont-de-levallois-à-la-limite-de-clichy"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.27293,
+            48.896592
+          ],
+          [
+            2.272943,
+            48.896618
+          ],
+          [
+            2.279158,
+            48.89887
+          ],
+          [
+            2.283156,
+            48.900236
+          ],
+          [
+            2.285176,
+            48.901018
+          ],
+          [
+            2.285789,
+            48.901317
+          ],
+          [
+            2.288888,
+            48.902778
+          ]
+        ]
+      }
+    }
+  ]
+}

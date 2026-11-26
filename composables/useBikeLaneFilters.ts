@@ -81,7 +81,7 @@ export function useBikeLaneFilters({ allFeatures, allGeojsons, allLines }: UseBi
     { label: 'Vélorue', isEnabled: true, types: ['velorue'] },
     { label: 'Bandes cyclables', isEnabled: true, types: ['bandes-cyclables'] },
     { label: 'Zone de rencontre', isEnabled: true, types: ['zone-de-rencontre'] },
-    // { label: 'Inconnu', isEnabled: true, types: ['inconnu'] },
+    { label: 'Pas d’information', isEnabled: true, types: ['inconnu'] },
     { label: 'Aucun', isEnabled: true, types: ['aucun'] },
   ]);
 

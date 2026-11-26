@@ -2,7 +2,7 @@
   "revName": {
     "plural": "Lignes vélo POLD",
     "singular": "Ligne vélo POLD",
-    "abbreviated": "L"
+    "abbreviated": "V"
   },
   "siteName": "Observatoire vélo POLD",
   "territory": {
@@ -52,10 +52,6 @@
       {
         "label": "Distance",
         "value": "à compléter"
-      },
-      {
-        "label": "Budget",
-        "value": "à compléter"
       }
     ]
   },
@@ -67,7 +63,6 @@
     [2.5, 49.0]
   ],
   "zoom": 12.2,
-  "nbVoiesCyclables": 2,
   "colors": [
     {
       "line": 1,
@@ -116,6 +111,10 @@
     {
       "line": 12,
       "color": "#DBABB7"
+    },
+    {
+      "line": 20,
+      "color": "#00A19A"
     }
   ],
   "accessibleColors": [
@@ -166,6 +165,10 @@
     {
       "line": 12,
       "color": "#E91E63"
+    },
+    {
+      "line": 20,
+      "color": "#00796B"
     }
   ],
   "transports": [
@@ -239,5 +242,6 @@
   "territoryBoundary": {
     "label": "Limites de Paris Ouest La Défense et des communes",
     "defaultVisible": false
-  }
+  },
+  "lines": [20]
 }

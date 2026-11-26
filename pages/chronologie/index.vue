@@ -19,7 +19,7 @@
           <span class="hidden sm:inline">Toutes les lignes</span>
         </button>
         <button
-          v-for="line in getNbVoiesCyclables()"
+          v-for="line in getLineNumbers()"
           :key="line"
           type="button"
           class="w-7 h-7 sm:w-8 sm:h-8 rounded-full text-[11px] sm:text-xs font-bold text-white transition-all"
@@ -232,7 +232,7 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/fr';
 dayjs.locale('fr');
 
-const { getRevName, getNbVoiesCyclables } = useConfig();
+const { getRevName, getLineNumbers } = useConfig();
 const { getLineColor } = useColors();
 const { displayDistanceInKm } = useStats();
 

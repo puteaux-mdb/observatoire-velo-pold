@@ -15,8 +15,13 @@ export const useConfig = () => {
     return config.assoLink;
   }
 
+  /** Numéros des lignes du réseau (ex. [4, 20] pour V4 et V20) */
+  function getLineNumbers(): number[] {
+    return config.lines;
+  }
+
   function getNbVoiesCyclables(): number {
-    return config.nbVoiesCyclables;
+    return config.lines.length;
   }
 
   function displayQuality(): boolean {
@@ -42,6 +47,7 @@ export const useConfig = () => {
     getAssoName,
     getAssoLink,
     getNbVoiesCyclables,
+    getLineNumbers,
     displayQuality,
     displayQualityOnHomePage,
     displayCounters,
