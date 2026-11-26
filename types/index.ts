@@ -170,6 +170,8 @@ export function isCompteurFeature(
 export interface BaseFilterItem {
   label: string;
   isEnabled: boolean;
+  /** Filtre de ligne : numéro interne, pour afficher le logo officiel des lignes VIF */
+  line?: number;
   customStyle?: {
     backgroundColor?: string;
     borderColor?: string;

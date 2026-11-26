@@ -1,5 +1,25 @@
 import { getContrastTextColor } from './colors';
+import { VIF_LOGO_BACKGROUND, VIF_LOGO_BARS, VIF_LOGO_VIEWBOX, type VifLogo } from './vif-logos';
 import type { Collections } from '@nuxt/content';
+
+/** Dessine le logo officiel d'une ligne VIF (carré blanc, bandeaux de couleur, « V » et numéro) */
+function drawVifLogo(ctx: CanvasRenderingContext2D, logo: VifLogo, x: number, y: number, size: number) {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(size / VIF_LOGO_VIEWBOX, size / VIF_LOGO_VIEWBOX);
+  const background = new Path2D(VIF_LOGO_BACKGROUND);
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fill(background);
+  // fin liseré pour détacher le logo du fond de carte
+  ctx.strokeStyle = 'rgba(0, 0, 0, 0.35)';
+  ctx.lineWidth = 8;
+  ctx.stroke(background);
+  ctx.fillStyle = logo.color;
+  ctx.fill(new Path2D(VIF_LOGO_BARS));
+  ctx.fillStyle = '#000000';
+  logo.glyphs.forEach((glyph) => ctx.fill(new Path2D(glyph)));
+  ctx.restore();
+}
 
 type ColoredLineStringFeature = Extract<
   Collections['voiesCyclablesGeojson']['features'][0],
@@ -52,7 +72,12 @@ export function getCrossIconUrl(pixelRatio = 1, lineWidth = 3): string {
   return canvas.toDataURL();
 }
 
-export function createLineShieldIcon(lineLabel: string | number, color: string, pixelRatio = 1): HTMLCanvasElement {
+export function createLineShieldIcon(
+  lineLabel: string | number,
+  color: string,
+  pixelRatio = 1,
+  vifLogo: VifLogo | null = null,
+): HTMLCanvasElement {
   const canvas = document.createElement('canvas');
   const size = 64;
 
@@ -64,6 +89,11 @@ export function createLineShieldIcon(lineLabel: string | number, color: string, 
     return canvas;
   }
   ctx.scale(pixelRatio, pixelRatio);
+
+  if (vifLogo) {
+    drawVifLogo(ctx, vifLogo, 4, 4, size - 8);
+    return canvas;
+  }
 
   const centerX = size / 2;
   const centerY = size / 2;
@@ -95,6 +125,7 @@ export function createCompositeLineShieldIcon(
   lineLabels: Array<string | number>,
   colors: string[],
   pixelRatio = 1,
+  vifLogos: Array<VifLogo | null> = [],
 ): HTMLCanvasElement {
   const canvas = document.createElement('canvas');
   const iconSize = 64;
@@ -115,6 +146,12 @@ export function createCompositeLineShieldIcon(
     const color = colors[index];
     const x = index * spacing + iconSize / 2;
     const centerY = iconSize / 2;
+
+    const vifLogo = vifLogos[index];
+    if (vifLogo) {
+      drawVifLogo(ctx, vifLogo, x - iconSize / 2 + 4, 4, iconSize - 8);
+      return;
+    }
 
     // circle background
     ctx.fillStyle = color || '#000000';

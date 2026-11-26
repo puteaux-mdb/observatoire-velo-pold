@@ -134,12 +134,7 @@
                       @click="close()"
                     >
                       <div class="flex-shrink-0">
-                        <div
-                          class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center font-bold"
-                          :style="`background-color: ${getLineColor(voie.line)}; color: ${getLineTextColor(voie.line)}`"
-                        >
-                          {{ getLineCode(voie.line) }}
-                        </div>
+                        <LineBadge :line="voie.line" size="md" />
                       </div>
                     </NuxtLink>
                   </div>
@@ -360,12 +355,7 @@
                 @click="close()"
               >
                 <div class="flex-shrink-0">
-                  <div
-                    class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center font-bold"
-                    :style="`background-color: ${getLineColor(voie.line)}; color: ${getLineTextColor(voie.line)}`"
-                  >
-                    {{ getLineCode(voie.line) }}
-                  </div>
+                  <LineBadge :line="voie.line" size="md" />
                 </div>
               </NuxtLink>
             </div>
@@ -377,12 +367,11 @@
 </template>
 
 <script setup lang="ts">
-import { getLineCode } from '~/composables/useConfig';
+import LineBadge from '~/components/line/LineBadge.vue';
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue';
 import { useMediaQuery } from '@vueuse/core';
 import SettingsPopover from './SettingsPopover.vue';
 import type GlobalSearch from '~/components/GlobalSearch.vue';
-const { getLineColor, getLineTextColor } = useColors();
 const { getVoieCyclablePath } = useUrl();
 const { config, getAssoName, hasFeature, displayCounters } = useConfig();
 const assetUrl = useAssetUrl();

@@ -1,5 +1,19 @@
 <template>
+  <!-- Ligne VIF : logo officiel, grisé quand le filtre est désactivé -->
   <button
+    v-if="line !== undefined && getVifLogo(line)"
+    type="button"
+    class="rounded-[12%] cursor-pointer transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-lvv-blue-600 focus-visible:ring-offset-2"
+    :class="isEnabled ? 'hover:opacity-80' : 'opacity-30 grayscale hover:opacity-60'"
+    :aria-pressed="isEnabled"
+    :aria-label="label"
+    :title="label"
+    @click="emit('click')"
+  >
+    <LineBadge :line="line" size="sm" />
+  </button>
+  <button
+    v-else
     type="button"
     class="px-2 py-1.5 rounded-2xl text-sm cursor-pointer outline outline-2 outline-offset-[-1px] focus:outline-none transition-all"
     :class="{
@@ -17,11 +31,14 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import LineBadge from '~/components/line/LineBadge.vue';
+import { getVifLogo } from '~/helpers/vif-logo-utils';
 import type { BaseFilterItem } from '~/types';
 
 const props = defineProps<{
   label: string;
   isEnabled: boolean;
+  line?: number;
   customStyle?: BaseFilterItem['customStyle'];
 }>();
 

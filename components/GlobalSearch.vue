@@ -62,13 +62,7 @@
                   <div v-if="result.sublabel" class="text-xs text-gray-500 truncate">{{ result.sublabel }}</div>
                 </div>
                 <StatusBadge v-if="result.status" :status="result.status" />
-                <div
-                  v-if="result.line"
-                  class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold"
-                  :style="{ backgroundColor: getLineColor(result.line), color: getLineTextColor(result.line) }"
-                >
-                  {{ result.line }}
-                </div>
+                <LineBadge v-if="result.line" :line="result.line" size="xs" />
               </button>
             </div>
           </div>
@@ -95,6 +89,7 @@
 </template>
 
 <script setup lang="ts">
+import LineBadge from '~/components/line/LineBadge.vue';
 import { STATUSES } from '~/helpers/statuses';
 import config from '~/config.json';
 import type { SearchResult } from '~/composables/useGlobalSearch';
@@ -131,7 +126,6 @@ const StatusBadge = defineComponent({
   },
 });
 
-const { getLineColor, getLineTextColor } = useColors();
 const { results, loading, search, loadIndex } = useGlobalSearch();
 const router = useRouter();
 

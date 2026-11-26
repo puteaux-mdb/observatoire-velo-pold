@@ -32,6 +32,7 @@ import {
   getUsedCompositeIcons,
   groupFeaturesByColor,
 } from '~/helpers/map-utils';
+import { getVifLogo } from '~/helpers/vif-logo-utils';
 import { type CanvasDashAnimator, createCanvasDashAnimator } from '~/helpers/canvas-animator';
 import printConfig from '~/print-config.json';
 
@@ -164,7 +165,7 @@ export const useMap = ({
       }
 
       const color = getLineColor(line);
-      const canvas = createLineShieldIcon(getLineCode(line), color, iconPixelRatio);
+      const canvas = createLineShieldIcon(getLineCode(line), color, iconPixelRatio, getVifLogo(line));
       const imageData = canvas.getContext('2d')?.getImageData(0, 0, canvas.width, canvas.height);
       if (imageData) {
         map.addImage(id, imageData, { pixelRatio: iconPixelRatio });
@@ -189,6 +190,7 @@ export const useMap = ({
         lineNumbers.map((line) => getLineCode(line)),
         colors,
         iconPixelRatio,
+        lineNumbers.map((line) => getVifLogo(line)),
       );
       const imageData = canvas.getContext('2d')?.getImageData(0, 0, canvas.width, canvas.height);
       if (imageData) {

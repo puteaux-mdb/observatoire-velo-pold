@@ -2,14 +2,7 @@
   <div class="bg-white not-prose text-gray-900 w-48">
     <div class="py-1 bg-zinc-100 flex flex-col items-center justify-center">
       <div class="flex flex-row space-x-1">
-        <div
-          v-for="line in lines"
-          :key="line"
-          class="h-8 min-w-8 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center text-base font-bold"
-          :style="`background-color: ${getLineColor(line)}; color: ${getLineTextColor(line)}`"
-        >
-          {{ getLineCode(line) }}
-        </div>
+        <LineBadge v-for="line in lines" :key="line" :line="line" size="sm" />
       </div>
     </div>
     <div class="divide-y">
@@ -55,11 +48,10 @@
 </template>
 
 <script setup lang="ts">
-import { getLineCode } from '~/composables/useConfig';
+import LineBadge from '~/components/line/LineBadge.vue';
 import { getStatusDefinition } from '~/helpers/statuses';
 import type { LaneQuality, LineStringFeature } from '~/types';
 
-const { getLineColor, getLineTextColor } = useColors();
 const { getDistance, typologyNames, qualityNames } = useStats();
 const { getSectionDetailsUrl } = useUrl();
 

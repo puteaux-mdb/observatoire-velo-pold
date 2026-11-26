@@ -8,6 +8,7 @@
         :label="filter.label"
         :is-enabled="filter.isEnabled"
         :custom-style="filter.customStyle"
+        :line="filter.line"
         @click="emit('toggleFilter', index)"
       />
     </div>

@@ -75,43 +75,43 @@
   "colors": [
     {
       "line": 1,
-      "color": "#E0041B"
+      "color": "#FF1400"
     },
     {
       "line": 2,
-      "color": "#FDCE00"
+      "color": "#FFBE00"
     },
     {
       "line": 3,
-      "color": "#02804D"
+      "color": "#00643C"
     },
     {
       "line": 4,
-      "color": "#0263AF"
+      "color": "#0055C8"
     },
     {
       "line": 5,
-      "color": "#BF4393"
+      "color": "#A0006E"
     },
     {
       "line": 6,
-      "color": "#D5C700"
+      "color": "#D2D200"
     },
     {
       "line": 7,
-      "color": "#99D3E1"
+      "color": "#82C8E6"
     },
     {
       "line": 8,
-      "color": "#642383"
+      "color": "#640082"
     },
     {
       "line": 9,
-      "color": "#F18C42"
+      "color": "#FF5A00"
     },
     {
       "line": 10,
-      "color": "#F3A5BA"
+      "color": "#FF82B4"
     },
     {
       "line": 11,
@@ -123,13 +123,13 @@
     },
     {
       "line": 20,
-      "color": "#8C5C2A"
+      "color": "#6E491E"
     }
   ],
   "accessibleColors": [
     {
       "line": 1,
-      "color": "#B00315"
+      "color": "#C21000"
     },
     {
       "line": 2,
@@ -137,15 +137,15 @@
     },
     {
       "line": 3,
-      "color": "#02653D"
+      "color": "#00643C"
     },
     {
       "line": 4,
-      "color": "#0263AF"
+      "color": "#0055C8"
     },
     {
       "line": 5,
-      "color": "#9C2F76"
+      "color": "#A0006E"
     },
     {
       "line": 6,
@@ -157,11 +157,11 @@
     },
     {
       "line": 8,
-      "color": "#642383"
+      "color": "#640082"
     },
     {
       "line": 9,
-      "color": "#B85A14"
+      "color": "#C24400"
     },
     {
       "line": 10,
@@ -177,7 +177,7 @@
     },
     {
       "line": 20,
-      "color": "#6E4520"
+      "color": "#6E491E"
     }
   ],
   "transports": [

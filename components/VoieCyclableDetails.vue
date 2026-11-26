@@ -11,11 +11,8 @@
       <template #header>
         <h1 class="text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
           {{ getRevName('singular') }}
-          <div
-            class="mt-2 h-12 min-w-12 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center font-bold mx-auto transition-colors"
-            :style="`background-color: ${color}; color: ${textColor}`"
-          >
-            {{ getLineCode(voie.line) }}
+          <div class="mt-2 flex justify-center">
+            <LineBadge :line="voie.line" size="lg" />
           </div>
         </h1>
       </template>
@@ -81,6 +78,7 @@
 </template>
 
 <script setup lang="ts">
+import LineBadge from '~/components/line/LineBadge.vue';
 import { getLineCode } from '~/composables/useConfig';
 import config from '~/config.json';
 import type { Collections } from '@nuxt/content';
@@ -102,7 +100,6 @@ const props = withDefaults(
   },
 );
 
-const { getLineColor, getLineTextColor } = useColors();
 const { getRevName } = useConfig();
 const { getLineFromPath } = useUrl();
 
@@ -113,8 +110,6 @@ const line = computed(() => {
   return props.line;
 });
 
-const color = computed(() => getLineColor(Number(line.value)));
-const textColor = computed(() => getLineTextColor(Number(line.value)));
 
 const { data: asyncVoie } = useAsyncData(
   () => `voie-${line.value}`,

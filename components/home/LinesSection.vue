@@ -6,12 +6,7 @@
       class="relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-lvv-blue-600"
     >
       <div class="flex-shrink-0">
-        <div
-          class="h-10 min-w-10 w-fit px-1.5 whitespace-nowrap rounded-full flex items-center justify-center font-bold"
-          :style="`background-color: ${getLineColor(voie.line)}; color: ${getLineTextColor(voie.line)}`"
-        >
-          {{ getLineCode(voie.line) }}
-        </div>
+        <LineBadge :line="voie.line" size="md" />
       </div>
       <div class="flex-1 min-w-0">
         <NuxtLink :to="getVoieCyclablePath(voie.line)" class="focus:outline-none">
@@ -25,8 +20,8 @@
 </template>
 
 <script setup lang="ts">
+import LineBadge from '~/components/line/LineBadge.vue';
 import { getLineCode } from '~/composables/useConfig';
-const { getLineColor, getLineTextColor } = useColors();
 const { getVoieCyclablePath } = useUrl();
 
 const { voies } = await useGetVoiesCyclablesNums();
