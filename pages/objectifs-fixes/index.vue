@@ -37,6 +37,9 @@
       <!-- Modes actifs -->
       <section id="modes-actifs" class="objectif-section pt-12">
         <h2 class="text-2xl font-bold text-gray-900">+50 % de modes actifs d'ici à 2050</h2>
+        <p class="mt-1 text-xs text-gray-500">
+          Actualisé : {{ dateLabel(SECTION_META['modes-actifs']?.updated) }} · Revu le {{ SECTION_META['modes-actifs']?.reviewed }}
+        </p>
         <p class="mt-2 text-gray-600">
           Objectif du plan climat-air-énergie de POLD (2019) : « 50 % de croissance des modes actifs d'ici à 2050 »,
           c'est-à-dire de la marche et du vélo. Horizon <strong>{{ MODES_ACTIFS.baseYear }}-{{ MODES_ACTIFS.targetYear }}</strong>.
@@ -98,6 +101,9 @@
       <!-- VIF -->
       <section id="vif" class="objectif-section pt-12">
         <h2 class="text-2xl font-bold text-gray-900">Vélo Île-de-France (VIF)</h2>
+        <p class="mt-1 text-xs text-gray-500">
+          Actualisé : {{ dateLabel(SECTION_META['vif']?.updated) }} · Revu le {{ SECTION_META['vif']?.reviewed }}
+        </p>
         <p class="mt-2 text-gray-600">
           Réseau régional de pistes cyclables structurantes, réalisé en deux phases : phase 1 sur 2021-2025, phase 2
           sur 2025-2030. Achèvement de l'ensemble du réseau prévu en 2030.
@@ -110,6 +116,9 @@
       <!-- Département -->
       <section id="departement" class="objectif-section pt-14">
         <h2 class="text-2xl font-bold text-gray-900">Plan vélo des Hauts-de-Seine</h2>
+        <p class="mt-1 text-xs text-gray-500">
+          Actualisé : {{ dateLabel(SECTION_META['departement']?.updated) }} · Revu le {{ SECTION_META['departement']?.reviewed }}
+        </p>
         <p class="mt-2 text-gray-600">Itinéraires départementaux structurants et interdépartementaux.</p>
         <div class="mt-6 grid gap-6">
           <PlanCard v-for="plan in CD92_PLANS" :key="plan.id" :plan="plan" color="#5B3F99" />
@@ -128,6 +137,9 @@
       <!-- Schéma directeur POLD -->
       <section id="schema-directeur" class="objectif-section pt-14">
         <h2 class="text-2xl font-bold text-gray-900">Schéma directeur cyclable de POLD</h2>
+        <p class="mt-1 text-xs text-gray-500">
+          Actualisé : {{ dateLabel(SECTION_META['schema-directeur']?.updated) }} · Revu le {{ SECTION_META['schema-directeur']?.reviewed }}
+        </p>
         <p class="mt-2 text-gray-600">{{ SDC_POLD.note }}</p>
         <div class="mt-6 grid items-center gap-6 lg:grid-cols-[18rem_1fr]">
           <div class="flex flex-col items-center rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -145,6 +157,9 @@
       <!-- Gares -->
       <section id="gares" class="objectif-section pt-14">
         <h2 class="text-2xl font-bold text-gray-900">Le vélo autour des gares</h2>
+        <p class="mt-1 text-xs text-gray-500">
+          Actualisé : {{ dateLabel(SECTION_META['gares']?.updated) }} · Revu le {{ SECTION_META['gares']?.reviewed }}
+        </p>
         <div class="mt-2 space-y-2 text-gray-600">
           <p>
             <strong>POLD</strong> (plan climat 2019, fiches MOBIL 3 et MOBIL 6) : développer le stationnement vélo aux
@@ -252,6 +267,9 @@
       <!-- Collèges -->
       <section id="colleges" class="objectif-section pt-14">
         <h2 class="text-2xl font-bold text-gray-900">Le vélo vers les collèges publics</h2>
+        <p class="mt-1 text-xs text-gray-500">
+          Actualisé : {{ dateLabel(SECTION_META['colleges']?.updated) }} · Revu le {{ SECTION_META['colleges']?.reviewed }}
+        </p>
         <div class="mt-2 space-y-2 text-gray-600">
           <p>
             <strong>Département des Hauts-de-Seine</strong> (plan d'action vélo 2021-2028), qui gère les collèges publics :
@@ -316,6 +334,9 @@
       <!-- Sources -->
       <section id="sources" class="objectif-section pt-14">
         <h2 class="text-2xl font-bold text-gray-900">Sources des objectifs</h2>
+        <p class="mt-1 text-xs text-gray-500">
+          Actualisé : {{ dateLabel(SECTION_META['sources']?.updated) }} · Revu le {{ SECTION_META['sources']?.reviewed }}
+        </p>
         <p class="mt-2 text-gray-600">Les documents officiels où ces objectifs sont fixés.</p>
         <div class="mt-6 grid gap-6 md:grid-cols-2">
           <div v-for="group in SOURCES" :key="group.section" class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -334,6 +355,9 @@
                 </a>
                 <span v-else class="font-medium text-gray-800">{{ link.label }}</span>
                 <span class="block text-gray-500">{{ link.owner }}<template v-if="link.note"> · {{ link.note }}</template></span>
+                <span class="block text-xs text-gray-400">
+                  Actualisé : {{ link.updated ?? 'non daté' }} · Revu le {{ link.reviewed }}
+                </span>
               </li>
             </ul>
           </div>
@@ -346,7 +370,7 @@
 <script setup lang="ts">
 import PlanCard from '~/components/objectifs/PlanCard.vue';
 import TargetGauge from '~/components/objectifs/TargetGauge.vue';
-import { CD92_NEXT, CD92_PLANS, COLLEGES, GARES, SOURCES, MODES_ACTIFS, SDC_POLD, VIF_PHASES, type Gare, type Mode } from '~/helpers/objectifs-exemple';
+import { CD92_NEXT, CD92_PLANS, COLLEGES, GARES, SECTION_META, SOURCES, MODES_ACTIFS, SDC_POLD, VIF_PHASES, type Gare, type Mode } from '~/helpers/objectifs-exemple';
 
 useHead({ title: 'Objectifs fixés' });
 
@@ -478,6 +502,9 @@ function toggle(commune: string) {
 function sum(gs: Gare[], key: 'libre' | 'abrite' | 'securise' | 'velib' | 'connecte3km'): number {
   return Math.round(gs.reduce((s, g) => s + g[key], 0) * 10) / 10;
 }
+function dateLabel(d?: string): string {
+  return !d ? 'non daté' : d === 'exemple' ? '— (chiffres d\'exemple)' : d;
+}
 function km(v: number): string {
   return `${v.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} km`;
 }
@@ -488,7 +515,9 @@ function distance(m: number | null): string {
 </script>
 
 <style scoped>
-.objectif-section {
+.objectif-section,
+.objectif-section:target {
+  animation: none;
   outline: none;
   scroll-margin-top: calc(var(--navbar-height, 0px) + 3.5rem);
 }

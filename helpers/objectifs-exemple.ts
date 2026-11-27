@@ -105,19 +105,19 @@ export const SDC_POLD: PlanProgress = {
   period: '2021-2025',
   deadline: 2025,
   target: 80,
-  note: 'Objectif du plan climat-air-énergie de POLD (PCAE, adopté le 25 juin 2019, fiche MOBIL 5) : 80 % des axes aménagés en 2025.',
+  note: 'Le schéma directeur prévoit de pérenniser 14 km d\'aménagements temporaires et de réaliser 106 km d\'aménagements nouveaux. Le plan climat-air-énergie de POLD (adopté le 25 juin 2019, fiche MOBIL 5) fixe l\'objectif de 80 % des axes aménagés en 2025.',
   communes: [
-    c('Courbevoie', 6.1, 11.0),
-    c('Garches', 1.2, 4.0),
-    c('La Garenne-Colombes', 2.3, 4.2),
-    c('Levallois-Perret', 4.5, 6.0),
-    c('Nanterre', 9.8, 19.5),
-    c('Neuilly-sur-Seine', 3.0, 8.1),
-    c('Puteaux', 4.0, 7.6),
-    c('Rueil-Malmaison', 7.4, 17.3),
-    c('Saint-Cloud', 1.9, 6.4),
-    c('Suresnes', 3.6, 7.2),
-    c('Vaucresson', 0.8, 3.7),
+    c('Courbevoie', 6.1, 13.9),
+    c('Garches', 1.2, 5.1),
+    c('La Garenne-Colombes', 2.3, 5.3),
+    c('Levallois-Perret', 4.5, 7.6),
+    c('Nanterre', 9.8, 24.6),
+    c('Neuilly-sur-Seine', 3, 10.2),
+    c('Puteaux', 4, 9.6),
+    c('Rueil-Malmaison', 7.4, 21.9),
+    c('Saint-Cloud', 1.9, 8.1),
+    c('Suresnes', 3.6, 9.1),
+    c('Vaucresson', 0.8, 4.7),
   ],
 };
 
@@ -216,44 +216,62 @@ export const COLLEGES: CollegesVille[] = [
   { commune: 'Vaucresson', colleges: 1, desservis: 0, equipes: 1, places: 15 },
 ];
 
-export type SourceLink = { label: string; owner: string; url?: string; note?: string };
+// updated : date de publication ou de dernière mise à jour du document ; reviewed : date de notre dernière relecture.
+export type SourceLink = { label: string; owner: string; url?: string; note?: string; updated?: string; reviewed: string };
+
+const REVU = '27/11/2026';
 
 export const SOURCES: { section: string; links: SourceLink[] }[] = [
   {
     section: 'Modes actifs et plans climat',
     links: [
-      { label: 'Plan climat-air-énergie de Paris Ouest La Défense (2019)', owner: 'POLD', url: 'https://www.ville-levallois.fr/wp-content/uploads/2023/09/POLD_PCAET1.pdf', note: 'Objectif +50 % de modes actifs en 2050 ; fiches MOBIL 2 à 6' },
-      { label: 'Rapport développement durable 2025', owner: 'POLD', url: 'https://www.ville-levallois.fr/wp-content/uploads/2026/02/Rapport-DD-POLD-2025.pdf' },
-      { label: 'Plan climat-air-énergie métropolitain (2018)', owner: 'Métropole du Grand Paris', url: 'https://metropolegrandparis.fr/sites/default/files/media/document/PCAEM.pdf.pdf', note: 'Cadre de référence des plans climat des territoires' },
+      { label: 'Plan climat-air-énergie de Paris Ouest La Défense (2019)', owner: 'POLD', url: 'https://www.ville-levallois.fr/wp-content/uploads/2023/09/POLD_PCAET1.pdf', note: 'Objectif +50 % de modes actifs en 2050 ; fiches MOBIL 2 à 6', updated: 'juin 2019', reviewed: REVU },
+      { label: 'Rapport développement durable 2025', owner: 'POLD', url: 'https://www.ville-levallois.fr/wp-content/uploads/2026/02/Rapport-DD-POLD-2025.pdf', updated: 'février 2026', reviewed: REVU },
+      { label: 'Plan climat-air-énergie métropolitain (2018)', owner: 'Métropole du Grand Paris', url: 'https://metropolegrandparis.fr/sites/default/files/media/document/PCAEM.pdf.pdf', note: 'Cadre de référence des plans climat des territoires', updated: '12/11/2018', reviewed: REVU },
     ],
   },
   {
     section: 'Vélo Île-de-France (VIF)',
     links: [
-      { label: 'Réseau Vélo Île-de-France : objectifs et carte d\'avancement', owner: 'Région Île-de-France', url: 'https://www.iledefrance.fr/toutes-les-actualites/reseau-velo-ile-de-france-vif-plus-de-pistes-cyclables-pour-les-deplacements-quotidiens' },
-      { label: 'Brochure VIF (juillet 2026)', owner: 'Région Île-de-France', url: 'https://www.iledefrance.fr/sites/default/files/2026-09/brochure-vif-juillet-2026_def_web.pdf', note: 'Phases 1 et 2, état d\'avancement' },
+      { label: 'Réseau Vélo Île-de-France : objectifs et carte d\'avancement', owner: 'Région Île-de-France', url: 'https://www.iledefrance.fr/toutes-les-actualites/reseau-velo-ile-de-france-vif-plus-de-pistes-cyclables-pour-les-deplacements-quotidiens', reviewed: REVU },
+      { label: 'Brochure VIF (juillet 2026)', owner: 'Région Île-de-France', url: 'https://www.iledefrance.fr/sites/default/files/2026-09/brochure-vif-juillet-2026_def_web.pdf', note: 'Phases 1 et 2, état d\'avancement', updated: 'juillet 2026', reviewed: REVU },
     ],
   },
   {
     section: 'Plan vélo départemental et collèges',
     links: [
-      { label: 'Schéma directeur cyclable / plan d\'action 2021-2028', owner: 'Département des Hauts-de-Seine', url: 'https://www.hauts-de-seine.fr/fileadmin/user_upload/Mon_departement/01_Missions_et_actions/01.7_Transport_et_voirie/Circulations_douces/Le_plan_velo.pdf', note: 'Desserte et stationnement des collèges, Savoir rouler' },
-      { label: 'Plan vélo 2022-2028 (dépliant, juin 2025)', owner: 'Département des Hauts-de-Seine', url: 'https://www.hauts-de-seine.fr/fileadmin/user_upload/plan-velo-2022-2028-hauts-de-seine.pdf' },
-      { label: 'Open data « Aménagements cyclables »', owner: 'Département des Hauts-de-Seine', url: 'https://www.data.gouv.fr/datasets/amenagements-cyclables' },
+      { label: 'Schéma directeur cyclable / plan d\'action 2021-2028', owner: 'Département des Hauts-de-Seine', url: 'https://www.hauts-de-seine.fr/fileadmin/user_upload/Mon_departement/01_Missions_et_actions/01.7_Transport_et_voirie/Circulations_douces/Le_plan_velo.pdf', note: 'Desserte et stationnement des collèges, Savoir rouler', updated: 'février 2022', reviewed: REVU },
+      { label: 'Plan vélo 2022-2028 (dépliant, juin 2025)', owner: 'Département des Hauts-de-Seine', url: 'https://www.hauts-de-seine.fr/fileadmin/user_upload/plan-velo-2022-2028-hauts-de-seine.pdf', updated: 'juin 2025', reviewed: REVU },
+      { label: 'Open data « Aménagements cyclables »', owner: 'Département des Hauts-de-Seine', url: 'https://www.data.gouv.fr/datasets/amenagements-cyclables', reviewed: REVU },
     ],
   },
   {
     section: 'Schéma directeur cyclable POLD',
     links: [
-      { label: 'Objectif 80 % des axes aménagés en 2025 (fiche MOBIL 5)', owner: 'POLD', url: 'https://www.ville-levallois.fr/wp-content/uploads/2023/09/POLD_PCAET1.pdf', note: 'Le schéma directeur lui-même n\'est pas publié en ligne à notre connaissance' },
+      { label: 'Le schéma directeur cyclable du territoire : vers un réseau cyclable continu', owner: 'POLD', url: 'https://www.parisouestladefense.fr/le-schema-directeur-cyclable-de-paris-ouest-la-defense-vers-un-reseau-cyclable-continu/', note: '14 km à pérenniser et 106 km d\'aménagements nouveaux', updated: '24/07/2024', reviewed: REVU },
+      { label: 'Schéma directeur cyclable (PDF)', owner: 'POLD', url: 'https://www.parisouestladefense.fr/app/uploads/2022/02/schema_directeur_cyclable-1.pdf', updated: 'février 2022', reviewed: REVU },
+      { label: 'Étude mobilité vélo post-Covid-19 (Explain)', owner: 'POLD', url: 'https://www.parisouestladefense.fr/app/uploads/2022/02/C0836_Mobilite-velo-post-Covid-19_Rapport_V1.3.pdf', updated: 'février 2022', reviewed: REVU },
+      { label: 'Objectif 80 % des axes aménagés en 2025 (plan climat, fiche MOBIL 5)', owner: 'POLD', url: 'https://www.ville-levallois.fr/wp-content/uploads/2023/09/POLD_PCAET1.pdf', updated: 'juin 2019', reviewed: REVU },
     ],
   },
   {
     section: 'Gares',
     links: [
-      { label: 'Schéma directeur du stationnement vélo en gares et stations (2020)', owner: 'Île-de-France Mobilités', url: 'https://www.iledefrance-mobilites.fr/medias/portail-idfm/a4589a21-eea6-410f-b591-01e34e829d1c_SDSV_2020_Web.pdf' },
-      { label: 'Parkings Vélos Île-de-France Mobilités', owner: 'Île-de-France Mobilités', url: 'https://www.iledefrance-mobilites.fr/le-reseau/services-de-mobilite/velo/parkings-velo' },
-      { label: 'Grand Paris cyclable : 3 km autour des gares', owner: 'Apur', url: 'https://apur.org/en/our-works/bike-friendly-grand-paris-current-situation-and-projects-delivered-2030', note: 'Rayon de rabattement retenu' },
+      { label: 'Schéma directeur du stationnement vélo en gares et stations (2020)', owner: 'Île-de-France Mobilités', url: 'https://www.iledefrance-mobilites.fr/medias/portail-idfm/a4589a21-eea6-410f-b591-01e34e829d1c_SDSV_2020_Web.pdf', updated: 'décembre 2020', reviewed: REVU },
+      { label: 'Parkings Vélos Île-de-France Mobilités', owner: 'Île-de-France Mobilités', url: 'https://www.iledefrance-mobilites.fr/le-reseau/services-de-mobilite/velo/parkings-velo', reviewed: REVU },
+      { label: 'Grand Paris cyclable : 3 km autour des gares', owner: 'Apur', url: 'https://apur.org/en/our-works/bike-friendly-grand-paris-current-situation-and-projects-delivered-2030', note: 'Rayon de rabattement retenu', reviewed: REVU },
     ],
   },
 ];
+
+
+// Date des chiffres affichés et de leur dernière relecture, par section de la page.
+export const SECTION_META: Record<string, { updated: string; reviewed: string }> = {
+  'modes-actifs': { updated: 'exemple', reviewed: REVU },
+  vif: { updated: 'exemple', reviewed: REVU },
+  departement: { updated: 'exemple', reviewed: REVU },
+  'schema-directeur': { updated: 'exemple', reviewed: REVU },
+  gares: { updated: 'exemple', reviewed: REVU },
+  colleges: { updated: 'exemple', reviewed: REVU },
+  sources: { updated: REVU, reviewed: REVU },
+};
