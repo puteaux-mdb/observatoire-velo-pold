@@ -150,6 +150,14 @@
             </transition>
           </Popover>
 
+          <NuxtLink
+            to="/objectifs-fixes"
+            class="text-base font-medium text-gray-500 hover:text-lvv-blue-600"
+            active-class="!text-lvv-blue-600"
+          >
+            Objectifs fixés
+          </NuxtLink>
+
           <!-- Compteurs -->
           <Popover v-if="displayCounters()" v-slot="{ open }" class="relative">
             <PopoverButton
@@ -389,6 +397,7 @@ const navItems = computed(() => [
   { name: 'Carte interactive', path: linkToMap.value, target: '_self' },
   ...(hasFeature('officialPlan') ? [{ name: 'Plan officiel', path: '/plan-officiel', target: '_self' }] : []),
   { name: 'Évolution du réseau', path: '/evolution', target: '_self' },
+  { name: 'Objectifs fixés', path: '/objectifs-fixes', target: '_self' },
   { name: config.barometre.label, path: barometreVeloLink, target: '_blank' },
 ]);
 
