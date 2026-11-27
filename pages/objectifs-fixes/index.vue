@@ -248,6 +248,97 @@
           Express. Les « pistes connectées » ne comptent que les aménagements reliés à la gare par un itinéraire continu.
         </p>
       </section>
+
+      <!-- Collèges -->
+      <section id="colleges" class="objectif-section pt-14">
+        <h2 class="text-2xl font-bold text-gray-900">Le vélo vers les collèges publics</h2>
+        <div class="mt-2 space-y-2 text-gray-600">
+          <p>
+            <strong>Département des Hauts-de-Seine</strong> (plan d'action vélo 2021-2028), qui gère les collèges publics :
+          </p>
+          <ul class="list-disc space-y-1 pl-6">
+            <li>aménager les axes vers les gares, collèges et lycées (action 2) ;</li>
+            <li>créer des stationnements vélo au droit des collèges, après un diagnostic des besoins (action 7) ;</li>
+            <li>partager la culture du vélo dès le collège, avec le « Savoir rouler à vélo » (action 18).</li>
+          </ul>
+          <p>Horizon <strong>2028</strong>, sans cible chiffrée par collège.</p>
+        </div>
+
+        <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div v-for="kpi in collegesKpis" :key="kpi.label" class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+            <div class="text-2xl font-bold text-gray-900">{{ kpi.value }}</div>
+            <div class="text-sm text-gray-600">{{ kpi.label }}</div>
+          </div>
+        </div>
+
+        <div class="mt-4 overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
+          <table class="w-full min-w-[40rem] text-sm">
+            <thead class="bg-gray-50 text-left text-gray-600">
+              <tr>
+                <th class="px-3 py-2 font-medium">Ville</th>
+                <th class="px-3 py-2 text-right font-medium">Collèges publics</th>
+                <th class="w-1/4 px-3 py-2 font-medium">Desservis par une piste continue</th>
+                <th class="w-1/4 px-3 py-2 font-medium">Équipés de stationnement vélo</th>
+                <th class="px-3 py-2 text-right font-medium">Places vélo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="row in COLLEGES" :key="row.commune" class="border-t border-gray-100">
+                <td class="px-3 py-2 font-medium">{{ row.commune }}</td>
+                <td class="px-3 py-2 text-right tabular-nums">{{ row.colleges }}</td>
+                <td class="px-3 py-2">
+                  <div class="flex items-center gap-2">
+                    <div class="h-2 flex-1 overflow-hidden rounded-full bg-gray-200">
+                      <div class="h-full rounded-full bg-[#5B3F99]" :style="{ width: `${(row.desservis / row.colleges) * 100}%` }" />
+                    </div>
+                    <span class="w-10 text-right tabular-nums">{{ row.desservis }}/{{ row.colleges }}</span>
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="flex items-center gap-2">
+                    <div class="h-2 flex-1 overflow-hidden rounded-full bg-gray-200">
+                      <div class="h-full rounded-full bg-[#5B3F99]" :style="{ width: `${(row.equipes / row.colleges) * 100}%` }" />
+                    </div>
+                    <span class="w-10 text-right tabular-nums">{{ row.equipes }}/{{ row.colleges }}</span>
+                  </div>
+                </td>
+                <td class="px-3 py-2 text-right tabular-nums">{{ row.places }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-3 text-xs text-gray-500">
+          « Desservi » : un aménagement cyclable relié au réseau continu arrive à moins de 300 m de l'entrée du collège.
+          La liste des collèges sera importée de l'annuaire de l'Éducation nationale.
+        </p>
+      </section>
+
+      <!-- Sources -->
+      <section id="sources" class="objectif-section pt-14">
+        <h2 class="text-2xl font-bold text-gray-900">Sources des objectifs</h2>
+        <p class="mt-2 text-gray-600">Les documents officiels où ces objectifs sont fixés.</p>
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          <div v-for="group in SOURCES" :key="group.section" class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+            <h3 class="font-bold text-gray-900">{{ group.section }}</h3>
+            <ul class="mt-3 space-y-3">
+              <li v-for="link in group.links" :key="link.label" class="text-sm">
+                <a
+                  v-if="link.url"
+                  :href="link.url"
+                  target="_blank"
+                  rel="noopener"
+                  class="font-medium text-lvv-blue-600 hover:underline"
+                >
+                  {{ link.label }}
+                  <Icon name="mdi:launch" class="-mt-0.5 ml-0.5 h-3.5 w-3.5 align-middle" aria-hidden="true" />
+                </a>
+                <span v-else class="font-medium text-gray-800">{{ link.label }}</span>
+                <span class="block text-gray-500">{{ link.owner }}<template v-if="link.note"> · {{ link.note }}</template></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -255,7 +346,7 @@
 <script setup lang="ts">
 import PlanCard from '~/components/objectifs/PlanCard.vue';
 import TargetGauge from '~/components/objectifs/TargetGauge.vue';
-import { CD92_NEXT, CD92_PLANS, GARES, MODES_ACTIFS, SDC_POLD, VIF_PHASES, type Gare, type Mode } from '~/helpers/objectifs-exemple';
+import { CD92_NEXT, CD92_PLANS, COLLEGES, GARES, SOURCES, MODES_ACTIFS, SDC_POLD, VIF_PHASES, type Gare, type Mode } from '~/helpers/objectifs-exemple';
 
 useHead({ title: 'Objectifs fixés' });
 
@@ -265,6 +356,8 @@ const tabs = [
   { id: 'departement', label: 'Plan vélo départemental' },
   { id: 'schema-directeur', label: 'Schéma directeur POLD' },
   { id: 'gares', label: 'Gares' },
+  { id: 'colleges', label: 'Collèges' },
+  { id: 'sources', label: 'Sources' },
 ];
 
 const activeTab = ref('modes-actifs');
@@ -362,6 +455,18 @@ const garesKpis = computed(() => {
   ];
 });
 
+const collegesKpis = computed(() => {
+  const total = COLLEGES.reduce((s, r) => s + r.colleges, 0);
+  const desservis = COLLEGES.reduce((s, r) => s + r.desservis, 0);
+  const equipes = COLLEGES.reduce((s, r) => s + r.equipes, 0);
+  return [
+    { value: total, label: 'collèges publics' },
+    { value: `${Math.round((desservis / total) * 100)} %`, label: 'desservis par une piste continue' },
+    { value: `${Math.round((equipes / total) * 100)} %`, label: 'équipés de stationnement vélo' },
+    { value: COLLEGES.reduce((s, r) => s + r.places, 0), label: 'places vélo' },
+  ];
+});
+
 const open = ref(new Set<string>());
 function toggle(commune: string) {
   const s = new Set(open.value);
@@ -384,6 +489,7 @@ function distance(m: number | null): string {
 
 <style scoped>
 .objectif-section {
+  outline: none;
   scroll-margin-top: calc(var(--navbar-height, 0px) + 3.5rem);
 }
 </style>
